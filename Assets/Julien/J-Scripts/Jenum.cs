@@ -1,1 +1,0 @@
-public enum JUniteType { Chef, Agressif, Passif }
