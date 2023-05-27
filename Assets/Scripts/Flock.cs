@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
+    public GameObject chef;
+
     public FlockAgent agentPrefab;
     List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
@@ -50,16 +52,23 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         foreach(FlockAgent agent in agents)
         {
-            List<Transform> context = GetNearbyObjects(agent);
-            Vector2 move = behavior.CalculateMove(agent, context, this);
-            move *= driveFactor;
-            if(move.sqrMagnitude > squareMaxSpeed)
+            if (!agent.GetComponent<MouseInteraction>().isHovered)
             {
-                move = move.normalized * maxSpeed;
+                float distance = Vector2.Distance(chef.transform.position, agent.transform.position);
+                float Speed = Mathf.Clamp(distance, 1, maxSpeed);
+                List<Transform> context = GetNearbyObjects(agent);
+                Vector2 move = behavior.CalculateMove(agent, context, this, chef.transform.position);
+                move *= driveFactor;
+                if (move.sqrMagnitude > squareMaxSpeed)
+                {
+                    move = move.normalized * Speed;
+                }
+                agent.Move(move);
             }
-            agent.Move(move);
+            
         }
     }
 

@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ff676abcbd264440aa942fd21c86d5b, type: 3}
-  m_Name: Stay In R15
+  m_Name: Stay In RALL
   m_EditorClassIdentifier: 
-  radius: 0.1
+  radius: 50

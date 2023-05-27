@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 768c7236221f4414c9a34a14a17e521c, type: 3}
-  m_Name: CenteredFlockBehaviour
+  m_Name: CenteredFlockBehaviourALL
   m_EditorClassIdentifier: 
   behaviors:
   - {fileID: 11400000, guid: 23f4d8958ce373a458591561339ae501, type: 2}
   - {fileID: 11400000, guid: a1c9c52f896c84f4a86c2d5b4be763c1, type: 2}
   - {fileID: 11400000, guid: c97456d5d04bb1b4e94843dbfec3b468, type: 2}
-  - {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
+  - {fileID: 11400000, guid: 03b5d87f72b5b0e449cf93b253165078, type: 2}
   weights:
   - 4
-  - 0.1
+  - 0
   - 3
   - 0.5
