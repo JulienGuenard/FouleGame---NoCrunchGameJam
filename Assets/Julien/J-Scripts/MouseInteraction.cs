@@ -6,8 +6,8 @@ public class MouseInteraction : MonoBehaviour
 {
     private SpriteRenderer spriteR;
 
-    private bool isHovered = false;
-    private bool isSelected = false;
+    public bool isHovered = false;
+    public bool isSelected = false;
 
     public Vector3 offset;
 

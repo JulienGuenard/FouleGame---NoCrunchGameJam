@@ -4,9 +4,16 @@ using UnityEngine;
 
 public class Flock : MonoBehaviour
 {
+    public GameObject chef;
+    public float TIMER = 2f;
+
+    float timer;
+
     public FlockAgent agentPrefab;
-    List<FlockAgent> agents = new List<FlockAgent>();
+    public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
+
+    public bool addnew = true;
 
     [Range(10, 500)]
     public int strartingCount = 250;
@@ -14,11 +21,11 @@ public class Flock : MonoBehaviour
 
     [Range(1f, 100f)]
     public float driveFactor = 10f;
-    [Range(1f, 100f)]
+    [Range(0f, 100f)]
     public float maxSpeed = 5f;
     [Range(1f, 10f)]
     public float neighborRadius = 1.5f;
-    [Range(0f, 1f)]
+    [Range(0f, 20f)]
     public float avoidanceRadiusMultiplier = 0.5f;
 
     float squareMaxSpeed;
@@ -29,6 +36,7 @@ public class Flock : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        timer = TIMER;
         squareMaxSpeed = maxSpeed * maxSpeed;
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
@@ -50,16 +58,31 @@ public class Flock : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        foreach(FlockAgent agent in agents)
+        if (!addnew)
         {
-            List<Transform> context = GetNearbyObjects(agent);
-            Vector2 move = behavior.CalculateMove(agent, context, this);
-            move *= driveFactor;
-            if(move.sqrMagnitude > squareMaxSpeed)
+            timer -= Time.deltaTime;
+            if(timer <= 0)
             {
-                move = move.normalized * maxSpeed;
+                addnew = true;
+                timer = TIMER;
             }
-            agent.Move(move);
+        }
+        foreach(FlockAgent agent in agents.ToArray())
+        {
+            if (!agent.GetComponent<MouseInteraction>().isHovered)
+            {
+                float distance = Vector2.Distance(chef.transform.position, agent.transform.position);
+                float Speed = Mathf.Clamp(distance, 1, maxSpeed);
+                List<Transform> context = GetNearbyObjects(agent);
+                Vector2 move = behavior.CalculateMove(agent, context, this, chef.transform.position);
+                move *= driveFactor;
+                if (move.sqrMagnitude > squareMaxSpeed)
+                {
+                    move = move.normalized * Speed;
+                }
+                agent.Move(move);
+            }
+            
         }
     }
 
@@ -72,7 +95,18 @@ public class Flock : MonoBehaviour
             if(c != agent.AgentCollider)
             {
                 context.Add(c.transform);
+
+                if(c.transform.parent.CompareTag("Neutre")&&addnew)
+                {
+                    Flock cflock = c.GetComponentInParent<Flock>();
+
+                    cflock.agents.Remove(c.GetComponent<FlockAgent>());
+                    c.transform.SetParent(this.transform, true);
+                    agents.Add(c.GetComponent<FlockAgent>());
+                    addnew = false;
+                }
             }
+
         }
         return context;
     }
