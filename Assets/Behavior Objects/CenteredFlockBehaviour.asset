@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 768c7236221f4414c9a34a14a17e521c, type: 3}
+  m_Name: CenteredFlockBehaviour
+  m_EditorClassIdentifier: 
+  behaviors:
+  - {fileID: 11400000, guid: 23f4d8958ce373a458591561339ae501, type: 2}
+  - {fileID: 11400000, guid: a1c9c52f896c84f4a86c2d5b4be763c1, type: 2}
+  - {fileID: 11400000, guid: c97456d5d04bb1b4e94843dbfec3b468, type: 2}
+  - {fileID: 11400000, guid: 03b5d87f72b5b0e449cf93b253165078, type: 2}
+  weights:
+  - 4
+  - 1
+  - 2
+  - 0.1
