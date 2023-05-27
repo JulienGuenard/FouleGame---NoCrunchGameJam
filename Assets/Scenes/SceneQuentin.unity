@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 418633015}
   m_Layer: 0
   m_Name: Flock universel
-  m_TagString: Untagged
+  m_TagString: Neutre
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -153,13 +153,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chef: {fileID: 1735468291}
+  TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: f4518e2d835a7ff4698fca1a4ea5a142, type: 3}
+  agents: []
   behavior: {fileID: 11400000, guid: eae417c25276e8f4ab81008cfb77642b, type: 2}
+  addnew: 0
   strartingCount: 200
   driveFactor: 52.7
-  maxSpeed: 2
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.244
+  maxSpeed: 0.2
+  neighborRadius: 1.35
+  avoidanceRadiusMultiplier: 1.95
 --- !u!4 &418633016
 Transform:
   m_ObjectHideFlags: 0
@@ -312,7 +315,7 @@ GameObject:
   - component: {fileID: 1638876564}
   m_Layer: 0
   m_Name: Flock_orange
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -330,8 +333,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chef: {fileID: 788447620}
+  TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
+  agents: []
   behavior: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
+  addnew: 0
   strartingCount: 10
   driveFactor: 52
   maxSpeed: 2
@@ -479,7 +485,7 @@ GameObject:
   - component: {fileID: 1790926522}
   m_Layer: 0
   m_Name: Flock
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -497,8 +503,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chef: {fileID: 788447620}
+  TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: 07a05ba758e97e749859336fe254bdfa, type: 3}
+  agents: []
   behavior: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
+  addnew: 0
   strartingCount: 10
   driveFactor: 52.7
   maxSpeed: 2

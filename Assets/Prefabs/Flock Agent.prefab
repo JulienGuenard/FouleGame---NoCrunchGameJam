@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 6024399551065564511}
   - component: {fileID: 5343778298011262044}
   - component: {fileID: 8561261267107352624}
-  - component: {fileID: 7304584265050960503}
   m_Layer: 0
   m_Name: Flock Agent
   m_TagString: Untagged
@@ -199,15 +198,3 @@ MonoBehaviour:
   shadow: {fileID: 1964481218494993704}
   shadowDragOffset: {x: 0, y: 0, z: 0}
   undragOffset: {x: 0, y: 0, z: 0}
---- !u!114 &7304584265050960503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189879585582541447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54d27eb412dc35a42a3ce2148e1e790f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
