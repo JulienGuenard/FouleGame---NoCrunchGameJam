@@ -29,7 +29,7 @@ public class MouseInteraction : MonoBehaviour
             {
                 Select();
             }
-            else if (!isHovered && isSelected)
+            else if (isSelected)
             {
                 Unselect();
             }
@@ -48,24 +48,30 @@ public class MouseInteraction : MonoBehaviour
         if (isHovered) return;
         if (isSelected) return;
 
-        Hover();
+        TryToHover();
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag != "Cursor") return;
         if (isSelected) return;
-        Unhover();
+        TryToUnhover();
     }
 
-    void Hover()
+    void TryToHover()
+    {
+        HoverManager.instance.HoverUnit(this.gameObject);
+    }
+
+    public void TryToUnhover()
+    {
+        HoverManager.instance.UnhoverUnit(this.gameObject);
+    }
+
+    public void Hover()
     {
         isHovered = true;
         spriteR.color = ColorManager.instance.colorHovered;
-
-        if (HoverManager.instance.hoveredUnit != null && HoverManager.instance.hoveredUnit != this.gameObject) HoverManager.instance.hoveredUnit.GetComponent<MouseInteraction>().Unhover();
-
-        HoverManager.instance.hoveredUnit = this.gameObject;
     }
 
     public void Unhover()
