@@ -20,7 +20,8 @@ public abstract class CharacterBehavior : MonoBehaviour
     public int Health;
     public int DMG;
     protected CharacterData data;
-
+    protected PacifistesBehavior Pacifist;
+    protected AgressifBehavior Agressif;
     /// <summary>
     /// Load des infos du scriptable correspondant
     /// </summary>
@@ -39,5 +40,20 @@ public abstract class CharacterBehavior : MonoBehaviour
     {
         this.Health -= Dmg;
         Debug.Log("TEST DMG");
+    }
+
+    protected virtual void CheckType(Collider2D other)
+    {
+       
+        if (other.GetComponent<AgressifBehavior>() == true)
+        {
+            Agressif = other.GetComponent<AgressifBehavior>();
+          
+        }
+        else if (other.GetComponent<PacifistesBehavior>())
+        {
+            Pacifist = other.GetComponent<PacifistesBehavior>();
+            
+        }
     }
 }

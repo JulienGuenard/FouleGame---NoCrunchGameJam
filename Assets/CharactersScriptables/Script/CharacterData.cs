@@ -25,5 +25,9 @@ public class CharacterData : ScriptableObject
     [Range(0, 100)]
     public int DMG;
 
+    [Range(0, 100)]
+    public int MaxConvert;
 
+    [Range(0, 10)]
+    public float ConvertPercentMultiplicater;
 }
