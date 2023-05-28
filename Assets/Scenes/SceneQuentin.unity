@@ -776,7 +776,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735468291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64424, y: -1.4700941, z: 2.1979802}
+  m_LocalPosition: {x: 0, y: -1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -796,11 +796,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machine: {fileID: 1358689036}
-  "unit\xE9taille": 0
-  tailleGrille: 0
-  ChefFoule: {fileID: 0}
+  "unit\xE9taille": 2
+  tailleGrille: 5
+  ChefFoule: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
+  saferayon: 10
   NombreFouleActuelle: 0
-  maxNombreFoule: 0
+  maxNombreFoule: 3
 --- !u!1 &1750164888
 GameObject:
   m_ObjectHideFlags: 0

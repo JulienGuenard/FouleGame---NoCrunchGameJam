@@ -210,13 +210,7 @@ public class Flock : MonoBehaviour
            
             
        
-                StartCoroutine(ChargedAttack(agent));
-            
-            
-                
-           
-           
-   
+                StartCoroutine(ChargedAttack(agent)); 
         }
         else
         {
@@ -285,21 +279,28 @@ public class Flock : MonoBehaviour
     public IEnumerator Charge(FlockAgent agent)
     {
 
-        Debug.Log("ouui");
-        float LaucnhDirectionX = Target.position.x;
+        if(Target != null)
+        {
+            float LaucnhDirectionX = Target.position.x;
             float LaucnhDIrectionY = Target.position.y;
             float posX = agent.transform.position.x;
             float posY = agent.transform.position.y;
 
             Vector2 lauchDir = new Vector2(LaucnhDirectionX - posX, LaucnhDIrectionY - posY).normalized;
             DistancePos = lauchDir;
-            agent.Move(lauchDir*LauchForce);
+            agent.Move(lauchDir * LauchForce);
             IsLaunch = true;
+        }
+      
 
             yield return new WaitForSeconds(ChargedTime);
-        Ennemidistance = Vector2.Distance(Target.position, agent.transform.position);
+        if(agent != null&&Target!=null)
+        {
+            Ennemidistance = Vector2.Distance(Target.position, agent.transform.position);
+        }
+        
   
-        if (Ennemidistance <=0.2)
+        if (Ennemidistance <=0.2&& Target != null&&agent!=null)
             {
                 CheckAttack(agent);
             }

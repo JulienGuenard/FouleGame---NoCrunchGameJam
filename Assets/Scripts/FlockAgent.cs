@@ -5,7 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(Collider2D))]
 public class FlockAgent : MonoBehaviour
 {
-
     Flock agentFlock;
 
     public Rigidbody2D rb;
@@ -15,8 +14,11 @@ public class FlockAgent : MonoBehaviour
 
     Collider2D agentCollider;
     public Collider2D AgentCollider { get { return agentCollider; } }
-    // Start is called before the first frame update
+
+    Flock parentflock;
     
+    // Start is called before the first frame update
+
     public void Initialize(Flock flock)
     {
 
@@ -24,6 +26,7 @@ public class FlockAgent : MonoBehaviour
 
     void Start()
     {
+        parentflock = this.GetComponentInParent<Flock>();
         agentCollider = GetComponent<Collider2D>();
     }
     public void Move(Vector2 velocity)
@@ -39,6 +42,7 @@ public class FlockAgent : MonoBehaviour
     {
         if (Health <= 0)
         {
+            parentflock.agents.Remove(this);
             Destroy(gameObject);
         }
     }

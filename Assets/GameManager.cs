@@ -6,6 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameObject Player;
     public static Camera MainCamera;
+    public static GameManager GameMa;
     public GameObject machine;
     public static GameObject Cinemachine;
 
@@ -14,8 +15,12 @@ public class GameManager : MonoBehaviour
 
     public GameObject ChefFoule;
 
+    public int saferayon;
+
     public int NombreFouleActuelle;
     public int maxNombreFoule;
+
+    static int lastRandomNumber;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,14 +32,31 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
- /*       if(NombreFouleActuelle < maxNombreFoule)
+        if (NombreFouleActuelle < maxNombreFoule)
         {
             for (int i = 0; i < maxNombreFoule; i++)
             {
-                Instantiate(ChefFoule,new Vector2(transform.position.x + (unitétaille*Random.Range(0,tailleGrille)), 
-                    transform.position.y + (unitétaille * Random.Range(0, tailleGrille))),transform.rotation);
+                NombreFouleActuelle++;
+                Instantiate(ChefFoule, new Vector2(transform.position.x + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille)),
+                    transform.position.y + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille))), transform.rotation);
             }
-        }*/
+        }
+
+    }
+    protected static int generateRandomNumber(int min, int max)
+    {
+
+        int result = Random.Range(min, max);
+
+        if (result == lastRandomNumber)
+        {
+
+            return generateRandomNumber(min, max);
+
+        }
+
+        lastRandomNumber = result;
+        return result;
 
     }
 }
