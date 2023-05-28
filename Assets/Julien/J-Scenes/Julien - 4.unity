@@ -305,6 +305,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
   chef: {fileID: 1735468291}
   TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: f4518e2d835a7ff4698fca1a4ea5a142, type: 3}
@@ -706,6 +714,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
   chef: {fileID: 788447620}
   TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
@@ -780,6 +796,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machine: {fileID: 1358689036}
+  "unit\xE9taille": 0
+  tailleGrille: 0
+  ChefFoule: {fileID: 0}
+  saferayon: 0
+  NombreFouleActuelle: 0
+  maxNombreFoule: 0
 --- !u!1 &1750164888
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,6 +915,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
   chef: {fileID: 788447620}
   TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: f4518e2d835a7ff4698fca1a4ea5a142, type: 3}
