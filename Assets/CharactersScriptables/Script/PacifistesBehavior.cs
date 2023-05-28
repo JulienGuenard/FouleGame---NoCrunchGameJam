@@ -148,11 +148,15 @@ public class PacifistesBehavior : CharacterBehavior
                         break;
                     }
             }
-
-
-      
-       
-        
     }
 
+
+    public Vector2 Fear(Vector2 Direction)
+    {
+        Vector2 NewDirection = -Direction;
+        NewDirection.Normalize();
+        return NewDirection;
+    }
+
+  
 }
