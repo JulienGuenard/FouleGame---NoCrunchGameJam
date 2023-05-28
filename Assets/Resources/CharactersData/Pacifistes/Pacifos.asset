@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartingCount: 0
   DriveFactor: 0
-  MaxSpeed: 0
+  MaxSpeed: 7
   NeighBorRadius: 0
   AvoidanceRadiusMultiplier: 0
-  Health: 0
+  Health: 4
   DMG: 0
+  MaxConvert: 100
+  ConvertPercentMultiplicater: 0.5
