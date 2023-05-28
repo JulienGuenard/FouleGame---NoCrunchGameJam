@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3849838081759355303}
   m_Layer: 0
   m_Name: Flock_orange
-  m_TagString: Untagged
+  m_TagString: Ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isPlayer: 1
+  isPlayer: 0
   LauchForce: 2
   ChargedTime: 1
   RepulseForce: 10
