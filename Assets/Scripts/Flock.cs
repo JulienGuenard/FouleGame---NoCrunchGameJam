@@ -92,7 +92,7 @@ public class Flock : MonoBehaviour
         Collider2D[] contextColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);
         foreach(Collider2D c in contextColliders)
         {
-            if(c != agent.AgentCollider)
+            if(c != agent.AgentCollider && !c.CompareTag("Cursor"))
             {
                 context.Add(c.transform);
 

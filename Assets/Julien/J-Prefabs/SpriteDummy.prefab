@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 1697759150, guid: f9375f0f9bf039241bf02174c5328edb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.40784314, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -173,11 +173,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17a83257251e0b44a4772195c11ce5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHovered: 0
+  isSelected: 0
   offset: {x: 0, y: -0.2, z: 0}
   sprite: {fileID: 8377242558967938669}
-  shadow: {fileID: 8377242560173646118}
-  shadowDragOffset: {x: 0, y: -0.4, z: 0}
   undragOffset: {x: 0, y: -0.4, z: 0}
+  forceOutput: 0
 --- !u!1 &8377242560173646118
 GameObject:
   m_ObjectHideFlags: 0

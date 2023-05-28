@@ -18,7 +18,7 @@ public class MouseInteraction : MonoBehaviour
 
     void Awake()
     {
-        spriteR = sprite.GetComponent<SpriteRenderer>();
+        spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
