@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Cohesion")]
 public class CohesionBehavior : FilteredFlockBehaviour
 {
-    public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock)
+    public override Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock, Vector2 chefpos)
     {
         //if no neighbors, return no adjustment 
         if (context.Count == 0)
