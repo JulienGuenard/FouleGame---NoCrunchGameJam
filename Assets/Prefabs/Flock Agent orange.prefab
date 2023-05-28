@@ -41,9 +41,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8144567599109322388}
   - component: {fileID: 6725954552759890413}
-  - component: {fileID: 161140971}
-  - component: {fileID: 4139178769558950419}
-  - component: {fileID: 894945958}
   m_Layer: 0
   m_Name: Flock Agent Sprite
   m_TagString: Untagged
@@ -59,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3405310068054473756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -0.034326438}
   m_LocalScale: {x: 0.82, y: 0.82, z: 0.82}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -107,8 +104,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -106777831, guid: a58dc5c5520dfb441b24001d3e1aa333, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Color: {r: 1, g: 0.40679443, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -118,53 +115,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &161140971
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405310068054473756}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0305a942d68bf504e9d3b2d27b05bf4d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &4139178769558950419
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405310068054473756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f2c278004dd3f54e9cb391ce8f898d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &894945958
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3405310068054473756}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeec1430efc19194d950a6a7e5ad7ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layerOffset: 0
-  lookAtParent: 1
-  changeZ: 0
 --- !u!1 &4189879585582541447
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,12 +127,10 @@ GameObject:
   - component: {fileID: 6024399551065564511}
   - component: {fileID: 5343778298011262044}
   - component: {fileID: 9079357006144876075}
-  - component: {fileID: 4803461940970596666}
-  - component: {fileID: 3617564826217774999}
-  - component: {fileID: 8631119564619340385}
+  - component: {fileID: 4158964545480397466}
   m_Layer: 0
   m_Name: Flock Agent orange
-  m_TagString: Untagged
+  m_TagString: agressif
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementIsEnabled: 1
+  rb: {fileID: 4158964545480397466}
+  Health: 100
 --- !u!114 &9079357006144876075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,31 +194,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e17a83257251e0b44a4772195c11ce5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteOutlined: {fileID: 21300000, guid: d359a05237d85884989b4f5b9733616f, type: 3}
   isHovered: 0
   isSelected: 0
   offset: {x: 0, y: 0, z: 0}
   sprite: {fileID: 3405310068054473756}
   undragOffset: {x: 0, y: 0, z: 0}
-  delayMoveAgainAfterUndrag: 2
-  forceOutput: 75
---- !u!58 &4803461940970596666
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189879585582541447}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.07
---- !u!50 &3617564826217774999
+  forceOutput: 0
+--- !u!50 &4158964545480397466
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -290,15 +221,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &8631119564619340385
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189879585582541447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3de126ae7dd77040b9e61078bcfe42b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

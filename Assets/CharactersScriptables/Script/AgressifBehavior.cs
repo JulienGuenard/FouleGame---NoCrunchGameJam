@@ -12,8 +12,6 @@ public class AgressifBehavior : CharacterBehavior
     [SerializeField] float ChargedTime;
     [SerializeField] float RepulseForce;
     private bool IsLaunch = false;
-    private PacifistesBehavior Pacifist;
-    private AgressifBehavior Agressif;
     private Vector2 DistancePos;
 
  
@@ -106,17 +104,7 @@ public class AgressifBehavior : CharacterBehavior
         }
     }
 
-    public void CheckType(Collider2D other)
-    {
-        if (other.GetComponent<AgressifBehavior>() == true)
-        {
-            Agressif = other.GetComponent<AgressifBehavior>();
-        }
-        else if (other.GetComponent<PacifistesBehavior>())
-        {
-            Pacifist = other.GetComponent<PacifistesBehavior>();
-        }
-    }
+    
 
     public void CheckLauch()
     {

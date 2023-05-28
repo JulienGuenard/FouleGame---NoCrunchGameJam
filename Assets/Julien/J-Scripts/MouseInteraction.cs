@@ -5,10 +5,6 @@ using UnityEngine;
 public class MouseInteraction : MonoBehaviour
 {
     private SpriteRenderer spriteR;
-    private Rigidbody2D rigid;
-
-    public Sprite spriteOutlined;
-    private Sprite spriteBase;
 
     public bool isHovered = false;
     public bool isSelected = false;
@@ -17,14 +13,12 @@ public class MouseInteraction : MonoBehaviour
 
     public GameObject sprite;
     public Vector3 undragOffset;
-    public float delayMoveAgainAfterUndrag;
+
     public float forceOutput;
 
     void Awake()
     {
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
-        rigid = GetComponent<Rigidbody2D>();
-        spriteBase = spriteR.sprite;
     }
 
     void Update()
@@ -49,6 +43,7 @@ public class MouseInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+       
         if (col.tag != "Cursor") return;
         if (isHovered) return;
         if (isSelected) return;
@@ -76,25 +71,26 @@ public class MouseInteraction : MonoBehaviour
     public void Hover()
     {
         isHovered = true;
-        spriteR.sprite = spriteOutlined;
+        spriteR.color = ColorManager.instance.colorHovered;
     }
 
     public void Unhover()
     {
         isHovered = false;
-        spriteR.sprite = spriteBase;
+        spriteR.color = ColorManager.instance.colorNeutral;
     }
 
     void Select()
     {
         isSelected = true;
         isHovered = false;
+        spriteR.color = ColorManager.instance.colorSelected;
     }
 
     void Unselect()
     {
         isSelected = false;
-        spriteR.sprite = spriteBase;
+        spriteR.color = ColorManager.instance.colorNeutral;
         Undrag();
     }
 
@@ -106,14 +102,5 @@ public class MouseInteraction : MonoBehaviour
     void Undrag()
     {
         transform.position += undragOffset;
-     //   rigid.AddForceAtPosition(FollowCursor.instance.transform.up * forceOutput, transform.position);
-     //   StartCoroutine(MoveAgainAfterDelay());
-    }
-
-    IEnumerator MoveAgainAfterDelay()
-    {
-        GetComponent<FlockAgent>().movementIsEnabled = false;
-        yield return new WaitForSeconds(delayMoveAgainAfterUndrag);
-        GetComponent<FlockAgent>().movementIsEnabled = true;
     }
 }

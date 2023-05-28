@@ -9,15 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 979d880d0604d364b962c48a0dd76c51, type: 3}
-  m_Name: Pacifos
+  m_Script: {fileID: 11500000, guid: 4ff676abcbd264440aa942fd21c86d5b, type: 3}
+  m_Name: Stay In RALL 1
   m_EditorClassIdentifier: 
-  StartingCount: 0
-  DriveFactor: 0
-  MaxSpeed: 7
-  NeighBorRadius: 0
-  AvoidanceRadiusMultiplier: 0
-  Health: 4
-  DMG: 0
-  MaxConvert: 100
-  ConvertPercentMultiplicater: 0.5
+  radius: 5

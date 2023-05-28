@@ -7,6 +7,10 @@ TagManager:
   - Neutre
   - Cursor
   - PlayerFlock
+  - Ennemi
+  - Chefs
+  - agressif
+  - passif
   layers:
   - Default
   - TransparentFX
