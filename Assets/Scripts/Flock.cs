@@ -73,7 +73,7 @@ public class Flock : MonoBehaviour
         }
         foreach(FlockAgent agent in agents.ToArray())
         {
-            if (!agent.GetComponent<MouseInteraction>().isHovered)
+            if (!agent.GetComponent<MouseInteraction>().isSelected)
             {
                 float distance = Vector2.Distance(chef.transform.position, agent.transform.position);
                 float Speed = Mathf.Clamp(distance, 1, maxSpeed);
