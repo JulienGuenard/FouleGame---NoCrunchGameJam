@@ -7,6 +7,8 @@ TagManager:
   - Neutre
   - Cursor
   - PlayerFlock
+  - Ennemi
+  - Chefs
   layers:
   - Default
   - TransparentFX
