@@ -7,6 +7,10 @@ public class FlockAgent : MonoBehaviour
 {
 
     Flock agentFlock;
+
+    public Rigidbody2D rb;
+
+    public int Health = 100;
     public Flock AgentFlock { get { return agentFlock; } }
 
     Collider2D agentCollider;
@@ -26,5 +30,22 @@ public class FlockAgent : MonoBehaviour
     {
         transform.up = velocity;
         transform.position += (Vector3)velocity * Time.deltaTime;
+    }
+    public void RBMove(Vector2 dir, float force)
+    {
+        rb.velocity = dir * force;
+    }
+    public void CheckHP()
+    {
+        if (Health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    public void TakeDamage(int Dmg)
+    {
+        this.Health -= Dmg;
+        Debug.Log("TEST DMG");
     }
 }
