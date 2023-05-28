@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 4158964545480397466}
   m_Layer: 0
   m_Name: Flock Agent orange
-  m_TagString: Untagged
+  m_TagString: agressif
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

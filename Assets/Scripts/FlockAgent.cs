@@ -7,6 +7,8 @@ public class FlockAgent : MonoBehaviour
 {
     Flock agentFlock;
 
+    [SerializeField] public float ConvertPercent = 0;
+
     public Rigidbody2D rb;
 
     public int Health = 100;
@@ -46,8 +48,9 @@ public class FlockAgent : MonoBehaviour
     {
         if (Health <= 0)
         {
-            parentflock.agents.Remove(this);
+            
             Destroy(gameObject);
+            parentflock.agents.Remove(this);
         }
     }
 

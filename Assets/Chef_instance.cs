@@ -13,23 +13,25 @@ public class Chef_instance : MonoBehaviour
 
     private void Start()
     {
+        gamema = GameManager.GameMa;
         Passif.chef = this.gameObject;
         Aggressif.chef = this.gameObject;
 
         Instantiate(Passif.gameObject);
         Instantiate(Aggressif.gameObject);
     }
+    private void Update()
+    {
+        Health = GetComponent<FlockAgent>().Health;
+        CheckHP();
+    }
     public void CheckHP()
     {
         if (Health <= 0)
         {
             Destroy(gameObject);
+            gamema.NombreFouleActuelle--;
         }
     }
 
-    public void TakeDamage(int Dmg)
-    {
-        this.Health -= Dmg;
-        Debug.Log("TEST DMG");
-    }
 }

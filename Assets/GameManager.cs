@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static GameObject neutre;
     public static GameObject Player;
     public static Camera MainCamera;
     public static GameManager GameMa;
@@ -24,6 +25,8 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        neutre = GameObject.FindGameObjectWithTag("Neutre");
+        GameMa = this;
         Player = GameObject.FindGameObjectWithTag("Player");
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
         Cinemachine = machine;
