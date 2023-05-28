@@ -22,6 +22,10 @@ public class FlockAgent : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+      
+    }
     void Start()
     {
         agentCollider = GetComponent<Collider2D>();
@@ -47,5 +51,11 @@ public class FlockAgent : MonoBehaviour
     {
         this.Health -= Dmg;
         Debug.Log("TEST DMG");
+    }
+
+    public IEnumerator  LifeTimer( int LifeTime)
+    {
+        yield return new WaitForSeconds(LifeTime);
+        Destroy(gameObject);
     }
 }
