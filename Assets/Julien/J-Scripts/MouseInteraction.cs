@@ -12,16 +12,13 @@ public class MouseInteraction : MonoBehaviour
     public Vector3 offset;
 
     public GameObject sprite;
-    public GameObject shadow;
-    public Vector3 shadowDragOffset;
-    private Vector3 shadowDragOffsetInitial;
     public Vector3 undragOffset;
+
+    public float forceOutput;
 
     void Awake()
     {
-        spriteR = sprite.GetComponent<SpriteRenderer>();
-
-        shadowDragOffsetInitial = shadow.transform.localPosition;
+        spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
     }
 
     void Update()
@@ -44,16 +41,19 @@ public class MouseInteraction : MonoBehaviour
         }
     }
 
-    private void OnMouseOver()
+    private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("hover");
+        if (col.tag != "Cursor") return;
         if (isHovered) return;
         if (isSelected) return;
 
         Hover();
     }
 
-    private void OnMouseExit()
+    private void OnTriggerExit2D(Collider2D col)
     {
+        if (col.tag != "Cursor") return;
         if (isSelected) return;
         Unhover();
     }
@@ -62,9 +62,13 @@ public class MouseInteraction : MonoBehaviour
     {
         isHovered = true;
         spriteR.color = ColorManager.instance.colorHovered;
+
+        if (HoverManager.instance.hoveredUnit != null && HoverManager.instance.hoveredUnit != this.gameObject) HoverManager.instance.hoveredUnit.GetComponent<MouseInteraction>().Unhover();
+
+        HoverManager.instance.hoveredUnit = this.gameObject;
     }
 
-    void Unhover()
+    public void Unhover()
     {
         isHovered = false;
         spriteR.color = ColorManager.instance.colorNeutral;
@@ -86,13 +90,11 @@ public class MouseInteraction : MonoBehaviour
 
     void Drag()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + offset) - new Vector3(0,0, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
-        shadow.transform.localPosition = shadowDragOffset;
+        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + offset) - new Vector3(0, 0, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
     }
 
     void Undrag()
     {
         transform.position += undragOffset;
-        shadow.transform.localPosition = shadowDragOffsetInitial;
     }
 }

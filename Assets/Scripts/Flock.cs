@@ -12,6 +12,10 @@ public class Flock : MonoBehaviour
     public FlockAgent agentPrefab;
     public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
+    public int compteur;
+
+    public bool isAgressif;
+    public bool isPacifique;
 
     public bool addnew = true;
 
@@ -84,6 +88,7 @@ public class Flock : MonoBehaviour
             }
             
         }
+        compteur = agents.Count;
     }
 
     List<Transform> GetNearbyObjects(FlockAgent agent)
@@ -92,7 +97,7 @@ public class Flock : MonoBehaviour
         Collider2D[] contextColliders = Physics2D.OverlapCircleAll(agent.transform.position, neighborRadius);
         foreach(Collider2D c in contextColliders)
         {
-            if(c != agent.AgentCollider)
+            if(c != agent.AgentCollider && !c.CompareTag("Cursor"))
             {
                 context.Add(c.transform);
 
