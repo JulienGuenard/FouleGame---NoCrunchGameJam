@@ -12,6 +12,10 @@ public class Flock : MonoBehaviour
     public FlockAgent agentPrefab;
     public List<FlockAgent> agents = new List<FlockAgent>();
     public FlockBehavior behavior;
+    public int compteur;
+
+    public bool isAgressif;
+    public bool isPacifique;
 
     public bool addnew = true;
 
@@ -84,6 +88,7 @@ public class Flock : MonoBehaviour
             }
             
         }
+        compteur = agents.Count;
     }
 
     List<Transform> GetNearbyObjects(FlockAgent agent)

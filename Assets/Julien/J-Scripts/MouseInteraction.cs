@@ -43,6 +43,7 @@ public class MouseInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
+        Debug.Log("hover");
         if (col.tag != "Cursor") return;
         if (isHovered) return;
         if (isSelected) return;

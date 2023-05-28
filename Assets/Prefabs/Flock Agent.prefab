@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 2746850421927866692}
   - component: {fileID: 6024399551065564511}
   - component: {fileID: 5343778298011262044}
+  - component: {fileID: 8466090791002944358}
   - component: {fileID: 8561261267107352624}
   m_Layer: 0
   m_Name: Flock Agent
@@ -179,6 +180,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!58 &8466090791002944358
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189879585582541447}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.06
 --- !u!114 &8561261267107352624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +212,5 @@ MonoBehaviour:
   isSelected: 0
   offset: {x: 0, y: 0, z: 0}
   sprite: {fileID: 3405310068054473756}
-  shadow: {fileID: 1964481218494993704}
-  shadowDragOffset: {x: 0, y: 0, z: 0}
   undragOffset: {x: 0, y: 0, z: 0}
+  forceOutput: 0
