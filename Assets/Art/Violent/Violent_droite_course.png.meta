@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d6ac9a025174dc543bbfbcf2903054b5
+guid: e965752659afda84f8b5e2ca017c4cbf
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -128,12 +128,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Violent_gauche_damaged_0
+      name: Violent_droite_course_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -142,19 +142,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a3edf26e9a4df04d8c7b571834fa1aa
-      internalID: -1290865349
+      spriteID: 2801f07163616c346b3a204c50384880
+      internalID: -466606457
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_gauche_damaged_1
+      name: Violent_droite_course_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a7ec159361f3a9489ca039313faa71f
+      internalID: -1983384723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Violent_droite_course_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,19 +184,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a44f65d0e7e83da47b7be71f6506f3b2
-      internalID: -523372759
+      spriteID: a8864de29cebf8248aa41837f20a11b2
+      internalID: 2047725460
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_gauche_damaged_2
+      name: Violent_droite_course_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9962fb05b4c8de242b9d5ba4ef12b660
+      internalID: -263935286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Violent_droite_course_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -184,19 +226,40 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78b9ecb0cf146ea4383b814c49e66540
-      internalID: 1844230284
+      spriteID: b5feef61cf29c0c488124ca5903d12a0
+      internalID: -2009722934
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_gauche_damaged_3
+      name: Violent_droite_course_5
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f40af844a8ec8424dbccfa040f5f60cb
+      internalID: -814277288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Violent_droite_course_6
       rect:
         serializedVersion: 2
         x: 96
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -205,19 +268,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51b1ff028b1a9604c884f66c8a75acf7
-      internalID: -927344531
+      spriteID: d458bd8481e6635418f924725a931392
+      internalID: -1434242007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_gauche_damaged_4
+      name: Violent_droite_course_7
       rect:
         serializedVersion: 2
-        x: 128
+        x: 112
         y: 0
-        width: 32
+        width: 16
         height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -226,71 +289,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5341b7199379e8418836b40a4fe169c
-      internalID: -860948256
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_gauche_damaged_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7030a2edea063be4887476d65b62dbee
-      internalID: -1865435760
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_gauche_damaged_6
-      rect:
-        serializedVersion: 2
-        x: 192
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7dda1b7e74e3532418563af6dbb8c497
-      internalID: -238571100
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_gauche_damaged_7
-      rect:
-        serializedVersion: 2
-        x: 224
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 085c6c986ce033e4d921e7b0b5dcd11f
-      internalID: 944666924
+      spriteID: 29ed88c84b361f5489039cff178e6d85
+      internalID: -59675849
       vertices: []
       indices: 
       edges: []
@@ -306,14 +306,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_gauche_damaged_1: -523372759
-      Violent_gauche_damaged_2: 1844230284
-      Violent_gauche_damaged_6: -238571100
-      Violent_gauche_damaged_4: -860948256
-      Violent_gauche_damaged_7: 944666924
-      Violent_gauche_damaged_0: -1290865349
-      Violent_gauche_damaged_5: -1865435760
-      Violent_gauche_damaged_3: -927344531
+      Violent_droite_course_0: -466606457
+      Violent_droite_course_6: -1434242007
+      Violent_droite_course_1: -1983384723
+      Violent_droite_course_3: -263935286
+      Violent_droite_course_4: -2009722934
+      Violent_droite_course_7: -59675849
+      Violent_droite_course_5: -814277288
+      Violent_droite_course_2: 2047725460
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
