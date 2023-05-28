@@ -6,6 +6,9 @@ public class MouseInteraction : MonoBehaviour
 {
     private SpriteRenderer spriteR;
 
+    public Sprite spriteOutlined;
+    private Sprite spriteBase;
+
     public bool isHovered = false;
     public bool isSelected = false;
 
@@ -19,6 +22,7 @@ public class MouseInteraction : MonoBehaviour
     void Awake()
     {
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
+        spriteBase = spriteR.sprite;
     }
 
     void Update()
@@ -71,26 +75,25 @@ public class MouseInteraction : MonoBehaviour
     public void Hover()
     {
         isHovered = true;
-        spriteR.color = ColorManager.instance.colorHovered;
+        spriteR.sprite = spriteOutlined;
     }
 
     public void Unhover()
     {
         isHovered = false;
-        spriteR.color = ColorManager.instance.colorNeutral;
+        spriteR.sprite = spriteBase;
     }
 
     void Select()
     {
         isSelected = true;
         isHovered = false;
-        spriteR.color = ColorManager.instance.colorSelected;
     }
 
     void Unselect()
     {
         isSelected = false;
-        spriteR.color = ColorManager.instance.colorNeutral;
+        spriteR.sprite = spriteBase;
         Undrag();
     }
 
