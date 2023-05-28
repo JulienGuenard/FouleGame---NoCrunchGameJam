@@ -24,6 +24,10 @@ public class FlockAgent : MonoBehaviour
 
     }
 
+    private void FixedUpdate()
+    {
+      
+    }
     void Start()
     {
         parentflock = this.GetComponentInParent<Flock>();
@@ -51,5 +55,11 @@ public class FlockAgent : MonoBehaviour
     {
         this.Health -= Dmg;
         Debug.Log("TEST DMG");
+    }
+
+    public IEnumerator  LifeTimer( int LifeTime)
+    {
+        yield return new WaitForSeconds(LifeTime);
+        Destroy(gameObject);
     }
 }
