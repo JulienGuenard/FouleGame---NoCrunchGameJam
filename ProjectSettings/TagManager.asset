@@ -9,6 +9,8 @@ TagManager:
   - PlayerFlock
   - Ennemi
   - Chefs
+  - agressif
+  - passif
   layers:
   - Default
   - TransparentFX
