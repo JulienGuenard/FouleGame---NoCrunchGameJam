@@ -5,6 +5,7 @@ using UnityEngine;
 public class MouseInteraction : MonoBehaviour
 {
     private SpriteRenderer spriteR;
+    private Rigidbody2D rigid;
 
     public Sprite spriteOutlined;
     private Sprite spriteBase;
@@ -16,12 +17,13 @@ public class MouseInteraction : MonoBehaviour
 
     public GameObject sprite;
     public Vector3 undragOffset;
-
+    public float delayMoveAgainAfterUndrag;
     public float forceOutput;
 
     void Awake()
     {
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
+        rigid = GetComponent<Rigidbody2D>();
         spriteBase = spriteR.sprite;
     }
 
@@ -47,7 +49,6 @@ public class MouseInteraction : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("hover");
         if (col.tag != "Cursor") return;
         if (isHovered) return;
         if (isSelected) return;
@@ -105,5 +106,14 @@ public class MouseInteraction : MonoBehaviour
     void Undrag()
     {
         transform.position += undragOffset;
+     //   rigid.AddForceAtPosition(FollowCursor.instance.transform.up * forceOutput, transform.position);
+     //   StartCoroutine(MoveAgainAfterDelay());
+    }
+
+    IEnumerator MoveAgainAfterDelay()
+    {
+        GetComponent<FlockAgent>().movementIsEnabled = false;
+        yield return new WaitForSeconds(delayMoveAgainAfterUndrag);
+        GetComponent<FlockAgent>().movementIsEnabled = true;
     }
 }
