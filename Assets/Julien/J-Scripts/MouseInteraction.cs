@@ -16,9 +16,16 @@ public class MouseInteraction : MonoBehaviour
 
     public float forceOutput;
 
+    public GameObject outline;
+    public Vector3 outlineOffsetPos;
+    private GameObject outlineInstancied;
+    public Material outlineMat;
+    private Material outlineMatInitial;
+
     void Awake()
     {
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
+        outlineMatInitial = spriteR.material;
     }
 
     void Update()
@@ -41,12 +48,10 @@ public class MouseInteraction : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerStay2D(Collider2D col)
     {
-       
         if (col.tag != "Cursor") return;
         if (isHovered) return;
-        if (isSelected) return;
 
         TryToHover();
     }
@@ -54,7 +59,6 @@ public class MouseInteraction : MonoBehaviour
     private void OnTriggerExit2D(Collider2D col)
     {
         if (col.tag != "Cursor") return;
-        if (isSelected) return;
         TryToUnhover();
     }
 
@@ -71,26 +75,33 @@ public class MouseInteraction : MonoBehaviour
     public void Hover()
     {
         isHovered = true;
-        spriteR.color = ColorManager.instance.colorHovered;
+
+        if (outlineInstancied != null) return;
+
+        outlineInstancied = Instantiate(outline, transform.position + outlineOffsetPos, Quaternion.identity);
+        outlineInstancied.transform.parent = spriteR.transform;
+        spriteR.material = outlineMat;
     }
 
     public void Unhover()
     {
         isHovered = false;
-        spriteR.color = ColorManager.instance.colorNeutral;
+
+        if (outlineInstancied == null) return;
+
+        Destroy(outlineInstancied);
+        spriteR.material = outlineMatInitial;
     }
 
     void Select()
     {
         isSelected = true;
         isHovered = false;
-        spriteR.color = ColorManager.instance.colorSelected;
     }
 
     void Unselect()
     {
         isSelected = false;
-        spriteR.color = ColorManager.instance.colorNeutral;
         Undrag();
     }
 
@@ -102,5 +113,6 @@ public class MouseInteraction : MonoBehaviour
     void Undrag()
     {
         transform.position += undragOffset;
+        TryToUnhover();
     }
 }

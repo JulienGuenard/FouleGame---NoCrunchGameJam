@@ -17,38 +17,23 @@ public class HoverManager : MonoBehaviour
 
     private void Update()
     {
+        HoverNewUnit();
+    }
+
+    void HoverNewUnit()
+    {
         lastHoveredUnit = hoveredUnit;
-        if (hoveredUnitList.Count >= 2) HoverUnitAtCenter();
-        if (hoveredUnitList.Count == 1) hoveredUnit = hoveredUnitList[0];
-        if (hoveredUnitList.Count == 0)
-        {
-            hoveredUnit = null;
-            return;
-        }
-        if (lastHoveredUnit != null) Unhover(lastHoveredUnit);
-        Hover();
-    }
+        SetHoveredUnit(null);
 
-    public GameObject GetHoveredUnit() { return hoveredUnit; }
+        if (hoveredUnitList.Count >= 1) HoverUnitAtCenter();
 
-    public void HoverUnit(GameObject obj)
-    {
-        if (hoveredUnitList.Contains(obj)) return;
+     //   if (lastHoveredUnit != null && lastHoveredUnit != hoveredUnit) Unhover(lastHoveredUnit);
 
-        hoveredUnitList.Add(obj);
-    }
-
-    public void UnhoverUnit(GameObject obj)
-    {
-        if (!hoveredUnitList.Contains(obj)) return;
-
-        Unhover(obj);
-        hoveredUnitList.Remove(obj);
+     //   Hover();
     }
 
     public void HoverUnitAtCenter()
     {
-        GameObject unit;
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0,0, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
         float distanceNearest = 0;
 
@@ -56,28 +41,47 @@ public class HoverManager : MonoBehaviour
         {
             Vector3 objPos = obj.transform.position - new Vector3(0, 0, obj.transform.position.z);
             float distance = (objPos - cursorPos).magnitude;
+
             if (distanceNearest == 0) distanceNearest = distance;
 
-            if (hoveredUnit == null)
+            if (hoveredUnit == null || distance < distanceNearest)
             {
                 distanceNearest = distance;
-                hoveredUnit = obj;
-            }
-            else if (distance < distanceNearest)
-            {
-                distanceNearest = distance;
-                hoveredUnit = obj;
+                SetHoveredUnit(obj);
             }
         }
     }
 
-    void Hover()
+    void SetHoveredUnit(GameObject obj) { hoveredUnit = obj; }
+
+    public void HoverUnit(GameObject obj)
     {
-        hoveredUnit.GetComponent<MouseInteraction>().Hover();
+        HoverNewUnit();
+        Hover();
+
+        if (hoveredUnitList.Contains(obj)) return;
+
+        hoveredUnitList.Add(obj);
     }
 
-    void Unhover(GameObject obj)
+    public void UnhoverUnit(GameObject obj)
     {
-        obj.GetComponent<MouseInteraction>().Unhover();
+        Unhover(obj);
+        hoveredUnitList.Remove(obj);
+    }
+
+    void Hover()
+    {
+        if (hoveredUnit == null) return;
+        if (SelectableManager.instance.GetSelectableUnitList().Contains(hoveredUnit)) return;
+
+        Debug.Log(hoveredUnit.name);
+
+        SelectableManager.instance.AddToSelectableUnitList(hoveredUnit);
+    }
+
+   void Unhover(GameObject obj)
+    {
+        SelectableManager.instance.RemoveToSelectableUnitList(obj);
     }
 }
