@@ -100,30 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +109,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 021fa771d7edb6b42bc1e489ba486cfa
-      internalID: -1352554588
+      spriteID: 481ccf7ac5780384cb258f56552ea0fb
+      internalID: 1847231665
       vertices: []
       indices: 
       edges: []
@@ -152,10 +128,10 @@ TextureImporter:
       name: Violent_bas_damaged_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 42
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e97841f897a3fe4da2c6ba91df92d3f
-      internalID: -235820832
+      spriteID: 4764d0f6b31de0848b09d31e108a6850
+      internalID: 599565038
       vertices: []
       indices: 
       edges: []
@@ -173,10 +149,10 @@ TextureImporter:
       name: Violent_bas_damaged_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e8dc5b54fc54c634da6eecf3b5284f2d
-      internalID: 92005555
+      spriteID: 83fe350a3f983914392f2535c44778a1
+      internalID: 753805632
       vertices: []
       indices: 
       edges: []
@@ -194,10 +170,10 @@ TextureImporter:
       name: Violent_bas_damaged_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 126
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65d666034739b8945865a13a9bcd50a3
-      internalID: -1962237374
+      spriteID: 868a687407ec26e42a3d24462e36d5a3
+      internalID: 1883862224
       vertices: []
       indices: 
       edges: []
@@ -215,10 +191,10 @@ TextureImporter:
       name: Violent_bas_damaged_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 168
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18d6fa3ba5c317340b39cdd16fb64009
-      internalID: 973542121
+      spriteID: ecaa895441c031c46a486b30492bde92
+      internalID: -1330229192
       vertices: []
       indices: 
       edges: []
@@ -236,10 +212,10 @@ TextureImporter:
       name: Violent_bas_damaged_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 210
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 81467469cdb3cdc45b6ba48ab6d90ede
-      internalID: -862289594
+      spriteID: af6b0cbb61b519542af467cab4e75d69
+      internalID: -1975095755
       vertices: []
       indices: 
       edges: []
@@ -257,10 +233,10 @@ TextureImporter:
       name: Violent_bas_damaged_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 252
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02591a5a4b69e514da9e57b6ee6c709d
-      internalID: -1618718981
+      spriteID: 20968ecbb8971f0438c1330ceab4086c
+      internalID: 818095464
       vertices: []
       indices: 
       edges: []
@@ -278,10 +254,10 @@ TextureImporter:
       name: Violent_bas_damaged_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 294
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 26c0bc7578668a744ab121d4e27d6d13
-      internalID: 315613687
+      spriteID: c906c455d2081d943b2f36971204da0d
+      internalID: 588856263
       vertices: []
       indices: 
       edges: []
@@ -306,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_bas_damaged_2: 92005555
-      Violent_bas_damaged_6: -1618718981
-      Violent_bas_damaged_4: 973542121
-      Violent_bas_damaged_5: -862289594
-      Violent_bas_damaged_0: -1352554588
-      Violent_bas_damaged_1: -235820832
-      Violent_bas_damaged_3: -1962237374
-      Violent_bas_damaged_7: 315613687
+      Violent_bas_damaged_2: 753805632
+      Violent_bas_damaged_6: 818095464
+      Violent_bas_damaged_4: -1330229192
+      Violent_bas_damaged_5: -1975095755
+      Violent_bas_damaged_0: 1847231665
+      Violent_bas_damaged_1: 599565038
+      Violent_bas_damaged_3: 1883862224
+      Violent_bas_damaged_7: 588856263
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

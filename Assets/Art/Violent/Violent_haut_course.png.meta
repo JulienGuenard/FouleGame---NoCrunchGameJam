@@ -100,30 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +109,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c0b3560af54d674ca656c65a602c826
-      internalID: 1421990951
+      spriteID: 82a76f951ac24634fb28f1277457967b
+      internalID: 46990053
       vertices: []
       indices: 
       edges: []
@@ -152,10 +128,10 @@ TextureImporter:
       name: Violent_haut_course_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 26
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 22fc048aa52e13c49a82b1fe1c598bf1
-      internalID: -187335052
+      spriteID: a319d200a1f4a8c40bdf2b18b06a4723
+      internalID: -1754410733
       vertices: []
       indices: 
       edges: []
@@ -173,10 +149,10 @@ TextureImporter:
       name: Violent_haut_course_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 52
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 58ca84e571ae6ce44b9fc3e03855704a
-      internalID: -1092484255
+      spriteID: 861969b903d66974d96c8ae6775498a1
+      internalID: 899128374
       vertices: []
       indices: 
       edges: []
@@ -194,10 +170,10 @@ TextureImporter:
       name: Violent_haut_course_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 78
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1de5ef1d038e0c245a9d232f352c2078
-      internalID: -1042737361
+      spriteID: e853f9d46bf6f994aad67e738cac53e7
+      internalID: -1574223638
       vertices: []
       indices: 
       edges: []
@@ -215,10 +191,10 @@ TextureImporter:
       name: Violent_haut_course_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 104
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b197b7dd2e5c60e48a4ee8b12e0f3c43
-      internalID: -574083041
+      spriteID: 77fc0341cfedc694f8c088fe49aca8ec
+      internalID: -733799008
       vertices: []
       indices: 
       edges: []
@@ -236,10 +212,10 @@ TextureImporter:
       name: Violent_haut_course_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 130
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49e2c7d2a98154f42a288e4057e7309b
-      internalID: 947731617
+      spriteID: dabab7649087b9f43a3ea0bf6c9002f4
+      internalID: -1449165631
       vertices: []
       indices: 
       edges: []
@@ -257,10 +233,10 @@ TextureImporter:
       name: Violent_haut_course_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 156
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f76ab5503f9aa994cacb211af4188a36
-      internalID: -988638989
+      spriteID: 13bb74177844bf24896083af4fa198ff
+      internalID: 1017864790
       vertices: []
       indices: 
       edges: []
@@ -278,10 +254,10 @@ TextureImporter:
       name: Violent_haut_course_7
       rect:
         serializedVersion: 2
-        x: 112
+        x: 182
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e8215350ea96704393453aa6c77cbb9
-      internalID: -18830258
+      spriteID: e58e1f3fd1275e4439f7144318b47be5
+      internalID: 2104860701
       vertices: []
       indices: 
       edges: []
@@ -306,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_haut_course_4: -574083041
-      Violent_haut_course_2: -1092484255
-      Violent_haut_course_7: -18830258
-      Violent_haut_course_3: -1042737361
-      Violent_haut_course_5: 947731617
-      Violent_haut_course_0: 1421990951
-      Violent_haut_course_1: -187335052
-      Violent_haut_course_6: -988638989
+      Violent_haut_course_4: -733799008
+      Violent_haut_course_2: 899128374
+      Violent_haut_course_7: 2104860701
+      Violent_haut_course_3: -1574223638
+      Violent_haut_course_5: -1449165631
+      Violent_haut_course_0: 46990053
+      Violent_haut_course_1: -1754410733
+      Violent_haut_course_6: 1017864790
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

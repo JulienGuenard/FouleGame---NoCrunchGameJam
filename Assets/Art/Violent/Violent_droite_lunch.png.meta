@@ -100,30 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +109,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f4a9786d43d2bc4ea7236a4ecb2ecd6
-      internalID: -721434168
+      spriteID: cc4b9393f6fe2f049a29768a6d89ad24
+      internalID: -317768080
       vertices: []
       indices: 
       edges: []
@@ -152,10 +128,10 @@ TextureImporter:
       name: Violent_droite_lunch_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 42
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e879803cfaaa2c3459f0fd01d6821ced
-      internalID: -2142531587
+      spriteID: c5f1797602c684643907138c4bee4672
+      internalID: 1907100023
       vertices: []
       indices: 
       edges: []
@@ -173,10 +149,10 @@ TextureImporter:
       name: Violent_droite_lunch_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79b48857d0bfc4341bebd593fe353297
-      internalID: 676357820
+      spriteID: b4e2a1e671d81ef458f08a65f03b5a3e
+      internalID: -1765279914
       vertices: []
       indices: 
       edges: []
@@ -194,10 +170,10 @@ TextureImporter:
       name: Violent_droite_lunch_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 126
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce1f37ce1d635834fb731e09af48a4f8
-      internalID: -563806204
+      spriteID: c926dd46d44e9e449b816c7552e9f920
+      internalID: 132803873
       vertices: []
       indices: 
       edges: []
@@ -215,10 +191,10 @@ TextureImporter:
       name: Violent_droite_lunch_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 168
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9697472de5505be43bdb76301889586a
-      internalID: 1760158093
+      spriteID: a5e425c20313ccc40b5ed02cec71a0a8
+      internalID: 7445452
       vertices: []
       indices: 
       edges: []
@@ -236,10 +212,10 @@ TextureImporter:
       name: Violent_droite_lunch_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 210
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6b8c44a8723179d4fb6541ee8ab74cc0
-      internalID: 77903258
+      spriteID: 5757a5c5d471fbd42b179c639afc4502
+      internalID: 589109775
       vertices: []
       indices: 
       edges: []
@@ -264,12 +240,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_droite_lunch_3: -563806204
-      Violent_droite_lunch_4: 1760158093
-      Violent_droite_lunch_0: -721434168
-      Violent_droite_lunch_5: 77903258
-      Violent_droite_lunch_2: 676357820
-      Violent_droite_lunch_1: -2142531587
+      Violent_droite_lunch_3: 132803873
+      Violent_droite_lunch_4: 7445452
+      Violent_droite_lunch_0: -317768080
+      Violent_droite_lunch_5: 589109775
+      Violent_droite_lunch_2: -1765279914
+      Violent_droite_lunch_1: 1907100023
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

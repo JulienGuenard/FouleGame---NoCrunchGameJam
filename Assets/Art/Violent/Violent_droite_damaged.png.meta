@@ -100,30 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +109,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5fd56da177bce0d4680055fa3e2ae499
-      internalID: -1801000117
+      spriteID: 7eff8f8c15480174a82338492a933684
+      internalID: 1532769130
       vertices: []
       indices: 
       edges: []
@@ -152,10 +128,10 @@ TextureImporter:
       name: Violent_droite_damaged_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 42
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ec73f513e9eb5f4ca1789f373ee9bb0
-      internalID: 1339368431
+      spriteID: 528c24648c0c5864384489e051307122
+      internalID: 2128736395
       vertices: []
       indices: 
       edges: []
@@ -173,10 +149,10 @@ TextureImporter:
       name: Violent_droite_damaged_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 84
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20a3ab97b5887734893e6a7c6bb3eef1
-      internalID: -2050035097
+      spriteID: 4cd7a06e4f726474992a08439cffc86c
+      internalID: 1661224332
       vertices: []
       indices: 
       edges: []
@@ -194,10 +170,10 @@ TextureImporter:
       name: Violent_droite_damaged_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 126
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8caaa4d6865a434db0c9ee1dda3c3c4
-      internalID: 846103323
+      spriteID: 65b3cc150a91acd4dbc658a57ce61ae7
+      internalID: 669765080
       vertices: []
       indices: 
       edges: []
@@ -215,10 +191,10 @@ TextureImporter:
       name: Violent_droite_damaged_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 168
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2f3df4ad2d34c6d44b9f44979def7b40
-      internalID: 1711949125
+      spriteID: 640ae8346bf43aa45bcc6c390367ba9f
+      internalID: 1286049849
       vertices: []
       indices: 
       edges: []
@@ -236,10 +212,10 @@ TextureImporter:
       name: Violent_droite_damaged_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 210
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 351176f945dbb2b4e866e755107302f4
-      internalID: 2054550900
+      spriteID: c0602427ab6f0a94b9759d3246933e65
+      internalID: -1566621419
       vertices: []
       indices: 
       edges: []
@@ -257,10 +233,10 @@ TextureImporter:
       name: Violent_droite_damaged_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 252
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f924632d8401104d9035fa1740be40c
-      internalID: 1717469939
+      spriteID: e841d9e22e9dbad48a90b19f206f29b4
+      internalID: -1820390018
       vertices: []
       indices: 
       edges: []
@@ -278,10 +254,10 @@ TextureImporter:
       name: Violent_droite_damaged_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 294
         y: 0
-        width: 32
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71961916b44fb4e488e2fef4214ac55d
-      internalID: 1234520282
+      spriteID: 7894903d0ee2d0246940c69ad90d4c88
+      internalID: -1796490424
       vertices: []
       indices: 
       edges: []
@@ -306,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_droite_damaged_1: 1339368431
-      Violent_droite_damaged_0: -1801000117
-      Violent_droite_damaged_5: 2054550900
-      Violent_droite_damaged_4: 1711949125
-      Violent_droite_damaged_2: -2050035097
-      Violent_droite_damaged_3: 846103323
-      Violent_droite_damaged_7: 1234520282
-      Violent_droite_damaged_6: 1717469939
+      Violent_droite_damaged_1: 2128736395
+      Violent_droite_damaged_0: 1532769130
+      Violent_droite_damaged_5: -1566621419
+      Violent_droite_damaged_4: 1286049849
+      Violent_droite_damaged_2: 1661224332
+      Violent_droite_damaged_3: 669765080
+      Violent_droite_damaged_7: -1796490424
+      Violent_droite_damaged_6: -1820390018
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

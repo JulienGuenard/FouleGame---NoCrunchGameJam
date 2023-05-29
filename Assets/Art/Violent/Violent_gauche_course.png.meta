@@ -100,30 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +109,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd8749ee717c0f647829a3d55533c382
-      internalID: -2000855352
+      spriteID: 307768dc14fe79d4b8510096795a2519
+      internalID: -1257868298
       vertices: []
       indices: 
       edges: []
@@ -152,10 +128,10 @@ TextureImporter:
       name: Violent_gauche_course_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 26
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60e2018bafd5d64dae605e8a2d684c8
-      internalID: -1525248220
+      spriteID: e24e4a6c12dd0f444a79ea45c2df2349
+      internalID: -252651313
       vertices: []
       indices: 
       edges: []
@@ -173,10 +149,10 @@ TextureImporter:
       name: Violent_gauche_course_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 52
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b59e664d18bb7343a6c25930e0d9158
-      internalID: -1478072775
+      spriteID: c00c0eac070ad12408971461b544a3df
+      internalID: 272560663
       vertices: []
       indices: 
       edges: []
@@ -194,10 +170,10 @@ TextureImporter:
       name: Violent_gauche_course_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 78
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3224704736fd3e940a7075bf46df9a88
-      internalID: 1132802432
+      spriteID: 7ab8a2a04c71a9b4b98411104cd58fb1
+      internalID: 1572119756
       vertices: []
       indices: 
       edges: []
@@ -215,10 +191,10 @@ TextureImporter:
       name: Violent_gauche_course_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 104
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd75fde80d6739429e5f6382c67734b
-      internalID: -2003165484
+      spriteID: a67d45ff5a4ffd146bf274476d822d72
+      internalID: 2009389343
       vertices: []
       indices: 
       edges: []
@@ -236,10 +212,10 @@ TextureImporter:
       name: Violent_gauche_course_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 130
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c6752401c2226cd4ba6b19e20dd26e07
-      internalID: -1465246161
+      spriteID: 37dddb314aa121d4dbfbaed2ce457563
+      internalID: 302477966
       vertices: []
       indices: 
       edges: []
@@ -257,10 +233,10 @@ TextureImporter:
       name: Violent_gauche_course_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 156
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2a3109d66f81ee40bc836ad122a4aef
-      internalID: 563716763
+      spriteID: cfcdfb0435b3f8a41adee80472e6873a
+      internalID: -916359763
       vertices: []
       indices: 
       edges: []
@@ -278,10 +254,10 @@ TextureImporter:
       name: Violent_gauche_course_7
       rect:
         serializedVersion: 2
-        x: 112
+        x: 182
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: db7a3e28484cb3e41bbdcfbad254ec07
-      internalID: 1110157061
+      spriteID: 46c695579e10a414bbd417d2a9ba4431
+      internalID: 672425696
       vertices: []
       indices: 
       edges: []
@@ -306,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_gauche_course_2: -1478072775
-      Violent_gauche_course_3: 1132802432
-      Violent_gauche_course_4: -2003165484
-      Violent_gauche_course_6: 563716763
-      Violent_gauche_course_1: -1525248220
-      Violent_gauche_course_7: 1110157061
-      Violent_gauche_course_0: -2000855352
-      Violent_gauche_course_5: -1465246161
+      Violent_gauche_course_2: 272560663
+      Violent_gauche_course_3: 1572119756
+      Violent_gauche_course_4: 2009389343
+      Violent_gauche_course_6: -916359763
+      Violent_gauche_course_1: -252651313
+      Violent_gauche_course_7: 672425696
+      Violent_gauche_course_0: -1257868298
+      Violent_gauche_course_5: 302477966
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

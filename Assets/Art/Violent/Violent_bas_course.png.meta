@@ -100,30 +100,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -133,8 +109,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,8 +118,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49221f879e9d3c74eb97c39cef849aa6
-      internalID: -898541259
+      spriteID: cb428611f1f029d4e8725a9b23eea6f4
+      internalID: 644843927
       vertices: []
       indices: 
       edges: []
@@ -152,10 +128,10 @@ TextureImporter:
       name: Violent_bas_course_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 26
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5b05cd730e93d44bb919203aa6ed56f
-      internalID: 317267905
+      spriteID: c2a1a8dd5a790514ca3addd4259b1270
+      internalID: -678996217
       vertices: []
       indices: 
       edges: []
@@ -173,10 +149,10 @@ TextureImporter:
       name: Violent_bas_course_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 52
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,8 +160,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b441b44716eb3ba46819151a78875c48
-      internalID: 42946071
+      spriteID: ce8a3ae741f496a48b226402c5041baa
+      internalID: 38317292
       vertices: []
       indices: 
       edges: []
@@ -194,10 +170,10 @@ TextureImporter:
       name: Violent_bas_course_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 78
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0d79ed9f63722f40b9a22a2cff17282
-      internalID: -609112864
+      spriteID: b123fe0701128c34d87264ccb52a7686
+      internalID: -1722459539
       vertices: []
       indices: 
       edges: []
@@ -215,10 +191,10 @@ TextureImporter:
       name: Violent_bas_course_4
       rect:
         serializedVersion: 2
-        x: 64
+        x: 104
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -226,8 +202,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3161abdbbb95d5a4ca48b565dabb923a
-      internalID: 93308317
+      spriteID: 3e0d80e668c4234478873562d16adc8a
+      internalID: 905622559
       vertices: []
       indices: 
       edges: []
@@ -236,10 +212,10 @@ TextureImporter:
       name: Violent_bas_course_5
       rect:
         serializedVersion: 2
-        x: 80
+        x: 130
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -247,8 +223,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5dfec84173911af40be92d4a87165cad
-      internalID: -933461890
+      spriteID: 3be97ea32acf3e84eb0799bbf75c4c85
+      internalID: -1338313796
       vertices: []
       indices: 
       edges: []
@@ -257,10 +233,10 @@ TextureImporter:
       name: Violent_bas_course_6
       rect:
         serializedVersion: 2
-        x: 96
+        x: 156
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -268,8 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24af4f8a09694f640baf66adf208f908
-      internalID: -732690331
+      spriteID: a7a8ba8a43e40dc438514dd2ceeab3b6
+      internalID: -1039541755
       vertices: []
       indices: 
       edges: []
@@ -278,10 +254,10 @@ TextureImporter:
       name: Violent_bas_course_7
       rect:
         serializedVersion: 2
-        x: 112
+        x: 182
         y: 0
-        width: 16
-        height: 32
+        width: 26
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -289,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6333226281b59b24abacd2fd9a5f3a4c
-      internalID: 51190125
+      spriteID: 0e69706a1a52bfc4186b2df38ae999ee
+      internalID: 1835317236
       vertices: []
       indices: 
       edges: []
@@ -306,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_bas_course_3: -609112864
-      Violent_bas_course_2: 42946071
-      Violent_bas_course_7: 51190125
-      Violent_bas_course_1: 317267905
-      Violent_bas_course_6: -732690331
-      Violent_bas_course_0: -898541259
-      Violent_bas_course_4: 93308317
-      Violent_bas_course_5: -933461890
+      Violent_bas_course_3: -1722459539
+      Violent_bas_course_2: 38317292
+      Violent_bas_course_7: 1835317236
+      Violent_bas_course_1: -678996217
+      Violent_bas_course_6: -1039541755
+      Violent_bas_course_0: 644843927
+      Violent_bas_course_4: 905622559
+      Violent_bas_course_5: -1338313796
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
