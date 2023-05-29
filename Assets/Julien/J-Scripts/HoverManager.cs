@@ -56,7 +56,11 @@ public class HoverManager : MonoBehaviour
 
     public void HoverUnit(GameObject obj)
     {
+        HoverNewUnit();
         Hover();
+
+        if (hoveredUnitList.Contains(obj)) return;
+
         hoveredUnitList.Add(obj);
     }
 
@@ -70,6 +74,8 @@ public class HoverManager : MonoBehaviour
     {
         if (hoveredUnit == null) return;
         if (SelectableManager.instance.GetSelectableUnitList().Contains(hoveredUnit)) return;
+
+        Debug.Log(hoveredUnit.name);
 
         SelectableManager.instance.AddToSelectableUnitList(hoveredUnit);
     }
