@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 59f180cb1f1f33548a9d89aebef059a5
+guid: 8833bd1fe6d10d74d958c59461026918
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -100,41 +100,17 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Teteux_0
+      name: Teteux_gauche_course_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -142,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a56f23b3c3a2d5047826817c7d2a4d1b
-      internalID: 1139841354
+      spriteID: d5d1c8e25c704bb438e8f77efd0994d4
+      internalID: -288713636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teteux_1
+      name: Teteux_gauche_course_1
       rect:
         serializedVersion: 2
-        x: 16
+        x: 42
         y: 0
-        width: 16
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab3ed3eb6561a5b44ab70357ece43c18
-      internalID: 1877245566
+      spriteID: b5f33bfa385848945a5ef2a64a3cad34
+      internalID: -1721475183
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teteux_2
+      name: Teteux_gauche_course_2
       rect:
         serializedVersion: 2
-        x: 32
+        x: 84
         y: 0
-        width: 16
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1cc3cd2a68fc7d14cbeab16bc2d44c55
-      internalID: 581546875
+      spriteID: 44f7c7b51973ca042af74d6c204d5808
+      internalID: -959496155
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Teteux_3
+      name: Teteux_gauche_course_3
       rect:
         serializedVersion: 2
-        x: 48
+        x: 126
         y: 0
-        width: 16
-        height: 32
+        width: 42
+        height: 42
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -205,8 +181,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56990e9fa7c52bb4fb696e7765deed24
-      internalID: -374862090
+      spriteID: 35d4bacb3b7da0540959ae82c18e04bc
+      internalID: -555939000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Teteux_gauche_course_4
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a223a1129d5e2429fc3613a1332ce2
+      internalID: -1228077933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Teteux_gauche_course_5
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 0
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8ad7c103cfc0e4e9d0830e819152a3
+      internalID: -67224892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Teteux_gauche_course_6
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 0
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c3a870ce270fce4cada024e28b79fe6
+      internalID: 1851258398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Teteux_gauche_course_7
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 0
+        width: 42
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5e588874a65484b9ed43c307e86056
+      internalID: 833872663
       vertices: []
       indices: 
       edges: []
@@ -222,10 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Teteux_1: 1877245566
-      Teteux_2: 581546875
-      Teteux_3: -374862090
-      Teteux_0: 1139841354
+      Teteux_gauche_course_3: -555939000
+      Teteux_gauche_course_7: 833872663
+      Teteux_gauche_course_0: -288713636
+      Teteux_gauche_course_5: -67224892
+      Teteux_gauche_course_2: -959496155
+      Teteux_gauche_course_6: 1851258398
+      Teteux_gauche_course_1: -1721475183
+      Teteux_gauche_course_4: -1228077933
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
