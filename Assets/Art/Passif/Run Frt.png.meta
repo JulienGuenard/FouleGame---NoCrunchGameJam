@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a58dc5c5520dfb441b24001d3e1aa333
+guid: 6a4ef4a9e1cda3b4db80989d8961372f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Violent_bas_charge_0
+      name: Run Frt_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 42
-        height: 42
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ee101f824d9c14baa21b8a6cf8e55b
-      internalID: 3455980
+      spriteID: 61a346a7e93fa9043aa633b07a6468c8
+      internalID: -390568992
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_1
+      name: Run Frt_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 42
-        height: 42
+        x: 47
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d2cbe38369aa14aa5eb6cd8bb161a0
-      internalID: 174044471
+      spriteID: 08885a87d870f5d4aa877409d9207208
+      internalID: -1540396358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_2
+      name: Run Frt_2
       rect:
         serializedVersion: 2
-        x: 84
-        y: 0
-        width: 42
-        height: 42
+        x: 94
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc01a5c43736fa643b94d346c313cc9d
-      internalID: -833491057
+      spriteID: 1e31e63875bce094aa0ee11d65c34eed
+      internalID: 453548718
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_3
+      name: Run Frt_3
       rect:
         serializedVersion: 2
-        x: 126
-        y: 0
-        width: 42
-        height: 42
+        x: 141
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac8840356ddf30c4f9c2011c131c4bf7
-      internalID: 1367016430
+      spriteID: 3c602a4ff7c1c154082c13915aaec55a
+      internalID: -1659022595
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_4
+      name: Run Frt_4
       rect:
         serializedVersion: 2
-        x: 168
-        y: 0
-        width: 42
-        height: 42
+        x: 188
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 619b11a5296abdd4582a31d4cf998209
-      internalID: 718166201
+      spriteID: 5ee37777e4372f14d9baad0637ac09eb
+      internalID: -660742699
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_5
+      name: Run Frt_5
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 42
-        height: 42
+        x: 235
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60d3b9b96cabc8548b00852a90d1376a
-      internalID: -1665277159
+      spriteID: 0a6af46384a77bf4399dbe324338c9f6
+      internalID: -1239444309
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_6
+      name: Run Frt_6
       rect:
         serializedVersion: 2
-        x: 252
-        y: 0
-        width: 42
-        height: 42
+        x: 282
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,20 +244,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58e312de6aadd24fae8cecad98a9b12
-      internalID: 1171425257
+      spriteID: 9527d778a9c1ff4469434af7cf004546
+      internalID: -1990416067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_7
+      name: Run Frt_7
       rect:
         serializedVersion: 2
-        x: 294
-        y: 0
-        width: 42
-        height: 42
+        x: 329
+        y: 1
+        width: 47
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -265,8 +265,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8d72aec9f333814bb7f1872620996c4
-      internalID: 127737127
+      spriteID: 313cb6e5e58c0554a99297d90b1a3896
+      internalID: 305660147
       vertices: []
       indices: 
       edges: []
@@ -282,14 +282,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_bas_charge_2: -833491057
-      Violent_bas_charge_1: 174044471
-      Violent_bas_charge_0: 3455980
-      Violent_bas_charge_7: 127737127
-      Violent_bas_charge_5: -1665277159
-      Violent_bas_charge_4: 718166201
-      Violent_bas_charge_3: 1367016430
-      Violent_bas_charge_6: 1171425257
+      Run Frt_0: -390568992
+      Run Frt_2: 453548718
+      Run Frt_4: -660742699
+      Run Frt_3: -1659022595
+      Run Frt_6: -1990416067
+      Run Frt_1: -1540396358
+      Run Frt_7: 305660147
+      Run Frt_5: -1239444309
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

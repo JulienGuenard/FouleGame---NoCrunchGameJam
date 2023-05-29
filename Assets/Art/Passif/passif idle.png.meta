@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a58dc5c5520dfb441b24001d3e1aa333
+guid: e07f27ad43114c64684422a0b1edf08f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Violent_bas_charge_0
+      name: passif idle_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 42
-        height: 42
+        width: 32
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ee101f824d9c14baa21b8a6cf8e55b
-      internalID: 3455980
+      spriteID: eebbc3d2a085de64ca5a1123cd34e1f6
+      internalID: -104823780
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_1
+      name: passif idle_1
       rect:
         serializedVersion: 2
-        x: 42
+        x: 32
         y: 0
-        width: 42
-        height: 42
+        width: 32
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d2cbe38369aa14aa5eb6cd8bb161a0
-      internalID: 174044471
+      spriteID: ac19616af4c17c1479a4bd906b13e233
+      internalID: -1430428912
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_2
+      name: passif idle_2
       rect:
         serializedVersion: 2
-        x: 84
+        x: 64
         y: 0
-        width: 42
-        height: 42
+        width: 32
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc01a5c43736fa643b94d346c313cc9d
-      internalID: -833491057
+      spriteID: fbd0dfc81666bbf498dc39f84b2f666b
+      internalID: -1504041613
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_3
+      name: passif idle_3
       rect:
         serializedVersion: 2
-        x: 126
+        x: 96
         y: 0
-        width: 42
-        height: 42
+        width: 32
+        height: 49
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,92 +181,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac8840356ddf30c4f9c2011c131c4bf7
-      internalID: 1367016430
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_bas_charge_4
-      rect:
-        serializedVersion: 2
-        x: 168
-        y: 0
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 619b11a5296abdd4582a31d4cf998209
-      internalID: 718166201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_bas_charge_5
-      rect:
-        serializedVersion: 2
-        x: 210
-        y: 0
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 60d3b9b96cabc8548b00852a90d1376a
-      internalID: -1665277159
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_bas_charge_6
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 0
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d58e312de6aadd24fae8cecad98a9b12
-      internalID: 1171425257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_bas_charge_7
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 0
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8d72aec9f333814bb7f1872620996c4
-      internalID: 127737127
+      spriteID: 7001ae39561dbc2499f80e8fbfd240f4
+      internalID: 768081480
       vertices: []
       indices: 
       edges: []
@@ -282,14 +198,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_bas_charge_2: -833491057
-      Violent_bas_charge_1: 174044471
-      Violent_bas_charge_0: 3455980
-      Violent_bas_charge_7: 127737127
-      Violent_bas_charge_5: -1665277159
-      Violent_bas_charge_4: 718166201
-      Violent_bas_charge_3: 1367016430
-      Violent_bas_charge_6: 1171425257
+      passif idle_3: 768081480
+      passif idle_1: -1430428912
+      passif idle_0: -104823780
+      passif idle_2: -1504041613
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
