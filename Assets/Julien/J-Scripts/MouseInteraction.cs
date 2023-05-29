@@ -17,11 +17,15 @@ public class MouseInteraction : MonoBehaviour
     public float forceOutput;
 
     public GameObject outline;
+    public Vector3 outlineOffsetPos;
     private GameObject outlineInstancied;
+    public Material outlineMat;
+    private Material outlineMatInitial;
 
     void Awake()
     {
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
+        outlineMatInitial = spriteR.material;
     }
 
     void Update()
@@ -77,8 +81,9 @@ public class MouseInteraction : MonoBehaviour
 
         if (outlineInstancied != null) return;
 
-        outlineInstancied = Instantiate(outline, transform.position, Quaternion.identity);
+        outlineInstancied = Instantiate(outline, transform.position + outlineOffsetPos, Quaternion.identity);
         outlineInstancied.transform.parent = spriteR.transform;
+        spriteR.material = outlineMat;
     }
 
     public void Unhover()
@@ -88,6 +93,7 @@ public class MouseInteraction : MonoBehaviour
         if (outlineInstancied == null) return;
 
         Destroy(outlineInstancied);
+        spriteR.material = outlineMatInitial;
     }
 
     void Select()

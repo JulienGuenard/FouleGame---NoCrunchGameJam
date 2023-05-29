@@ -255,6 +255,8 @@ MonoBehaviour:
   undragOffset: {x: 0, y: 0, z: 0}
   forceOutput: 75
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
+  outlineOffsetPos: {x: 0, y: 0.15, z: 0}
+  outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
 --- !u!58 &7520486739068491884
 CircleCollider2D:
   m_ObjectHideFlags: 0

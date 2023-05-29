@@ -85,7 +85,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -239,6 +239,8 @@ MonoBehaviour:
   undragOffset: {x: 0, y: 0, z: 0}
   forceOutput: 0
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
+  outlineOffsetPos: {x: 0, y: 0.15, z: 0}
+  outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
 --- !u!50 &4158964545480397466
 Rigidbody2D:
   serializedVersion: 4
