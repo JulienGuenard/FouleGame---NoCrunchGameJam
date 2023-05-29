@@ -238,6 +238,7 @@ MonoBehaviour:
   sprite: {fileID: 3405310068054473756}
   undragOffset: {x: 0, y: 0, z: 0}
   forceOutput: 0
+  outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
 --- !u!50 &4158964545480397466
 Rigidbody2D:
   serializedVersion: 4

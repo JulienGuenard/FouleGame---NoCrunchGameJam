@@ -25,7 +25,11 @@ public class HoverManager : MonoBehaviour
             hoveredUnit = null;
             return;
         }
-        if (lastHoveredUnit != null) Unhover(lastHoveredUnit);
+        if (lastHoveredUnit != null)
+        {
+            if (lastHoveredUnit != hoveredUnit) Unhover(lastHoveredUnit);
+        }
+            
         Hover();
     }
 

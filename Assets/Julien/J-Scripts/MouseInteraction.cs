@@ -16,6 +16,9 @@ public class MouseInteraction : MonoBehaviour
 
     public float forceOutput;
 
+    public GameObject outline;
+    private GameObject outlineInstancied;
+
     void Awake()
     {
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
@@ -71,26 +74,31 @@ public class MouseInteraction : MonoBehaviour
     public void Hover()
     {
         isHovered = true;
-        spriteR.color = ColorManager.instance.colorHovered;
+
+        if (outlineInstancied != null) return;
+
+        outlineInstancied = Instantiate(outline, transform.position, Quaternion.identity);
+        outlineInstancied.transform.parent = spriteR.transform;
     }
 
     public void Unhover()
     {
         isHovered = false;
-        spriteR.color = ColorManager.instance.colorNeutral;
+
+        if (outlineInstancied == null) return;
+
+        Destroy(outlineInstancied);
     }
 
     void Select()
     {
         isSelected = true;
         isHovered = false;
-        spriteR.color = ColorManager.instance.colorSelected;
     }
 
     void Unselect()
     {
         isSelected = false;
-        spriteR.color = ColorManager.instance.colorNeutral;
         Undrag();
     }
 
