@@ -17,7 +17,8 @@ public class FollowCursor : MonoBehaviour
     void Update()
     {
         lastPos = transform.position;
-        transform.position = GameManager.MainCamera.ScreenToWorldPoint(Input.mousePosition) + new Vector3(0, 0, 10);
+        transform.position = GameManager.MainCamera.ScreenToWorldPoint(Input.mousePosition);
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
 
 
         float distance = (lastPos - transform.position).magnitude;
