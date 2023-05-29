@@ -224,18 +224,28 @@ public class Flock : MonoBehaviour
         {
             if(i.transform.gameObject.GetComponent<FlockAgent>() != null&&i.transform.parent != null)
             {
-                if(pourcentAgro <= 70)
-                {
+               
                     if (isPlayer)
                     {
-
-
-                        if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
-                         && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
+                        if (pourcentAgro <= 70)
                         {
-                            ennemis.Add(i.transform);
-                            target = i.transform;
-                            return true;
+                            if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
+                             && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
+                            {
+                                ennemis.Add(i.transform);
+                                target = i.transform;
+                                return true;
+                            }
+                        }
+                        else
+                        {
+                            if (i.transform.parent.tag != "Neutre"
+                            && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
+                            {
+                                ennemis.Add(i.transform);
+                                target = i.transform;
+                                return true;
+                            }
                         }
                     }
                     else
@@ -251,17 +261,8 @@ public class Flock : MonoBehaviour
                             return true;
                         }
                     }
-                }
-                else
-                {
-                    if ( i.transform.parent.tag != "Neutre"
-                    && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
-                    {
-                        ennemis.Add(i.transform);
-                        target = i.transform;
-                        return true;
-                    }
-                }
+               
+        
 
            
             }
