@@ -98,6 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flockAnimation: {fileID: 0}
+  ConvertPercent: 0
   rb: {fileID: 0}
   Health: 100
 --- !u!58 &7676536641943098886
@@ -134,6 +136,9 @@ MonoBehaviour:
   sprite: {fileID: 3510281759723149692}
   undragOffset: {x: 0, y: 0, z: 0}
   forceOutput: 0
+  outline: {fileID: 0}
+  outlineOffsetPos: {x: 0, y: 0, z: 0}
+  outlineMat: {fileID: 0}
 --- !u!114 &2724783979569385446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -148,6 +153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Passif: {fileID: 193313715011615670, guid: b22c5e77959a25a48af0f5584884d81f, type: 3}
   Aggressif: {fileID: 3849838081759355303, guid: b6856a6cbea05634db03213f7546cc1f, type: 3}
+  Health: 0
 --- !u!1 &3510281759723149692
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +227,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2f74a6187e4fbc94e97139e93e514797, type: 3}
+  m_Sprite: {fileID: 2028057729, guid: 7d62d3484a6cae1418d805b13e5cb81d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

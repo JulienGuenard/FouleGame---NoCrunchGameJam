@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1289190960004233011}
   - component: {fileID: 1289190960004233005}
-  - component: {fileID: 1289190960004233004}
+  - component: {fileID: 1857541522}
+  - component: {fileID: 1857541525}
   m_Layer: 0
   m_Name: J-Manager
   m_TagString: Untagged
@@ -48,7 +49,7 @@ MonoBehaviour:
   colorNeutral: {r: 1, g: 1, b: 1, a: 1}
   colorHovered: {r: 0.89502394, g: 1, b: 0.3433962, a: 1}
   colorSelected: {r: 0, g: 0.726316, b: 1, a: 1}
---- !u!114 &1289190960004233004
+--- !u!114 &1857541522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,4 +61,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89d11a50dd3dd4e884c6676a4f5975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoveredUnit: {fileID: 0}
+--- !u!114 &1857541525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289190960004233001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e313e338a7999ea4285b2aa0928201f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectableUnitNumberMax: 5
