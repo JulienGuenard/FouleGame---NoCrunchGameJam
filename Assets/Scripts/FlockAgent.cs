@@ -6,6 +6,7 @@ using UnityEngine;
 public class FlockAgent : MonoBehaviour
 {
     Flock agentFlock;
+    [HideInInspector] public FlockAnimation flockAnimation;
 
     [SerializeField] public float ConvertPercent = 0;
 
@@ -18,8 +19,13 @@ public class FlockAgent : MonoBehaviour
     public Collider2D AgentCollider { get { return agentCollider; } }
 
     Flock parentflock;
-    
+
     // Start is called before the first frame update
+
+    private void Awake()
+    {
+        flockAnimation = GetComponent<FlockAnimation>();
+    }
 
     public void Initialize(Flock flock)
     {
@@ -48,9 +54,9 @@ public class FlockAgent : MonoBehaviour
     {
         if (Health <= 0)
         {
-            
-            Destroy(gameObject);
+            flockAnimation.DeadAnimation();
             parentflock.agents.Remove(this);
+            Destroy(gameObject);
         }
     }
 
@@ -58,6 +64,7 @@ public class FlockAgent : MonoBehaviour
     {
         this.Health -= Dmg;
         Debug.Log("TEST DMG");
+        flockAnimation.DamagedAnimation();
     }
 
     public IEnumerator  LifeTimer( int LifeTime)

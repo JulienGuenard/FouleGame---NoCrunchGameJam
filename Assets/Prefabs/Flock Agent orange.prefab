@@ -106,7 +106,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: -898541259, guid: 6129b3c4b217b49479e3e00800855482, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -216,6 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flockAnimation: {fileID: 0}
   ConvertPercent: 0
   rb: {fileID: 4158964545480397466}
   Health: 100
@@ -270,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3de126ae7dd77040b9e61078bcfe42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadEffect: {fileID: 6928413279097990055, guid: 30ca69a7cdb543c4fad8684687e3078f, type: 3}
 --- !u!58 &7406124451690299001
 CircleCollider2D:
   m_ObjectHideFlags: 0

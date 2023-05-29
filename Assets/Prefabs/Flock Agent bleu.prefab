@@ -232,6 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flockAnimation: {fileID: 0}
   ConvertPercent: 0
   rb: {fileID: 0}
   Health: 100
@@ -302,3 +303,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3de126ae7dd77040b9e61078bcfe42b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deadEffect: {fileID: 6928413279097990055, guid: 30ca69a7cdb543c4fad8684687e3078f, type: 3}

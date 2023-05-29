@@ -445,6 +445,11 @@ public class Flock : MonoBehaviour
             DistancePos = lauchDir;
             agent.Move(lauchDir * LauchForce);
             IsLaunch = true;
+
+            agent.flockAnimation.ChargeAnimation();
+        }else
+        {
+            agent.flockAnimation.EndChargeAnimation();
         }
       
 
