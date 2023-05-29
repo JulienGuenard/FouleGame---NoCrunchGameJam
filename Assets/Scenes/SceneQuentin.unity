@@ -311,8 +311,12 @@ MonoBehaviour:
   RepulseForce: 0
   DMG: 0
   radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
+  destroy: 1
   chef: {fileID: 1735468291}
   TIMER: 2
+  timebtwDeath: 0
   agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: eae417c25276e8f4ab81008cfb77642b, type: 2}
@@ -339,6 +343,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &541822442
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 541822444}
+  - component: {fileID: 541822443}
+  m_Layer: 0
+  m_Name: Flock universel (2)
+  m_TagString: Neutre
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &541822443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541822442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
+  destroy: 1
+  chef: {fileID: 1735468291}
+  TIMER: 2
+  timebtwDeath: 0
+  agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
+  agents: []
+  behavior: {fileID: 11400000, guid: eae417c25276e8f4ab81008cfb77642b, type: 2}
+  compteur: 0
+  isAgressif: 0
+  isPacifique: 0
+  addnew: 0
+  strartingCount: 100
+  driveFactor: 52.7
+  maxSpeed: 0.2
+  neighborRadius: 1.35
+  avoidanceRadiusMultiplier: 1.95
+--- !u!4 &541822444
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541822442}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &691142301
 PrefabInstance:
@@ -722,8 +794,12 @@ MonoBehaviour:
   RepulseForce: 10
   DMG: 10
   radius: 2
+  MaxConvert: 0
+  Multiplicater: 0
+  destroy: 1
   chef: {fileID: 788447620}
   TIMER: 2
+  timebtwDeath: 5
   agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
@@ -732,10 +808,10 @@ MonoBehaviour:
   isPacifique: 0
   addnew: 0
   strartingCount: 10
-  driveFactor: 52
+  driveFactor: 2
   maxSpeed: 2
   neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.259
+  avoidanceRadiusMultiplier: 0.1
 --- !u!4 &1638876565
 Transform:
   m_ObjectHideFlags: 0
@@ -767,7 +843,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1700698680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,9 +862,13 @@ MonoBehaviour:
   RepulseForce: 0
   DMG: 0
   radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
+  destroy: 1
   chef: {fileID: 1735468291}
   TIMER: 2
-  agentPrefab: {fileID: 5343778298011262044, guid: 07a05ba758e97e749859336fe254bdfa, type: 3}
+  timebtwDeath: 0
+  agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: eae417c25276e8f4ab81008cfb77642b, type: 2}
   compteur: 0
@@ -984,10 +1064,14 @@ MonoBehaviour:
   ChargedTime: 0
   RepulseForce: 0
   DMG: 0
-  radius: 0
+  radius: 2
+  MaxConvert: 0
+  Multiplicater: 1
+  destroy: 1
   chef: {fileID: 788447620}
   TIMER: 2
-  agentPrefab: {fileID: 5343778298011262044, guid: 07a05ba758e97e749859336fe254bdfa, type: 3}
+  timebtwDeath: 5
+  agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
   compteur: 0
@@ -995,10 +1079,10 @@ MonoBehaviour:
   isPacifique: 1
   addnew: 0
   strartingCount: 10
-  driveFactor: 52.7
-  maxSpeed: 2
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.244
+  driveFactor: 1
+  maxSpeed: 1
+  neighborRadius: 1
+  avoidanceRadiusMultiplier: 0.1
 --- !u!4 &1790926523
 Transform:
   m_ObjectHideFlags: 0

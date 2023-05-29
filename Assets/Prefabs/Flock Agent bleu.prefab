@@ -41,6 +41,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8144567599109322388}
   - component: {fileID: 6725954552759890413}
+  - component: {fileID: 1467697580}
+  - component: {fileID: 1467697579}
+  - component: {fileID: 507975024}
   m_Layer: 0
   m_Name: Flock Agent Sprite
   m_TagString: Untagged
@@ -104,8 +107,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-  m_Color: {r: 0, g: 1, b: 0.98226285, a: 1}
+  m_Sprite: {fileID: 1139841354, guid: 59f180cb1f1f33548a9d89aebef059a5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -115,6 +118,53 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1467697580
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405310068054473756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f236768b4d30d0b469da2fcc29ff4442, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1467697579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405310068054473756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c278004dd3f54e9cb391ce8f898d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &507975024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3405310068054473756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeec1430efc19194d950a6a7e5ad7ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  layerOffset: 0
+  lookAtParent: 1
+  changeZ: 0
 --- !u!1 &4189879585582541447
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,9 +177,12 @@ GameObject:
   - component: {fileID: 6024399551065564511}
   - component: {fileID: 5343778298011262044}
   - component: {fileID: 9079357006144876075}
+  - component: {fileID: 7520486739068491884}
+  - component: {fileID: -5385522925458044981}
+  - component: {fileID: 8385057674806337724}
   m_Layer: 0
   m_Name: Flock Agent bleu
-  m_TagString: Untagged
+  m_TagString: agressif
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -179,6 +232,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  flockAnimation: {fileID: 0}
+  ConvertPercent: 0
+  rb: {fileID: 0}
+  Health: 100
 --- !u!114 &9079357006144876075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +252,55 @@ MonoBehaviour:
   isSelected: 0
   offset: {x: 0, y: 0, z: 0}
   sprite: {fileID: 3405310068054473756}
-  shadow: {fileID: 3098860261327507958}
-  shadowDragOffset: {x: 0, y: 0, z: 0}
   undragOffset: {x: 0, y: 0, z: 0}
+  forceOutput: 75
+--- !u!58 &7520486739068491884
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189879585582541447}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.07
+--- !u!50 &-5385522925458044981
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189879585582541447}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &8385057674806337724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189879585582541447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de126ae7dd77040b9e61078bcfe42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deadEffect: {fileID: 6928413279097990055, guid: 30ca69a7cdb543c4fad8684687e3078f, type: 3}
