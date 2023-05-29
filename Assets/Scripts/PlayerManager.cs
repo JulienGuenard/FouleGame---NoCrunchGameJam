@@ -41,4 +41,12 @@ public class PlayerManager : MonoBehaviour
             cinemachine.m_Lens.OrthographicSize = Mathf.Log(camsize+3,2);
         }
     }
+
+    public void CHeckGameOver(int compteur)
+    {
+        if(compteur == 0) 
+        {
+            MenuManager.Instance.LoadScene("MenuGameOver");
+        }
+    }
 }

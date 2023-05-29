@@ -71,7 +71,7 @@ public class MenuManager : MonoBehaviour
             }
             else
             {
-                    Pause();  
+               Pause();  
             }
         }
     }
