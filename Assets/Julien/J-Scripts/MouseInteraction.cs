@@ -116,5 +116,6 @@ public class MouseInteraction : MonoBehaviour
     void Undrag()
     {
         transform.position += undragOffset;
+        TryToUnhover();
     }
 }
