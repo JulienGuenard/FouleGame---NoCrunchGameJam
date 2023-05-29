@@ -11,8 +11,7 @@ TagManager:
   - Chefs
   - agressif
   - passif
-  - UiAgressif
-  - UiPassif
+  - Neutre1
   layers:
   - Default
   - TransparentFX

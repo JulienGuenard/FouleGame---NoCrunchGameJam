@@ -50,9 +50,13 @@ MonoBehaviour:
   RepulseForce: 0
   DMG: 0
   radius: 0
+  MaxConvert: 0
+  Multiplicater: 0
+  destroy: 1
   chef: {fileID: 0}
   TIMER: 2
-  agentPrefab: {fileID: 5343778298011262044, guid: 07a05ba758e97e749859336fe254bdfa, type: 3}
+  timebtwDeath: 0
+  agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
   compteur: 0
@@ -60,7 +64,7 @@ MonoBehaviour:
   isPacifique: 1
   addnew: 0
   strartingCount: 10
-  driveFactor: 52.7
-  maxSpeed: 2
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.244
+  driveFactor: 1
+  maxSpeed: 1
+  neighborRadius: 1
+  avoidanceRadiusMultiplier: 0.1
