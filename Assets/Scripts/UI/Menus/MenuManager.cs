@@ -7,6 +7,7 @@ public class MenuManager : MonoBehaviour
 {
     public static bool GameIsPaused = false;
     [SerializeField] GameObject PauseMenu;
+    [SerializeField] GameObject InterfaceIG;
     public static MenuManager Instance { get; private set; }
 
     private void Awake()
@@ -52,12 +53,14 @@ public class MenuManager : MonoBehaviour
         ClearMenu(PauseMenu);
         Time.timeScale = 1f;
         GameIsPaused = false;
+        ActiveMenu(InterfaceIG);
     }
     public void Pause()
     {
         ActiveMenu(PauseMenu);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        ClearMenu(InterfaceIG);
     }
 
     void CheckPause()
