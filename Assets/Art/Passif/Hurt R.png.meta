@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a58dc5c5520dfb441b24001d3e1aa333
+guid: 50fda23d096f4d74db53c346c03cd33b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -104,13 +104,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Violent_bas_charge_0
+      name: Hurt R_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 42
-        height: 42
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94ee101f824d9c14baa21b8a6cf8e55b
-      internalID: 3455980
+      spriteID: f253bba67bf43e24b89877cf57872dc8
+      internalID: 169840246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_1
+      name: Hurt R_1
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 42
-        height: 42
+        x: 48
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +139,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19d2cbe38369aa14aa5eb6cd8bb161a0
-      internalID: 174044471
+      spriteID: 9246130c0c0bc6d469094fd090ba801a
+      internalID: -359634158
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_2
+      name: Hurt R_2
       rect:
         serializedVersion: 2
-        x: 84
-        y: 0
-        width: 42
-        height: 42
+        x: 96
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +160,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc01a5c43736fa643b94d346c313cc9d
-      internalID: -833491057
+      spriteID: 564892a5318602c41b2828fb353bbf2f
+      internalID: 1949893804
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_3
+      name: Hurt R_3
       rect:
         serializedVersion: 2
-        x: 126
-        y: 0
-        width: 42
-        height: 42
+        x: 144
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac8840356ddf30c4f9c2011c131c4bf7
-      internalID: 1367016430
+      spriteID: c7df30ddc5a27444da3c4cf2997ca5b8
+      internalID: -1397851584
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_4
+      name: Hurt R_4
       rect:
         serializedVersion: 2
-        x: 168
-        y: 0
-        width: 42
-        height: 42
+        x: 192
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -202,20 +202,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 619b11a5296abdd4582a31d4cf998209
-      internalID: 718166201
+      spriteID: f7293454b7ae83a4db484bf90f4f187c
+      internalID: 408758561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_5
+      name: Hurt R_5
       rect:
         serializedVersion: 2
-        x: 210
-        y: 0
-        width: 42
-        height: 42
+        x: 240
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -223,20 +223,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 60d3b9b96cabc8548b00852a90d1376a
-      internalID: -1665277159
+      spriteID: 6915fe4dd96f3f54ba6d1b1812780c0e
+      internalID: -1381811011
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Violent_bas_charge_6
+      name: Hurt R_6
       rect:
         serializedVersion: 2
-        x: 252
-        y: 0
-        width: 42
-        height: 42
+        x: 288
+        y: 1
+        width: 48
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -244,29 +244,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d58e312de6aadd24fae8cecad98a9b12
-      internalID: 1171425257
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Violent_bas_charge_7
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 0
-        width: 42
-        height: 42
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b8d72aec9f333814bb7f1872620996c4
-      internalID: 127737127
+      spriteID: 3bcdb649c90e5234494fa49d0e07d66d
+      internalID: -838352193
       vertices: []
       indices: 
       edges: []
@@ -282,14 +261,13 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Violent_bas_charge_2: -833491057
-      Violent_bas_charge_1: 174044471
-      Violent_bas_charge_0: 3455980
-      Violent_bas_charge_7: 127737127
-      Violent_bas_charge_5: -1665277159
-      Violent_bas_charge_4: 718166201
-      Violent_bas_charge_3: 1367016430
-      Violent_bas_charge_6: 1171425257
+      Hurt R_1: -359634158
+      Hurt R_0: 169840246
+      Hurt R_2: 1949893804
+      Hurt R_6: -838352193
+      Hurt R_3: -1397851584
+      Hurt R_5: -1381811011
+      Hurt R_4: 408758561
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

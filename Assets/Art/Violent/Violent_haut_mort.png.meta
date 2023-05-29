@@ -133,8 +133,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,10 +152,10 @@ TextureImporter:
       name: Violent_haut_mort_1
       rect:
         serializedVersion: 2
-        x: 64
+        x: 74
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Violent_haut_mort_2
       rect:
         serializedVersion: 2
-        x: 128
+        x: 148
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: Violent_haut_mort_3
       rect:
         serializedVersion: 2
-        x: 192
+        x: 222
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,10 +215,10 @@ TextureImporter:
       name: Violent_haut_mort_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 296
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,10 +236,10 @@ TextureImporter:
       name: Violent_haut_mort_5
       rect:
         serializedVersion: 2
-        x: 320
+        x: 370
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Violent_haut_mort_6
       rect:
         serializedVersion: 2
-        x: 384
+        x: 444
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,10 +278,10 @@ TextureImporter:
       name: Violent_haut_mort_7
       rect:
         serializedVersion: 2
-        x: 448
+        x: 518
         y: 0
-        width: 64
-        height: 64
+        width: 74
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
