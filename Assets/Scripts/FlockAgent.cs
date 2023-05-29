@@ -63,8 +63,8 @@ public class FlockAgent : MonoBehaviour
     public void TakeDamage(int Dmg)
     {
         this.Health -= Dmg;
-        Debug.Log("TEST DMG");
-        flockAnimation.DamagedAnimation();
+       
+        /*flockAnimation.DamagedAnimation();*/
     }
 
     public IEnumerator  LifeTimer( int LifeTime)

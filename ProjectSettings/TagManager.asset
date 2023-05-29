@@ -11,6 +11,7 @@ TagManager:
   - Chefs
   - agressif
   - passif
+  - Neutre1
   layers:
   - Default
   - TransparentFX
