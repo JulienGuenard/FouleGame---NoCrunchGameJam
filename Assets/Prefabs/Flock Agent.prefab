@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 8561261267107352624}
   m_Layer: 0
   m_Name: Flock Agent
-  m_TagString: Untagged
+  m_TagString: passif
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -180,6 +180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rb: {fileID: 0}
+  Health: 100
 --- !u!58 &8466090791002944358
 CircleCollider2D:
   m_ObjectHideFlags: 0

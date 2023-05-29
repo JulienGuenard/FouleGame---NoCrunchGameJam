@@ -240,7 +240,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &241632477
 MonoBehaviour:
@@ -305,16 +305,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
   chef: {fileID: 1735468291}
   TIMER: 2
-  agentPrefab: {fileID: 5343778298011262044, guid: f4518e2d835a7ff4698fca1a4ea5a142, type: 3}
+  agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
   agents: []
   behavior: {fileID: 11400000, guid: eae417c25276e8f4ab81008cfb77642b, type: 2}
   compteur: 0
   isAgressif: 0
   isPacifique: 0
   addnew: 0
-  strartingCount: 200
+  strartingCount: 100
   driveFactor: 52.7
   maxSpeed: 0.2
   neighborRadius: 1.35
@@ -332,7 +338,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &691142301
 PrefabInstance:
@@ -679,7 +685,7 @@ Transform:
   m_Children:
   - {fileID: 728012502}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638876563
 GameObject:
@@ -710,6 +716,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
+  LauchForce: 2
+  ChargedTime: 1
+  RepulseForce: 10
+  DMG: 10
+  radius: 2
   chef: {fileID: 788447620}
   TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
@@ -739,6 +751,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1700698679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1700698681}
+  - component: {fileID: 1700698680}
+  m_Layer: 0
+  m_Name: Flock universel (1)
+  m_TagString: Neutre
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1700698680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700698679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 0
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
+  chef: {fileID: 1735468291}
+  TIMER: 2
+  agentPrefab: {fileID: 5343778298011262044, guid: 07a05ba758e97e749859336fe254bdfa, type: 3}
+  agents: []
+  behavior: {fileID: 11400000, guid: eae417c25276e8f4ab81008cfb77642b, type: 2}
+  compteur: 0
+  isAgressif: 0
+  isPacifique: 0
+  addnew: 0
+  strartingCount: 100
+  driveFactor: 52.7
+  maxSpeed: 0.2
+  neighborRadius: 1.35
+  avoidanceRadiusMultiplier: 1.95
+--- !u!4 &1700698681
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1700698679}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735468291
 GameObject:
   m_ObjectHideFlags: 0
@@ -764,12 +840,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735468291}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.64424, y: -1.4700941, z: 2.1979802}
+  m_LocalPosition: {x: 0, y: -1.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1735468293
 MonoBehaviour:
@@ -784,6 +860,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   machine: {fileID: 1358689036}
+  "unit\xE9taille": 2
+  tailleGrille: 5
+  ChefFoule: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
+  saferayon: 10
+  NombreFouleActuelle: 0
+  maxNombreFoule: 3
 --- !u!1 &1750164888
 GameObject:
   m_ObjectHideFlags: 0
@@ -897,6 +979,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 1
+  LauchForce: 0
+  ChargedTime: 0
+  RepulseForce: 0
+  DMG: 0
+  radius: 0
   chef: {fileID: 788447620}
   TIMER: 2
   agentPrefab: {fileID: 5343778298011262044, guid: 07a05ba758e97e749859336fe254bdfa, type: 3}
@@ -943,4 +1031,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c89d11a50dd3dd4e884c6676a4f5975, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoveredUnit: {fileID: 0}

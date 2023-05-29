@@ -5,4 +5,5 @@ using UnityEngine;
 public abstract class FlockBehavior : ScriptableObject
 {
     public abstract Vector2 CalculateMove(FlockAgent agent, List<Transform> context, Flock flock, Vector2 chefpos);
+
 }
