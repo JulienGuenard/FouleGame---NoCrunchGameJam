@@ -42,6 +42,8 @@ public class HoverManager : MonoBehaviour
             Vector3 objPos = obj.transform.position - new Vector3(0, 0, obj.transform.position.z);
             float distance = (objPos - cursorPos).magnitude;
 
+            if (SelectableManager.instance.GetSelectableUnitList().Contains(obj)) continue; // continue passe l'itération, break passe la boucle entière (comme return avec les fonctions)
+
             if (distanceNearest == 0) distanceNearest = distance;
 
             if (hoveredUnit == null || distance < distanceNearest)

@@ -59,7 +59,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2724783979569385447}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 15.65, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -164,6 +164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7994523529623589876}
   - component: {fileID: 4801529726743794829}
+  - component: {fileID: 3351672448256970630}
   m_Layer: 0
   m_Name: Flock Agent Sprite
   m_TagString: Untagged
@@ -238,6 +239,33 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3351672448256970630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3510281759723149692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_ComponentVersion: 1
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 00000000
+  m_ShapePath:
+  - {x: -0.01536613, y: -0.14806116, z: 0}
+  - {x: -0.01293768, y: -0.12914956, z: 0}
+  - {x: 0.0151079595, y: -0.12967157, z: 0}
+  - {x: 0.014083594, y: -0.14827669, z: 0}
+  m_ShapePathHash: 1073530717
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -72494
 --- !u!1 &4701919982875239189
 GameObject:
   m_ObjectHideFlags: 0

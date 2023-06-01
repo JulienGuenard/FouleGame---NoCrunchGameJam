@@ -459,7 +459,9 @@ public class Flock : MonoBehaviour
        
         if(Pacifist != null)
         {
-            for (int i = 0; Pacifist.GetComponent<FlockAgent>().ConvertPercent < MaxConvert; i++)
+            float convertPercent = Pacifist.GetComponent<FlockAgent>().ConvertPercent; // To avoid nullreference exceptions errors
+
+            for (int i = 0; convertPercent < MaxConvert; i++)
             {
                 if (Pacifist == null)
                 {
