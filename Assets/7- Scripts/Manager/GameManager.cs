@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameObject neutre;
+    public static Flock neutreFlock;
     public static GameObject Player;
     public static Camera MainCamera;
     public static GameManager GameMa;
@@ -26,6 +27,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         neutre = GameObject.FindGameObjectWithTag("Neutre");
+        neutreFlock = GameManager.neutre.GetComponent<Flock>();
         GameMa = this;
         Player = GameObject.FindGameObjectWithTag("Player");
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

@@ -6,7 +6,7 @@ using System.Linq;
 public class Flock : MonoBehaviour
 {
     public bool isPlayer;
-    private Transform Target;
+    private FlockAgent Target;
     [SerializeField] float LauchForce;
     [SerializeField] float ChargedTime;
     [SerializeField] float RepulseForce;
@@ -46,11 +46,11 @@ public class Flock : MonoBehaviour
     public int strartingCount = 250;
     const float AgentDensity = 0.08f;
 
-    [Range(1f, 100f)]
+    [Range(0.05f, 100f)]
     public float driveFactor = 10f;
     [Range(0f, 100f)]
     public float maxSpeed = 5f;
-    [Range(1f, 10f)]
+    [Range(0.05f, 10f)]
     public float neighborRadius = 1.5f;
     [Range(0f, 20f)]
     public float avoidanceRadiusMultiplier = 0.5f;
@@ -74,53 +74,73 @@ public class Flock : MonoBehaviour
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
 
+        StartCoroutine(SpawnAgents());
+    }
+
+    IEnumerator SpawnAgents()
+    {
         for (int i = 0; i < strartingCount; i++)
         {
+            yield return new WaitForSeconds(0.01f);
             FlockAgent newAgent = Instantiate(
                 agentPrefab,
                 chef.transform.position + Random.insideUnitSphere * strartingCount * AgentDensity,
-                Quaternion.Euler(Vector3.forward * Random.Range(0,360f)),
+                Quaternion.Euler(Vector3.forward * Random.Range(0, 360f)),
                 transform
                 );
             newAgent.name = "Agent " + i;
             newAgent.Initialize(this);
             agents.Add(newAgent);
         }
-       
+
+        yield return new WaitForSeconds(1f);
+
+        foreach(FlockAgent agent in agents)
+        {
+            yield return new WaitForSeconds(0.01f);
+            agent.canCalculateMove = true;
+            agent.canCheckEnemies = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    void Aggro()
     {
-        if (isPlayer && GameManager.Player.GetComponent<PlayerManager>().compteurTotal!=0)
+        if (isPlayer && PlayerManager.instance.compteurTotal != 0)
         {
-            pourcentAgro = (100 * GameManager.Player.GetComponent<PlayerManager>().compteurAggro) / GameManager.Player.GetComponent<PlayerManager>().compteurTotal;
-
-         
+            pourcentAgro = (100 * PlayerManager.instance.compteurAggro) / PlayerManager.instance.compteurTotal;
         }
-      
-        
+    }
+
+    void IncrementTimedDead()
+    {
         if (!addnew)
         {
             timer -= Time.deltaTime;
-            if(timer <= 0)
+            if (timer <= 0)
             {
                 addnew = true;
                 timer = TIMER;
             }
         }
-        foreach(FlockAgent agent in agents.ToArray())
+    }
+
+    void GroupMovement()
+    {
+        foreach (FlockAgent agent in agents.ToArray())
         {
-            if(this.tag == "Neutre")
+            // Passif Conversion
+            if (this.tag == "Neutre")
             {
                 if (agent.ConvertPercent > 0)
                 {
                     agent.ConvertPercent = 0;
                 }
             }
-            if(agent != null&&chef != null)
+
+            // Movement Behaviour
+            if (agent != null && chef != null)
             {
-                if (!agent.GetComponent<MouseInteraction>().isSelected)
+                if (!agent.mouseInteraction.isSelected)
                 {
 
                     agent.CheckHP();
@@ -140,7 +160,9 @@ public class Flock : MonoBehaviour
 
                 }
             }
-            if((chef == null&&agent != null)||(agent.ConvertPercent == 100&&agent !=null))
+
+            // Conversion
+            if ((chef == null && agent != null) || (agent.ConvertPercent == 100 && agent != null))
             {
                 if (agent.ConvertPercent > 0)
                 {
@@ -148,20 +170,23 @@ public class Flock : MonoBehaviour
                 }
                 agents.Remove(agent);
                 agent.transform.SetParent(GameManager.neutre.transform, true);
-                GameManager.neutre.GetComponent<Flock>().agents.Add(agent);
-                if(agents.Count == 0)
+                GameManager.neutreFlock.agents.Add(agent);
+                if (agents.Count == 0)
                 {
                     Destroy(gameObject);
                 }
-        
             }
-            if(agent == null)
+
+            // Remove null agent
+            if (agent == null)
             {
                 agents.Remove(agent);
             }
-     
-            
         }
+    }
+
+    void TimedDead()
+    {
         compteur = agents.Count;
         if (isPlayer && agents.Count != 0)
         {
@@ -172,10 +197,18 @@ public class Flock : MonoBehaviour
 
                 Destroy(agents.First().gameObject);
                 agents.Remove(agents.First());
-              
+
                 timer2 = timebtwDeath;
             }
         }
+    }
+
+    void Update()
+    {
+        Aggro();
+        IncrementTimedDead();
+        GroupMovement();
+        TimedDead();
     }
 
     List<Transform> GetNearbyObjects(FlockAgent agent)
@@ -186,25 +219,25 @@ public class Flock : MonoBehaviour
         {
             if(c != agent.AgentCollider && !c.CompareTag("Cursor")&&c.transform.parent!=null)
             {
-               
-         
+
                 if (c.transform.parent.CompareTag("Neutre")&&addnew&&isPlayer)
                 {
-                    Flock flockpassif = chef.GetComponent<PlayerManager>().flockPaco;
-                    Flock flockaggressif = chef.GetComponent<PlayerManager>().flockAggro;
-                    Flock cflock = c.GetComponentInParent<Flock>();
+                    Flock flockpassif = PlayerManager.instance.flockPaco;
+                    Flock flockaggressif = PlayerManager.instance.flockAggro;
+                    FlockAgent cflockAgent = c.GetComponent<FlockAgent>();
+                    Flock cflockParent = cflockAgent.parentflock;
 
-                    cflock.agents.Remove(c.GetComponent<FlockAgent>());
+                    cflockParent.agents.Remove(cflockAgent);
                     if(c.transform.tag == "passif")
                     {
                         c.transform.SetParent(flockpassif.transform, true);
-                        flockpassif.agents.Add(c.GetComponent<FlockAgent>());
+                        flockpassif.agents.Add(cflockAgent);
                         addnew = false;
                     }
                     if (c.transform.tag == "agressif")
                     {
                         c.transform.SetParent(flockaggressif.transform, true);
-                        flockaggressif.agents.Add(c.GetComponent<FlockAgent>());
+                        flockaggressif.agents.Add(cflockAgent);
                         addnew = false;
                     }
                    
@@ -216,24 +249,24 @@ public class Flock : MonoBehaviour
         return context;
     }
 
-    bool GetEnnemis(FlockAgent agent, out Transform target)
+    bool GetEnnemis(FlockAgent agent, out FlockAgent target)
     {
         List<Transform> ennemis = new List<Transform>();
         Collider2D[] ennemisCollider = Physics2D.OverlapCircleAll(agent.transform.position, radius);
         foreach (Collider2D i in ennemisCollider)
         {
-            if(i.transform.gameObject.GetComponent<FlockAgent>() != null&&i.transform.parent != null)
+            FlockAgent iFlockAgent = i.transform.gameObject.GetComponent<FlockAgent>();
+            if (iFlockAgent != null&&i.transform.parent != null)
             {
-               
                     if (isPlayer)
                     {
                         if (pourcentAgro <= 70)
                         {
-                            if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
+                            if (!agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
                              && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
                             {
                                 ennemis.Add(i.transform);
-                                target = i.transform;
+                                target = iFlockAgent;
                                 return true;
                             }
                         }
@@ -243,7 +276,7 @@ public class Flock : MonoBehaviour
                             && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
                             {
                                 ennemis.Add(i.transform);
-                                target = i.transform;
+                                target = iFlockAgent;
                                 return true;
                             }
                         }
@@ -251,12 +284,12 @@ public class Flock : MonoBehaviour
                     else
                     {
 
-                        if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "Ennemi"
+                        if (!agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "Ennemi"
                             && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
                         {
 
                             ennemis.Add(i.transform);
-                            target = i.transform;
+                            target = iFlockAgent;
 
                             return true;
                         }
@@ -269,7 +302,7 @@ public class Flock : MonoBehaviour
             if(i.transform.tag == "Chefs"&&isPlayer)
             {
                 ennemis.Add(i.transform);
-                target = i.transform;
+                target = iFlockAgent;
 
                 return true;
             }
@@ -280,35 +313,36 @@ public class Flock : MonoBehaviour
        
     }
 
-    bool GetPassif(FlockAgent agent, out Transform target)
+    bool GetPassif(FlockAgent agent, out FlockAgent target)
     {
         List<Transform> ennemis = new List<Transform>();
         Collider2D[] ennemisCollider = Physics2D.OverlapCircleAll(agent.transform.position, radius);
         foreach (Collider2D i in ennemisCollider)
         {
-            if (i.transform.gameObject.GetComponent<FlockAgent>() != null && i.transform.parent != null&&i.transform.tag == "passif")
+            FlockAgent iFlockAgent = i.transform.gameObject.GetComponent<FlockAgent>();
+            if (iFlockAgent != null && i.transform.parent != null && i.transform.tag == "passif")
             {
                 if (isPlayer)
                 {
 
 
-                    if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
+                    if (!agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
                      && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
                     {
                         ennemis.Add(i.transform);
-                        target = i.transform;
+                        target = iFlockAgent;
                         return true;
                     }
                 }
                 else
                 {
 
-                    if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "Ennemi"
+                    if (!agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "Ennemi"
                         && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
                     {
 
                         ennemis.Add(i.transform);
-                        target = i.transform;
+                        target = iFlockAgent;
 
                         return true;
                     }
@@ -317,11 +351,11 @@ public class Flock : MonoBehaviour
             }
             if(i.transform.tag == "agressif" && i.transform.parent.tag != "PlayerFlock")
             {
-                if (!agents.Contains(i.transform.GetComponent<FlockAgent>()) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
+                if (!agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "PlayerFlock"
                 && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
                 {
                     ennemis.Add(i.transform);
-                    target = i.transform;
+                    target = iFlockAgent;
                     return true;
                 }
             }
@@ -336,42 +370,40 @@ public class Flock : MonoBehaviour
     {
         float distance = Vector2.Distance(chef.transform.position, agent.transform.position);
         float Speed = Mathf.Clamp(distance, 1, maxSpeed);
-        List<Transform> context = GetNearbyObjects(agent);
-        ennemis = GetEnnemis(agent,out Transform target);
+        FlockAgent target = null;
 
-        
-        Vector2 move;
+        if (agent.canCheckEnemies)
+        {
+            agent.UnableCheckEnemies();
+            ennemis = GetEnnemis(agent, out target);
+        }
 
-
-        
-        
-            if(target != null)
+            if (target != null)
             {
                 Target = target;
             }
-        
 
             if (ennemis == true && Target != null)
             {
-               
-           
-            
-       
                     StartCoroutine(ChargedAttack(agent)); 
             }
             else
             {
-         
-                move = behavior.CalculateMove(agent, context, this, chef.transform.position);
-                move *= driveFactor;
-                if (move.sqrMagnitude > squareMaxSpeed)
+                if (agent.canCalculateMove)
                 {
-                    move = move.normalized * Speed;
-                }
-                agent.Move(move);
+                    agent.UnableCalculateMove();
+                    List<Transform> context = GetNearbyObjects(agent);
+                    agent.move = behavior.CalculateMove(agent, context, this, chef.transform.position);
+                    agent.move *= driveFactor;
+                    if (agent.move.sqrMagnitude > squareMaxSpeed)
+                    {
+                        agent.move = agent.move.normalized * Speed;
+                    }
+            }
+                agent.Move(agent.move);
             }
       
-
+        
 
     }
     public void CheckAttack(FlockAgent agent)
@@ -388,19 +420,19 @@ public class Flock : MonoBehaviour
     {
         float distance = Vector2.Distance(chef.transform.position, agent.transform.position);
         float Speed = Mathf.Clamp(distance, 1, maxSpeed);
-        List<Transform> context = GetNearbyObjects(agent);
-        ennemis = GetPassif(agent, out Transform target);
+        FlockAgent target = null;
 
-
-        Vector2 move;
-
-       
+        if (agent.canCheckEnemies)
+        {
+            agent.UnableCheckEnemies();
+            ennemis = GetPassif(agent, out target);
+        }
 
         if (target != null)
         {
-            if (target.parent.tag == "PlayerFlock")
+            if (target.transform.parent.tag == "PlayerFlock")
             {
-                Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+
             }
             Target = target;
         }
@@ -424,14 +456,19 @@ public class Flock : MonoBehaviour
         }
         else
         {
-
-            move = behavior.CalculateMove(agent, context, this, chef.transform.position);
-            move *= driveFactor;
-            if (move.sqrMagnitude > squareMaxSpeed)
+            if (agent.canCalculateMove)
             {
-                move = move.normalized * Speed;
+                agent.UnableCalculateMove();
+                List<Transform> context = GetNearbyObjects(agent);
+                agent.move = behavior.CalculateMove(agent, context, this, chef.transform.position);
+                agent.move *= driveFactor;
+                if (agent.move.sqrMagnitude > squareMaxSpeed)
+                {
+                    agent.move = agent.move.normalized * Speed;
+                }
             }
-            agent.Move(move);
+
+            agent.Move(agent.move);
         }
 
 
@@ -500,9 +537,8 @@ public class Flock : MonoBehaviour
         }
 
     }
-    public void ChaseAnotherEntity(Transform other, FlockAgent agent)
+    public void ChaseAnotherEntity(FlockAgent other, FlockAgent agent)
     {
-        Debug.Log("adzdqdz");
             float Distance = Vector2.Distance(agent.transform.position, other.transform.position);
             Vector2 direction = other.transform.position - agent.transform.position;
             direction.Normalize();
@@ -536,8 +572,8 @@ public class Flock : MonoBehaviour
 
         if(Target != null)
         {
-            float LaucnhDirectionX = Target.position.x;
-            float LaucnhDIrectionY = Target.position.y;
+            float LaucnhDirectionX = Target.transform.position.x;
+            float LaucnhDIrectionY = Target.transform.position.y;
             float posX = agent.transform.position.x;
             float posY = agent.transform.position.y;
 
@@ -556,7 +592,7 @@ public class Flock : MonoBehaviour
             yield return new WaitForSeconds(ChargedTime);
         if(agent != null&&Target!=null)
         {
-            Ennemidistance = Vector2.Distance(Target.position, agent.transform.position);
+            Ennemidistance = Vector2.Distance(Target.transform.position, agent.transform.position);
         }
         
   
@@ -577,7 +613,6 @@ public class Flock : MonoBehaviour
         agents.Remove(agents.Last());
         yield return new WaitForSeconds(LifeTime);
         destroy = true;
-        Debug.Log("Destroyed");
 
 
     }

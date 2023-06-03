@@ -922,7 +922,7 @@ Transform:
   m_GameObject: {fileID: 611740612}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -18.8, z: 0}
-  m_LocalScale: {x: 64, y: 64, z: 1}
+  m_LocalScale: {x: 64, y: 143.0136, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2625,8 +2625,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 284271545}
     - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: TIMER
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: behavior
+      value: 
+      objectReference: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
+    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: maxSpeed
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
       propertyPath: driveFactor
-      value: 0.05
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: timebtwDeath
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: neighborRadius
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 763596639306561501, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
       propertyPath: m_RootOrder
@@ -2695,11 +2719,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1324123231899656104, guid: 57c63825a36acc7488e99a00a2b2ca82, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.7923336
+      value: -0.7
       objectReference: {fileID: 0}
     - target: {fileID: 1324123231899656104, guid: 57c63825a36acc7488e99a00a2b2ca82, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.8271713
+      value: -1.7
       objectReference: {fileID: 0}
     - target: {fileID: 1324123231899656104, guid: 57c63825a36acc7488e99a00a2b2ca82, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3315,10 +3339,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: GrpCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 8675269313058673761, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4923337
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675269313058673761, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8728287
+      objectReference: {fileID: 0}
     - target: {fileID: 8675269313058673762, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
       propertyPath: m_Follow
       value: 
       objectReference: {fileID: 284271550}
+    - target: {fileID: 8675269314425217971, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.4923337
+      objectReference: {fileID: 0}
+    - target: {fileID: 8675269314425217971, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.8728287
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
 --- !u!1001 &9142310276845374935
@@ -3377,12 +3417,36 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 284271545}
     - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: TIMER
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: behavior
+      value: 
+      objectReference: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
+    - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: maxSpeed
+      value: 1.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
       propertyPath: driveFactor
-      value: 0.05
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: timebtwDeath
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: avoidanceRadiusMultiplier
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9142310276409267370, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
       propertyPath: m_Name
       value: F Grp - Player - Passif
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142310276409267370, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}

@@ -24,7 +24,14 @@ public class PlayerManager : MonoBehaviour
     public float Scale;
 
     public CinemachineVirtualCamera cinemachine;
-    // Start is called before the first frame update
+
+    public static PlayerManager instance;
+
+    void Awake()
+    {
+        if (instance == null) instance = this;
+    }
+
     void Start()
     {
         /*cinemachine = GameManager.Cinemachine.GetComponent<CinemachineVirtualCamera>();*/
@@ -33,7 +40,6 @@ public class PlayerManager : MonoBehaviour
      
     }
 
-    // Update is called once per frame
     void Update()
     {
         compteurAggro = flockAggro.compteur;

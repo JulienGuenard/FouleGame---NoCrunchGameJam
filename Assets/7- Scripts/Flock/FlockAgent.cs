@@ -7,6 +7,7 @@ public class FlockAgent : MonoBehaviour
 {
     Flock agentFlock;
     [HideInInspector] public FlockAnimation flockAnimation;
+    [HideInInspector] public MouseInteraction mouseInteraction;
 
     [SerializeField] public float ConvertPercent = 0;
 
@@ -18,13 +19,20 @@ public class FlockAgent : MonoBehaviour
     Collider2D agentCollider;
     public Collider2D AgentCollider { get { return agentCollider; } }
 
-    Flock parentflock;
+    public Flock parentflock;
+
+    public bool canCheckEnemies = false;
+    public bool canCalculateMove = false;
+    public Vector2 move = Vector2.zero;
 
     // Start is called before the first frame update
 
     private void Awake()
     {
         flockAnimation = GetComponent<FlockAnimation>();
+        mouseInteraction = GetComponent<MouseInteraction>();
+        canCheckEnemies = false;
+        canCalculateMove = false;
     }
 
     public void Initialize(Flock flock)
@@ -41,6 +49,36 @@ public class FlockAgent : MonoBehaviour
         parentflock = this.GetComponentInParent<Flock>();
         agentCollider = GetComponent<Collider2D>();
     }
+
+    public void UnableCalculateMove()
+    {
+        if (!canCalculateMove) return;
+
+        canCalculateMove = false;
+        StartCoroutine(CalculateMoveDelay());
+    }
+
+    public void UnableCheckEnemies()
+    {
+        if (!canCheckEnemies) return;
+
+        canCheckEnemies = false;
+        StartCoroutine(CheckEnemiesDelay());
+    }
+
+    IEnumerator CalculateMoveDelay()
+    {
+        yield return new WaitForSeconds(8f * Time.deltaTime);
+        canCalculateMove = true;
+    }
+
+    IEnumerator CheckEnemiesDelay()
+    {
+        Debug.Log(25f * Time.deltaTime);
+        yield return new WaitForSeconds(40f * Time.deltaTime);
+        canCheckEnemies = true;
+    }
+
     public void Move(Vector2 velocity)
     {
         transform.up = velocity;
