@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class FlockAgent : MonoBehaviour
+public class FlockAgent : Flock
 {
     Flock agentFlock;
-    [HideInInspector] public FlockAnimation flockAnimation;
+    [HideInInspector] public FA_Animation flockAgentAnimation;
     [HideInInspector] public MouseInteraction mouseInteraction;
+    [HideInInspector] public FA_Charge flockAgentCharge;
 
     [SerializeField] public float ConvertPercent = 0;
 
@@ -29,8 +30,9 @@ public class FlockAgent : MonoBehaviour
 
     private void Awake()
     {
-        flockAnimation = GetComponent<FlockAnimation>();
+        flockAgentAnimation = GetComponent<FA_Animation>();
         mouseInteraction = GetComponent<MouseInteraction>();
+        flockAgentCharge = GetComponent<FA_Charge>();
         canCheckEnemies = false;
         canCalculateMove = false;
     }
@@ -74,7 +76,6 @@ public class FlockAgent : MonoBehaviour
 
     IEnumerator CheckEnemiesDelay()
     {
-        Debug.Log(25f * Time.deltaTime);
         yield return new WaitForSeconds(40f * Time.deltaTime);
         canCheckEnemies = true;
     }
@@ -92,7 +93,7 @@ public class FlockAgent : MonoBehaviour
     {
         if (Health <= 0)
         {
-            flockAnimation.DeadAnimation();
+            flockAgentAnimation.DeadAnimation();
             parentflock.agents.Remove(this);
             Destroy(gameObject);
         }
@@ -105,7 +106,7 @@ public class FlockAgent : MonoBehaviour
         /*flockAnimation.DamagedAnimation();*/
     }
 
-    public IEnumerator  LifeTimer( int LifeTime)
+    public IEnumerator LifeTimer( int LifeTime)
     {
         yield return new WaitForSeconds(LifeTime);
         Destroy(gameObject);

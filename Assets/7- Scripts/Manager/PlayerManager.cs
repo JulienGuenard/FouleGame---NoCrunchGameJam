@@ -36,7 +36,7 @@ public class PlayerManager : MonoBehaviour
     {
         /*cinemachine = GameManager.Cinemachine.GetComponent<CinemachineVirtualCamera>();*/
         MinCamSize = cinemachine.m_Lens.OrthographicSize;
-        MinSize = flockAggro.strartingCount + flockPaco.strartingCount;
+        MinSize = flockAggro.startingCount + flockPaco.startingCount;
      
     }
 

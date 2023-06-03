@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FlockAnimation : MonoBehaviour
+public class FA_Animation : MonoBehaviour
 {
     Animator animator;
 

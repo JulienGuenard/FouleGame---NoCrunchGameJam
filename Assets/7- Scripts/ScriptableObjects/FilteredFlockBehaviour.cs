@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class FilteredFlockBehaviour : FlockBehavior
+public abstract class FilteredFlockBehaviour : FA_Behaviour
 {
     public ContextFilter filter;
 }
