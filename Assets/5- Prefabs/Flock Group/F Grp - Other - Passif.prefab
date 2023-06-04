@@ -226,6 +226,7 @@ MonoBehaviour:
   RepulseForce: 0
   DMG: 0
   radius: 2
+  attackRange: 0.2
   IsLaunch: 0
   DistancePos: {x: 0, y: 0}
   Ennemidistance: 0

@@ -11,7 +11,7 @@ public class FlockGetAgentFunctions : Flock
 
         foreach (Collider2D c in contextColliders)
         {
-            if (c == agent.AgentCollider && c.CompareTag("Cursor") && !c.transform.parent != null) continue;
+            if (c == agent.AgentCollider || c.CompareTag("Cursor") || c.transform.parent == null) continue;
 
             if (c.transform.parent.CompareTag("Neutre") && FLifetime.addnew && FOwnership.isPlayer)
             {
@@ -52,47 +52,17 @@ public class FlockGetAgentFunctions : Flock
         foreach (Collider2D i in ennemisCollider)
         {
             FlockAgent iFlockAgent = i.transform.gameObject.GetComponent<FlockAgent>();
-            if ((iFlockAgent != null && i.transform.parent != null && FOwnership.isPlayer)
-                && (getEnemies || (getPassif && i.transform.tag == "passif")))
-            {
-                    if (FAggro.pourcentAgro <= 70 || getPassif)
-                    {
-                        if (!FBehaviour.agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre"
-                         && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
-                        {
-                            ennemis.Add(i.transform);
-                            target = iFlockAgent;
-                            return true;
-                        }
-                    }
-                    else
-                    {
-                        if (i.transform.parent.tag != "Neutre" && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor")
-                        {
-                            if (getEnemies || (getPassif && !FBehaviour.agents.Contains(iFlockAgent) && i.transform.parent.tag != "Ennemi"))
-                            {
-                                ennemis.Add(i.transform);
-                                target = iFlockAgent;
-                                return true;
-                            }
-                        }
-                    }
-                }
 
-            if (getEnemies || (getPassif && i.transform.tag == "agressif" && i.transform.parent.tag != "PlayerFlock"))
-            {
-                if (!FBehaviour.agents.Contains(iFlockAgent) && i.transform.parent.tag != "Neutre"
-                    && i.transform.parent.tag != "Untagged" && i.transform.parent.tag != "Cursor"
-                        && ((getEnemies && i.transform.parent.tag != "Ennemi")
-                        || (getPassif && i.transform.parent.tag != "PlayerFlock")))
-                {
+            if (iFlockAgent == null)                                                                    continue;
+            if (i.transform.parent == null)                                                             continue;
+            if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)   continue;
+            if (FBehaviour.agents.Contains(iFlockAgent))                                                continue;
+            if (!getEnemies || (!getPassif && i.transform.tag != "passif"))                             continue;
+            if (FAggro.pourcentAgro > 70 || getPassif)                                                  continue;
 
-                    ennemis.Add(i.transform);
-                    target = iFlockAgent;
-
-                    return true;
-                }
-            }
+            ennemis.Add(i.transform);
+            target = iFlockAgent;
+            return true;
         }
         target = null;
         return false;

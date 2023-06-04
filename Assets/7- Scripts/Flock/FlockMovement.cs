@@ -37,8 +37,8 @@ public class FlockMovement : Flock
             if (agent == null && FOwnership.chef == null)   continue;
             if (agent.mouseInteraction.isSelected)          continue;
 
-            if (!FType.isPacifique && !FType.isAgressif)   NextMove(agent);
-            else                                           NextMovePassif(agent);
+            if (FType.isPacifique || FType.isAgressif) NextMove(agent);  
+            else                                       NextMovePassif(agent);
         }
     }
 
@@ -48,7 +48,10 @@ public class FlockMovement : Flock
         float speed = Mathf.Clamp(distance, 1, maxSpeed);
         FlockAgent target = null;
 
-        if (agent.canCheckEnemies)
+        if (FAggro.Target != null) Debug.Log(this.gameObject.name + " // " + FAggro.Target.gameObject.name);
+
+
+        if (agent.canCheckEnemies && FAggro.Target == null)
         {
             agent.UnableCheckEnemies();
             if (FType.isAgressif) FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, false, true);
@@ -56,7 +59,7 @@ public class FlockMovement : Flock
         }
 
         if (target != null) FAggro.Target = target;
-
+        
         if (FCharge.ennemis == true && FAggro.Target != null)
         {
             if (FType.isAgressif)   NextMoveAgressif(agent);

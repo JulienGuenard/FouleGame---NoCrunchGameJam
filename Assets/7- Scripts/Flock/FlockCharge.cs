@@ -10,6 +10,7 @@ public class FlockCharge : Flock
     public float RepulseForce;
     public int DMG;
     public float radius;
+    public float attackRange;
     [HideInInspector] public bool IsLaunch = false;
     [HideInInspector] public Vector2 DistancePos;
     [HideInInspector] public float Ennemidistance;
@@ -54,13 +55,12 @@ public class FlockCharge : Flock
         }
 
 
-        if (Ennemidistance <= 0.2 && FAggro.Target != null && agent != null)
+        if (Ennemidistance <= attackRange && FAggro.Target != null && agent != null)
         {
             CheckAttack(agent);
         }
+
         IsLaunch = false;
-
-
         ennemis = false;
     }
 
