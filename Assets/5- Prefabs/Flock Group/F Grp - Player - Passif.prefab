@@ -20,6 +20,7 @@ GameObject:
   - component: {fileID: 3472814388653922777}
   - component: {fileID: 7089987872408065555}
   - component: {fileID: 1478381997137024684}
+  - component: {fileID: 6778065500201167575}
   m_Layer: 0
   m_Name: F Grp - Player - Passif
   m_TagString: PlayerFlock
@@ -64,6 +65,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
 --- !u!114 &-4188352184640548162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +88,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   pourcentAgro: 71
   Target: {fileID: 0}
 --- !u!114 &-411870797659478266
@@ -110,6 +113,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
 --- !u!114 &6825314669046963907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -132,6 +136,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   destroy: 1
   TIMER: 500
   timebtwDeath: 5000
@@ -161,6 +166,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   driveFactor: 1
   maxSpeed: 1
   neighborRadius: 1
@@ -188,6 +194,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
   startingCount: 10
   agentDensity: 0.08
@@ -213,6 +220,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   LauchForce: 0
   ChargedTime: 0
   RepulseForce: 0
@@ -244,6 +252,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   agents: []
   flockAgentBehaviour: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
 --- !u!114 &3472814388653922777
@@ -268,6 +277,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   MaxConvert: 0
   Multiplicater: 1
   HasConvert: 0
@@ -294,6 +304,7 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   isAgressif: 0
   isPacifique: 1
 --- !u!114 &1478381997137024684
@@ -318,5 +329,29 @@ MonoBehaviour:
   FConversion: {fileID: 0}
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
   isPlayer: 1
   chef: {fileID: 0}
+--- !u!114 &6778065500201167575
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9142310276409267370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ac9a8b223420040a3e8800b528ee8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}

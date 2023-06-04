@@ -11,6 +11,61 @@ public class FlockConversion : Flock
 
     [HideInInspector] public Flock Flk;
 
+    private void Update()
+    {
+        PassifConversion();
+        Conversion();
+    }
+
+    void PassifConversion()
+    {
+        foreach (FlockAgent agent in FBehaviour.agents.ToArray())
+        {
+            // Passif Conversion
+            if (this.tag == "Neutre")
+            {
+                if (agent.ConvertPercent > 0)
+                {
+                    agent.ConvertPercent = 0;
+                }
+            }
+        }
+    }
+
+    void Conversion()
+    {
+        foreach (FlockAgent agent in FBehaviour.agents.ToArray())
+        {
+            if (agent != null && FOwnership.chef != null)
+            {
+                if (!agent.mouseInteraction.isSelected)
+                {
+                    agent.CheckHP();
+                }
+            }
+
+                    if ((FOwnership.chef == null && agent != null) || (agent.ConvertPercent == 100 && agent != null))
+            {
+                if (agent.ConvertPercent > 0)
+                {
+                    agent.ConvertPercent = 0;
+                }
+                FBehaviour.agents.Remove(agent);
+                agent.transform.SetParent(GameManager.neutre.transform, true);
+                GameManager.neutreFlock.FBehaviour.agents.Add(agent);
+                if (FBehaviour.agents.Count == 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+
+            if (agent == null)
+            {
+                FBehaviour.agents.Remove(agent);
+            }
+        }
+    }
+
     public IEnumerator ConvertOther(GameObject Pacifist, FlockAgent agent)
     {
         if (HasConvert == false)

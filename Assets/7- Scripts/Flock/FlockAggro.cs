@@ -30,10 +30,5 @@ public class FlockAggro : Flock
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         agent.transform.position = Vector2.MoveTowards(agent.transform.position, other.transform.position, 1 * Time.deltaTime);
         agent.transform.rotation = Quaternion.Euler(Vector3.forward * angle);
-        /*        if (Distance <= 0.2)
-                {
-
-                }*/
-
     }
 }
