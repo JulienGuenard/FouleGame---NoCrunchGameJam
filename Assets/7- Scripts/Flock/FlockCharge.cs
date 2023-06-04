@@ -27,10 +27,10 @@ public class FlockCharge : Flock
 
     public IEnumerator Charge(FlockAgent agent)
     {
-        if (Target != null)
+        if (FAggro.Target != null)
         {
-            float LaucnhDirectionX = Target.transform.position.x;
-            float LaucnhDIrectionY = Target.transform.position.y;
+            float LaucnhDirectionX = FAggro.Target.transform.position.x;
+            float LaucnhDIrectionY = FAggro.Target.transform.position.y;
             float posX = agent.transform.position.x;
             float posY = agent.transform.position.y;
 

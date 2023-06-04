@@ -14,8 +14,8 @@ public class Chef_instance : MonoBehaviour
     private void Start()
     {
         gamema = GameManager.GameMa;
-        Passif.chef = this.gameObject;
-        Aggressif.chef = this.gameObject;
+       if (Passif.FOwnership.chef == null) Passif.FOwnership.chef = this.gameObject;
+       if (Aggressif.FOwnership.chef == null) Aggressif.FOwnership.chef = this.gameObject;
 
         Instantiate(Passif.gameObject);
         Instantiate(Aggressif.gameObject);

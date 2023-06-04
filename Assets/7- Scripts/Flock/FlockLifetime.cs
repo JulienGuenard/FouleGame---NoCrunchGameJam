@@ -6,13 +6,13 @@ using System.Linq;
 public class FlockLifetime : Flock
 {
     [Header("Lifetime")]
-    public bool destroy = true;
-    public float TIMER = 2f;
-    public float timebtwDeath;
-    public bool addnew = true;
-    public int compteur;
-    [HideInInspector] public float timer;
-    [HideInInspector] public float timer2;
+                        public bool destroy = true;
+                        public float TIMER = 2f;
+                        public float timebtwDeath;
+                        public bool addnew = true;
+    [HideInInspector]   public int compteur;
+    [HideInInspector]   public float timer;
+    [HideInInspector]   public float timer2;
 
     private void Start()
     {

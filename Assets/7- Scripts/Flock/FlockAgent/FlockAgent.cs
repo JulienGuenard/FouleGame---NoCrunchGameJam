@@ -37,7 +37,7 @@ public class FlockAgent : MonoBehaviour
 
     public void Initialize(Flock flock)
     {
-
+        parentflock = flock;
     }
 
     private void FixedUpdate()
@@ -92,7 +92,7 @@ public class FlockAgent : MonoBehaviour
         if (Health <= 0)
         {
             flockAgentAnimation.DeadAnimation();
-            parentflock.agents.Remove(this);
+            parentflock.FBehaviour.agents.Remove(this);
             Destroy(gameObject);
         }
     }

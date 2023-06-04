@@ -15,6 +15,11 @@ GameObject:
   - component: {fileID: 836281134389004480}
   - component: {fileID: 7154433168169977435}
   - component: {fileID: 6024657327452845502}
+  - component: {fileID: 7840910329840583685}
+  - component: {fileID: 7355246522268266000}
+  - component: {fileID: 6039924543998861411}
+  - component: {fileID: 6100525555127713493}
+  - component: {fileID: 4663919488440690876}
   m_Layer: 0
   m_Name: F Grp - Other - Passif
   m_TagString: Neutre
@@ -49,46 +54,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
-  startingCount: 0
-  agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  flockAgentBehaviour: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 1
-  driveFactor: 1
-  maxSpeed: 1
-  neighborRadius: 1
-  avoidanceRadiusMultiplier: 0.1
-  squareMaxSpeed: 0
-  LauchForce: 0
-  ChargedTime: 0
-  RepulseForce: 0
-  DMG: 0
-  radius: 2
-  pourcentAgro: 71
-  Target: {fileID: 0}
-  IsLaunch: 0
-  DistancePos: {x: 0, y: 0}
-  Ennemidistance: 0
-  ennemis: 0
-  MaxConvert: 0
-  Multiplicater: 1
-  HasConvert: 0
-  destroy: 1
-  TIMER: 2
-  timebtwDeath: 20
-  addnew: 0
-  compteur: 0
-  timer: 0
-  timer2: 0
-  flockSpawn: {fileID: 0}
-  flockAggro: {fileID: 0}
-  flockLifetime: {fileID: 0}
-  flockMovement: {fileID: 0}
-  flockFear: {fileID: 0}
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
 --- !u!114 &-18713439289791390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -101,46 +76,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe85428f50e2b3049b76a5d13cb64f9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 0}
-  startingCount: 0
-  agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  flockAgentBehaviour: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 0
-  driveFactor: 10
-  maxSpeed: 5
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.5
-  squareMaxSpeed: 0
-  LauchForce: 0
-  ChargedTime: 0
-  RepulseForce: 0
-  DMG: 0
-  radius: 0
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
   pourcentAgro: 71
   Target: {fileID: 0}
-  IsLaunch: 0
-  DistancePos: {x: 0, y: 0}
-  Ennemidistance: 0
-  ennemis: 0
-  MaxConvert: 0
-  Multiplicater: 0
-  HasConvert: 0
-  destroy: 1
-  TIMER: 2
-  timebtwDeath: 0
-  addnew: 1
-  compteur: 0
-  timer: 0
-  timer2: 0
-  flockSpawn: {fileID: 0}
-  flockAggro: {fileID: 0}
-  flockLifetime: {fileID: 0}
-  flockMovement: {fileID: 0}
-  flockFear: {fileID: 0}
 --- !u!114 &-5271746848631108237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -153,46 +100,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb48e4a09fc6aee4c8694ad3063b8029, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 0}
-  startingCount: 0
-  agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  flockAgentBehaviour: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 0
-  driveFactor: 10
-  maxSpeed: 5
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.5
-  squareMaxSpeed: 0
-  LauchForce: 0
-  ChargedTime: 0
-  RepulseForce: 0
-  DMG: 0
-  radius: 0
-  pourcentAgro: 71
-  Target: {fileID: 0}
-  IsLaunch: 0
-  DistancePos: {x: 0, y: 0}
-  Ennemidistance: 0
-  ennemis: 0
-  MaxConvert: 0
-  Multiplicater: 0
-  HasConvert: 0
-  destroy: 1
-  TIMER: 2
-  timebtwDeath: 0
-  addnew: 1
-  compteur: 0
-  timer: 0
-  timer2: 0
-  flockSpawn: {fileID: 0}
-  flockAggro: {fileID: 0}
-  flockLifetime: {fileID: 0}
-  flockMovement: {fileID: 0}
-  flockFear: {fileID: 0}
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
 --- !u!114 &836281134389004480
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,46 +122,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48a7ad8fc8b2c045b78465d8b80a8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 0}
-  startingCount: 0
-  agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  flockAgentBehaviour: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 0
-  driveFactor: 10
-  maxSpeed: 5
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.5
-  squareMaxSpeed: 0
-  LauchForce: 0
-  ChargedTime: 0
-  RepulseForce: 0
-  DMG: 0
-  radius: 0
-  pourcentAgro: 71
-  Target: {fileID: 0}
-  IsLaunch: 0
-  DistancePos: {x: 0, y: 0}
-  Ennemidistance: 0
-  ennemis: 0
-  MaxConvert: 0
-  Multiplicater: 0
-  HasConvert: 0
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
   destroy: 1
-  TIMER: 2
-  timebtwDeath: 0
-  addnew: 1
+  TIMER: 500
+  timebtwDeath: 5000
+  addnew: 0
   compteur: 0
   timer: 0
   timer2: 0
-  flockSpawn: {fileID: 0}
-  flockAggro: {fileID: 0}
-  flockLifetime: {fileID: 0}
-  flockMovement: {fileID: 0}
-  flockFear: {fileID: 0}
 --- !u!114 &7154433168169977435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,46 +151,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be08f80eff2661745aac09be91aa52d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 0}
-  startingCount: 0
-  agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  flockAgentBehaviour: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 0
-  driveFactor: 10
-  maxSpeed: 5
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.5
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  driveFactor: 1
+  maxSpeed: 1
+  neighborRadius: 1
+  avoidanceRadiusMultiplier: 0.1
   squareMaxSpeed: 0
-  LauchForce: 0
-  ChargedTime: 0
-  RepulseForce: 0
-  DMG: 0
-  radius: 0
-  pourcentAgro: 71
-  Target: {fileID: 0}
-  IsLaunch: 0
-  DistancePos: {x: 0, y: 0}
-  Ennemidistance: 0
-  ennemis: 0
-  MaxConvert: 0
-  Multiplicater: 0
-  HasConvert: 0
-  destroy: 1
-  TIMER: 2
-  timebtwDeath: 0
-  addnew: 1
-  compteur: 0
-  timer: 0
-  timer2: 0
-  flockSpawn: {fileID: 0}
-  flockAggro: {fileID: 0}
-  flockLifetime: {fileID: 0}
-  flockMovement: {fileID: 0}
-  flockFear: {fileID: 0}
 --- !u!114 &6024657327452845502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -309,43 +178,145 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 923540092fa02a34b89080e2f1206fbf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 0}
-  startingCount: 0
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
+  startingCount: 50
   agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  flockAgentBehaviour: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 0
-  driveFactor: 10
-  maxSpeed: 5
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.5
-  squareMaxSpeed: 0
+--- !u!114 &7840910329840583685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379438925407793193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0332d3eaef84b3446bd4e41642d88152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
   LauchForce: 0
   ChargedTime: 0
   RepulseForce: 0
   DMG: 0
-  radius: 0
-  pourcentAgro: 71
-  Target: {fileID: 0}
+  radius: 2
   IsLaunch: 0
   DistancePos: {x: 0, y: 0}
   Ennemidistance: 0
   ennemis: 0
+--- !u!114 &7355246522268266000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379438925407793193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18d911dcbecce24a9c8d21e0f3b4ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  agents: []
+  flockAgentBehaviour: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
+--- !u!114 &6039924543998861411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379438925407793193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cde84d827b4c743acb944b05ab407d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
   MaxConvert: 0
-  Multiplicater: 0
+  Multiplicater: 1
   HasConvert: 0
-  destroy: 1
-  TIMER: 2
-  timebtwDeath: 0
-  addnew: 1
-  compteur: 0
-  timer: 0
-  timer2: 0
-  flockSpawn: {fileID: 0}
-  flockAggro: {fileID: 0}
-  flockLifetime: {fileID: 0}
-  flockMovement: {fileID: 0}
-  flockFear: {fileID: 0}
+  Flk: {fileID: 0}
+--- !u!114 &6100525555127713493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379438925407793193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e47f61f602c5734a904e98dad45ea72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  isAgressif: 0
+  isPacifique: 1
+--- !u!114 &4663919488440690876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8379438925407793193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66cf0cabdbc96b4298b882d9418d8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  isPlayer: 0
+  chef: {fileID: 0}

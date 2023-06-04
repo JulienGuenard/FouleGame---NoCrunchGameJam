@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (NombreFouleActuelle < maxNombreFoule)
+    /*    if (NombreFouleActuelle < maxNombreFoule)
         {
             for (int i = 0; i < maxNombreFoule; i++)
             {
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
                     transform.position.y + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille))), transform.rotation);
             }
         }
-
+    */
     }
     protected static int generateRandomNumber(int min, int max)
     {

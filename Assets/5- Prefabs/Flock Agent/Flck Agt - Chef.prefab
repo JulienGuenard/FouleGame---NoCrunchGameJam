@@ -45,7 +45,6 @@ GameObject:
   - component: {fileID: 7676536641943098886}
   - component: {fileID: 7582553363713684816}
   - component: {fileID: 2724783979569385446}
-  - component: {fileID: -8535124483614925565}
   - component: {fileID: -1490069415553347879}
   m_Layer: 0
   m_Name: Flck Agt - Chef
@@ -100,8 +99,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3481f8e981c93c040b24ef6ca7a82f0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  flockAnimation: {fileID: 0}
+  flockAgentAnimation: {fileID: 0}
   mouseInteraction: {fileID: 0}
+  flockAgentCharge: {fileID: 0}
   ConvertPercent: 0
   rb: {fileID: 0}
   Health: 100
@@ -161,43 +161,6 @@ MonoBehaviour:
   Passif: {fileID: 8379438925407793192, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
   Aggressif: {fileID: 4411924906836831417, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
   Health: 0
---- !u!114 &-8535124483614925565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724783979569385447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 923540092fa02a34b89080e2f1206fbf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentPrefab: {fileID: 0}
-  startingCount: 0
-  agentDensity: 0.08
-  isPlayer: 0
-  chef: {fileID: 0}
-  agents: []
-  behavior: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 0
-  driveFactor: 10
-  maxSpeed: 5
-  neighborRadius: 1.5
-  avoidanceRadiusMultiplier: 0.5
-  LauchForce: 0
-  ChargedTime: 0
-  RepulseForce: 0
-  DMG: 0
-  radius: 0
-  MaxConvert: 0
-  Multiplicater: 0
-  destroy: 1
-  TIMER: 2
-  timebtwDeath: 0
-  addnew: 1
-  compteur: 0
 --- !u!114 &-1490069415553347879
 MonoBehaviour:
   m_ObjectHideFlags: 0

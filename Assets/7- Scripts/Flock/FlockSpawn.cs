@@ -26,13 +26,13 @@ public class FlockSpawn : Flock
             yield return new WaitForSeconds(0.01f);
             FlockAgent newAgent = Instantiate(
                 agentPrefab,
-                chef.transform.position + Random.insideUnitSphere * startingCount * agentDensity,
+                FOwnership.chef.transform.position + Random.insideUnitSphere * startingCount * agentDensity,
                 Quaternion.Euler(Vector3.forward * Random.Range(0, 360f)),
                 transform
                 );
             newAgent.name = "Agent " + i;
-            newAgent.Initialize(this);
-            agents.Add(newAgent);
+            newAgent.Initialize(GetComponent<Flock>());
+            FBehaviour.agents.Add(newAgent);
         }
 
         StartCoroutine(AgentsActivationDelayer());
@@ -42,7 +42,7 @@ public class FlockSpawn : Flock
     {
         yield return new WaitForSeconds(1f);
 
-        foreach (FlockAgent agent in agents)
+        foreach (FlockAgent agent in FBehaviour.agents)
         {
             yield return new WaitForSeconds(0.01f);
             agent.canCalculateMove = true;

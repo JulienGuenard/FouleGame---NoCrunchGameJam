@@ -36,14 +36,14 @@ public class PlayerManager : MonoBehaviour
     {
         /*cinemachine = GameManager.Cinemachine.GetComponent<CinemachineVirtualCamera>();*/
         MinCamSize = cinemachine.m_Lens.OrthographicSize;
-        MinSize = flockAggro.startingCount + flockPaco.startingCount;
+        MinSize = flockAggro.FSpawn.startingCount + flockPaco.FSpawn.startingCount;
      
     }
 
     void Update()
     {
-        compteurAggro = flockAggro.compteur;
-        compteurPaco = flockPaco.compteur;
+        compteurAggro = flockAggro.FLifetime.compteur;
+        compteurPaco = flockPaco.FLifetime.compteur;
      
         compteurTotal = compteurPaco + compteurAggro;
         SetBars();

@@ -2314,10 +2314,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 603968124}
     m_Modifications:
-    - target: {fileID: 763596639306561500, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
-      propertyPath: chef
-      value: 
-      objectReference: {fileID: 284271545}
     - target: {fileID: 763596639306561501, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -2366,6 +2362,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: F Grp - Player - Violent
       objectReference: {fileID: 0}
+    - target: {fileID: 2910173764469378479, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: chef
+      value: 
+      objectReference: {fileID: 284271545}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
 --- !u!1001 &1324123231640697878
@@ -2456,6 +2456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: F Grp - Other - Violent
       objectReference: {fileID: 0}
+    - target: {fileID: 4411924906836831398, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4411924906836831416, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2500,14 +2504,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4411924906836831417, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
+    - target: {fileID: 7850867636802764830, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
       propertyPath: chef
       value: 
       objectReference: {fileID: 265636684}
-    - target: {fileID: 4411924906836831417, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
-      propertyPath: strartingCount
-      value: 30
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
 --- !u!1001 &6199231180364820500
@@ -2888,17 +2888,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 603968124}
     m_Modifications:
-    - target: {fileID: 8379438925407793192, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
+    - target: {fileID: 4663919488440690876, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
       propertyPath: chef
       value: 
       objectReference: {fileID: 265636684}
-    - target: {fileID: 8379438925407793192, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
-      propertyPath: strartingCount
-      value: 30
-      objectReference: {fileID: 0}
     - target: {fileID: 8379438925407793193, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
       propertyPath: m_Name
       value: F Grp - Other - Passif
+      objectReference: {fileID: 0}
+    - target: {fileID: 8379438925407793193, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8379438925407793207, guid: c43b4bbf5d0b44c449682d840011fb02, type: 3}
       propertyPath: m_RootOrder
@@ -3014,6 +3014,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 603968124}
     m_Modifications:
+    - target: {fileID: 1478381997137024684, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
+      propertyPath: chef
+      value: 
+      objectReference: {fileID: 284271545}
     - target: {fileID: 9142310276409267368, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -3058,10 +3062,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9142310276409267369, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
-      propertyPath: chef
-      value: 
-      objectReference: {fileID: 284271545}
     - target: {fileID: 9142310276409267370, guid: c6dff432bac6bd44caffe21416a44a45, type: 3}
       propertyPath: m_Name
       value: F Grp - Player - Passif
