@@ -4,9 +4,17 @@ using UnityEngine;
 
 public class FlockAggro : Flock
 {
+    [HideInInspector] public int pourcentAgro = 71;
+    [HideInInspector] public FlockAgent Target;
+
+    private void Update()
+    {
+        Aggro();
+    }
+
     public void Aggro()
     {
-        if (isPlayer && PlayerManager.instance.compteurTotal != 0)
+        if (FOwnership.isPlayer && PlayerManager.instance.compteurTotal != 0)
         {
             pourcentAgro = (100 * PlayerManager.instance.compteurAggro) / PlayerManager.instance.compteurTotal;
         }

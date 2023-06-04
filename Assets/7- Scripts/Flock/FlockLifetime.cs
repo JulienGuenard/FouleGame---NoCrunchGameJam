@@ -5,6 +5,31 @@ using System.Linq;
 
 public class FlockLifetime : Flock
 {
+    [Header("Lifetime")]
+    public bool destroy = true;
+    public float TIMER = 2f;
+    public float timebtwDeath;
+    public bool addnew = true;
+    public int compteur;
+    [HideInInspector] public float timer;
+    [HideInInspector] public float timer2;
+
+    private void Start()
+    {
+        LifetimeSetup();
+    }
+
+    private void Update()
+    {
+        FLifetime.IncrementTimedDead();
+        FLifetime.TimedDead();
+    }
+
+    void LifetimeSetup()
+    {
+        timer = TIMER;
+    }
+
     public void IncrementTimedDead()
     {
         if (!addnew)
@@ -20,19 +45,28 @@ public class FlockLifetime : Flock
 
     public void TimedDead()
     {
-        compteur = agents.Count;
-        if (isPlayer && agents.Count != 0)
+        compteur = FBehaviour.agents.Count;
+        if (FOwnership.isPlayer && FBehaviour.agents.Count != 0)
         {
             timer2 -= Time.deltaTime;
             if (timer2 <= 0)
             {
-                agents.First().flockAgentAnimation.DeadAnimation();
+                FBehaviour.agents.First().flockAgentAnimation.DeadAnimation();
 
-                Destroy(agents.First().gameObject);
-                agents.Remove(agents.First());
+                Destroy(FBehaviour.agents.First().gameObject);
+                FBehaviour.agents.Remove(FBehaviour.agents.First());
 
                 timer2 = timebtwDeath;
             }
         }
+    }
+
+    public IEnumerator LifeTimer(int LifeTime)
+    {
+        destroy = false;
+        Destroy(FBehaviour.agents.Last());
+        FBehaviour.agents.Remove(FBehaviour.agents.Last());
+        yield return new WaitForSeconds(LifeTime);
+        destroy = true;
     }
 }

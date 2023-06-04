@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
-public class FlockAgent : Flock
+public class FlockAgent : MonoBehaviour
 {
     Flock agentFlock;
     [HideInInspector] public FA_Animation flockAgentAnimation;
@@ -25,8 +25,6 @@ public class FlockAgent : Flock
     public bool canCheckEnemies = false;
     public bool canCalculateMove = false;
     public Vector2 move = Vector2.zero;
-
-    // Start is called before the first frame update
 
     private void Awake()
     {

@@ -4,6 +4,16 @@ using UnityEngine;
 
 public class FlockSpawn : Flock
 {
+    [Header("Spawn")]
+    public FlockAgent agentPrefab;
+    [Range(0, 50)] public int startingCount;
+    public float agentDensity = 0.08f;
+
+    private void Start()
+    {
+        SpawnAgents();
+    }
+
     public void SpawnAgents() 
     { 
         StartCoroutine(SpawnDelayer()); 
