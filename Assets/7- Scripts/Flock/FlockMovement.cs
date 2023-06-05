@@ -32,13 +32,14 @@ public class FlockMovement : Flock
 
     public void MoveEachAgent()
     {
+        if (FOwnership.chef == null) return;
+
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
             if (agent.mouseInteraction.isSelected && FOwnership.chef == null) continue;
 
             FlockAgent target;
             DetectEnemy(agent, out target);
-            AimEnemy(target);
             MovementBehaviour(agent, target);
 
             agent.Move(agent.move);
@@ -49,17 +50,16 @@ public class FlockMovement : Flock
     {
         target = null;
 
-        if (FAggro.targetOnAggro != null && FAggro.targetOnAggro.Health > 0)    return;
         if (!agent.canCheckEnemies)                                             return;
 
         agent.UnableCheckEnemies();
         FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);
+
+        AimEnemy(target);
     }
 
     void AimEnemy(FlockAgent target) 
     {
-        if (target == null) return;
-
         FAggro.targetOnAggro = target; 
     }
 
@@ -81,7 +81,7 @@ public class FlockMovement : Flock
         if (!agent.canCalculateMove) return;
 
         agent.UnableCalculateMove();
-        List<Transform> context = FGetAgentFunctions.GetNearbyObjects(agent);
+        List<Transform> context = FGetAgentFunctions.GetNNearbyAgents(agent);
         agent.move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
         agent.move *= driveFactor;
 

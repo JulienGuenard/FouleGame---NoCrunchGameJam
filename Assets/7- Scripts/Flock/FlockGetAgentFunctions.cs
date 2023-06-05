@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FlockGetAgentFunctions : Flock
 {
-    public List<Transform> GetNearbyObjects(FlockAgent agent)
+    public List<Transform> GetNNearbyAgents(FlockAgent agent)
     {
         List<Transform> context = new List<Transform>();
         Collider2D[] contextColliders = Physics2D.OverlapCircleAll(agent.transform.position, FMovement.neighborRadius);
@@ -15,33 +15,38 @@ public class FlockGetAgentFunctions : Flock
             if (c.CompareTag("Cursor"))     continue;
             if (c.transform.parent == null) continue;
 
-            if (c.transform.parent.CompareTag("Neutre") && FOwnership.isPlayer)
-            {
-                Flock flockpassif = PlayerManager.instance.flockPaco;
-                Flock flockaggressif = PlayerManager.instance.flockAggro;
-                FlockAgent cflockAgent = c.GetComponent<FlockAgent>();
-                Flock cflockParent = cflockAgent.parentflock;
-
-                cflockParent.FBehaviour.agents.Remove(cflockAgent);
-
-                if (c.transform.tag == "passif")
-                {
-                    c.transform.SetParent(flockpassif.transform, true);
-                    flockpassif.FBehaviour.agents.Add(cflockAgent);
-                }
-
-                if (c.transform.tag == "agressif")
-                {
-                    c.transform.SetParent(flockaggressif.transform, true);
-                    flockaggressif.FBehaviour.agents.Add(cflockAgent);
-                }
-            }
+            GetNeutralAgents(c);
 
             context.Add(c.transform);
 
         }
 
         return context;
+    }
+
+    void GetNeutralAgents(Collider2D c)
+    {
+        if (c.transform.parent.CompareTag("Neutre") && FOwnership.isPlayer)
+        {
+            Flock flockpassif = PlayerManager.instance.flockPaco;
+            Flock flockaggressif = PlayerManager.instance.flockAggro;
+            FlockAgent cflockAgent = c.GetComponent<FlockAgent>();
+            Flock cflockParent = cflockAgent.parentflock;
+
+            cflockParent.FBehaviour.agents.Remove(cflockAgent);
+
+            if (c.transform.tag == "passif")
+            {
+                c.transform.SetParent(flockpassif.transform, true);
+                flockpassif.FBehaviour.agents.Add(cflockAgent);
+            }
+
+            if (c.transform.tag == "agressif")
+            {
+                c.transform.SetParent(flockaggressif.transform, true);
+                flockaggressif.FBehaviour.agents.Add(cflockAgent);
+            }
+        }
     }
 
     public bool GetAgents(FlockAgent agent, out FlockAgent target, AgentType agentType)
@@ -53,12 +58,11 @@ public class FlockGetAgentFunctions : Flock
         {
             FlockAgent iFlockAgent = i.transform.gameObject.GetComponent<FlockAgent>();
 
-            if (iFlockAgent == null)                                                                                continue;
-            if (i.transform.parent == null)                                                                         continue;
-            if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)               continue;
-            if (FBehaviour.agents.Contains(iFlockAgent))                                                            continue;
-            if (agentType != AgentType.Agressif || (agentType != AgentType.Passif && i.transform.tag != "passif"))  continue;
-            if (FAggro.pourcentAggro > 70 || agentType == AgentType.Passif)                                         continue;
+            if (iFlockAgent == null)                                                                    continue;
+            if (i.transform.parent == null)                                                             continue;
+            if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)   continue;
+            if (FBehaviour.agents.Contains(iFlockAgent))                                                continue;
+            if (agentType != AgentType.Agressif && FAggro.pourcentAggro > 70)                           continue;
 
             ennemis.Add(i.transform);
             target = iFlockAgent;

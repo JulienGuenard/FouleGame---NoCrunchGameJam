@@ -199,6 +199,8 @@ MonoBehaviour:
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
   agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
+  chefPrefab: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
+  noChef: 1
   startingCount: 1
   agentDensity: 0.08
 --- !u!114 &7840910329840583685

@@ -6,6 +6,8 @@ public class FlockSpawn : Flock
 {
     [Header("Spawn")]
     public FlockAgent agentPrefab;
+    public GameObject chefPrefab;
+    public bool noChef;
     [Range(0, 50)] public int startingCount;
     public float agentDensity = 0.08f;
     static int agentID = 0;
@@ -22,6 +24,11 @@ public class FlockSpawn : Flock
 
     IEnumerator SpawnDelayer()
     {
+        if (FOwnership.chef == null)
+        {
+            FOwnership.chef = Instantiate(chefPrefab, transform.position, Quaternion.identity);
+        }
+
         for (int i = 0; i < startingCount; i++)
         {
             yield return new WaitForSeconds(0.01f);
@@ -36,6 +43,12 @@ public class FlockSpawn : Flock
             newAgent.name = "#" + agentID + " Agent " + i;
             newAgent.Initialize(GetComponent<Flock>());
             FBehaviour.agents.Add(newAgent);
+        }
+
+        if (noChef)
+        {
+            Destroy(FOwnership.chef);
+            FOwnership.chef = null;
         }
 
         StartCoroutine(AgentsActivationDelayer());

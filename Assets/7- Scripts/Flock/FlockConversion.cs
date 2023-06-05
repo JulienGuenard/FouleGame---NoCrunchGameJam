@@ -33,18 +33,12 @@ public class FlockConversion : Flock
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
             if (agent == null)              continue;
-            if (FOwnership.chef != null)    continue;
 
             CheckHP(agent);
 
             if (agent == null)              continue;
-            if (FOwnership.chef != null)    continue;
 
             CheckConversion(agent);
-
-            if (agent == null)              continue;
-
-            FBehaviour.agents.Remove(agent);
         }
     }
 
@@ -62,8 +56,9 @@ public class FlockConversion : Flock
         if (agent.ConvertPercent >= 100) agent.ConvertPercent = 0;
 
         FBehaviour.agents.Remove(agent);
-        agent.transform.SetParent(GameManager.neutre.transform, true);
-        GameManager.neutreFlock.FBehaviour.agents.Add(agent);
+        agent.transform.SetParent(PlayerManager.instance.flockPaco.transform, true);
+        PlayerManager.instance.flockPaco.FBehaviour.agents.Add(agent);
+        agent.parentflock = PlayerManager.instance.flockPaco;
 
         if (FBehaviour.agents.Count == 0) Destroy(gameObject);
     }
