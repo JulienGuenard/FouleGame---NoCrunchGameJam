@@ -8,6 +8,7 @@ public class FlockSpawn : Flock
     public FlockAgent agentPrefab;
     [Range(0, 50)] public int startingCount;
     public float agentDensity = 0.08f;
+    static int agentID = 0;
 
     private void Start()
     {
@@ -30,7 +31,8 @@ public class FlockSpawn : Flock
                 Quaternion.Euler(Vector3.forward * Random.Range(0, 360f)),
                 transform
                 );
-            newAgent.name = "Agent " + i;
+            agentID++;
+            newAgent.name = "#" + agentID + "Agent " + i;
             newAgent.Initialize(GetComponent<Flock>());
             FBehaviour.agents.Add(newAgent);
         }

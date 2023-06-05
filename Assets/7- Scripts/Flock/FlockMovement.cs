@@ -15,78 +15,80 @@ public class FlockMovement : Flock
 
     private void Start()
     {
-        MovementSetup();
+        SquareNumberSetup();
     }
 
-    private void Update()
-    {
-        GroupMovement();
-    }
-
-    void MovementSetup()
+    void SquareNumberSetup()
     {
         squareMaxSpeed = maxSpeed * maxSpeed;
         squareNeighborRadius = neighborRadius * neighborRadius;
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
     }
 
-    public void GroupMovement()
+    private void Update()
+    {
+        MoveEachAgent();
+    }
+
+    public void MoveEachAgent()
     {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent == null && FOwnership.chef == null)   continue;
-            if (agent.mouseInteraction.isSelected)          continue;
+            if (agent.mouseInteraction.isSelected && FOwnership.chef == null) continue;
 
-            if (FType.isPacifique || FType.isAgressif) NextMove(agent);  
-            else                                       NextMovePassif(agent);
-        }
-    }
+            FlockAgent target;
 
-    void NextMove(FlockAgent agent)
-    {
-        float distance = Vector2.Distance(FOwnership.chef.transform.position, agent.transform.position);
-        float speed = Mathf.Clamp(distance, 1, maxSpeed);
-        FlockAgent target = null;
-
-        if (FAggro.Target != null) Debug.Log(this.gameObject.name + " // " + FAggro.Target.gameObject.name);
-
-
-        if (agent.canCheckEnemies && FAggro.Target == null)
-        {
-            agent.UnableCheckEnemies();
-            if (FType.isAgressif) FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, false, true);
-            if (FType.isPacifique) FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, true, false);
-        }
-
-        if (target != null) FAggro.Target = target;
-        
-        if (FCharge.ennemis == true && FAggro.Target != null)
-        {
-            if (FType.isAgressif)   NextMoveAgressif(agent);
-            if (FType.isPacifique)  NextMovePacifique(agent, target);
-        }
-        else
-        {
-            if (agent.canCalculateMove)
-            {
-                agent.UnableCalculateMove();
-                List<Transform> context = FGetAgentFunctions.GetNearbyObjects(agent);
-                agent.move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
-                agent.move *= driveFactor;
-
-                if (agent.move.sqrMagnitude > squareMaxSpeed) agent.move = agent.move.normalized * speed;
-            }
+            DetectEnemy(agent, out target);
+            MovementBehaviour(agent, target);
 
             agent.Move(agent.move);
         }
     }
 
-    void NextMoveAgressif(FlockAgent agent)
+    void DetectEnemy(FlockAgent agent, out FlockAgent target)
+    {
+        target = null;
+
+        if (agent.canCheckEnemies && (FAggro.Target == null || FAggro.Target.Health <= 0))
+        {
+            agent.UnableCheckEnemies();
+            FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);
+        }
+
+        if (target != null) FAggro.Target = target;
+    }
+
+    void MovementBehaviour(FlockAgent agent, FlockAgent target)
+    {
+        if (FCharge.ennemis == true && FAggro.Target != null)
+        {
+            if (FType.agentType == AgentType.Agressif)  Charge(agent);
+            if (FType.agentType == AgentType.Passif)    Convert(agent, target);
+        }
+        else NextMove_NextPoint(agent);
+    }
+
+    void NextMove_NextPoint(FlockAgent agent)
+    {
+        float distance = Vector2.Distance(FOwnership.chef.transform.position, agent.transform.position);
+        float speed = Mathf.Clamp(distance, 1, maxSpeed);
+
+        if (!agent.canCalculateMove) return;
+
+        agent.UnableCalculateMove();
+        List<Transform> context = FGetAgentFunctions.GetNearbyObjects(agent);
+        agent.move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
+        agent.move *= driveFactor;
+
+        if (agent.move.sqrMagnitude > squareMaxSpeed) agent.move = agent.move.normalized * speed;
+    }
+
+    void Charge(FlockAgent agent)
     {
         StartCoroutine(FCharge.ChargedAttack(agent));
     }
 
-    void NextMovePacifique(FlockAgent agent, FlockAgent target)
+    void Convert(FlockAgent agent, FlockAgent target)
     {
         FConversion.HasConvert = false;
         FConversion.MaxConvert = 100;
@@ -95,19 +97,5 @@ public class FlockMovement : Flock
 
         if (FConversion.HasConvert == false && FAggro.Target != null)   StartCoroutine(FConversion.ConvertOther(FAggro.Target.gameObject, agent));
         else                                                            agent.Move(-FFear.Fear(agent.transform.position - target.transform.position) * 2);
-    }
-
-    void NextMovePassif(FlockAgent agent)
-    {
-        float distance = Vector2.Distance(FOwnership.chef.transform.position, agent.transform.position);
-        float Speed = Mathf.Clamp(distance, 1, maxSpeed);
-        List<Transform> context = FGetAgentFunctions.GetNearbyObjects(agent);
-        Vector2 move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
-
-        move *= driveFactor;
-
-        if (move.sqrMagnitude > squareMaxSpeed) move = move.normalized * Speed;
-
-        agent.Move(move);
     }
 }

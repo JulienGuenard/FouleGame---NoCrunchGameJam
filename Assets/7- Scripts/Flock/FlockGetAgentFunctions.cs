@@ -44,7 +44,7 @@ public class FlockGetAgentFunctions : Flock
         return context;
     }
 
-    public bool GetAgents(FlockAgent agent, out FlockAgent target, bool getPassif, bool getEnemies)
+    public bool GetAgents(FlockAgent agent, out FlockAgent target, AgentType agentType)
     {
         List<Transform> ennemis = new List<Transform>();
         Collider2D[] ennemisCollider = Physics2D.OverlapCircleAll(agent.transform.position, FCharge.radius);
@@ -53,12 +53,12 @@ public class FlockGetAgentFunctions : Flock
         {
             FlockAgent iFlockAgent = i.transform.gameObject.GetComponent<FlockAgent>();
 
-            if (iFlockAgent == null)                                                                    continue;
-            if (i.transform.parent == null)                                                             continue;
-            if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)   continue;
-            if (FBehaviour.agents.Contains(iFlockAgent))                                                continue;
-            if (!getEnemies || (!getPassif && i.transform.tag != "passif"))                             continue;
-            if (FAggro.pourcentAgro > 70 || getPassif)                                                  continue;
+            if (iFlockAgent == null)                                                                                continue;
+            if (i.transform.parent == null)                                                                         continue;
+            if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)               continue;
+            if (FBehaviour.agents.Contains(iFlockAgent))                                                            continue;
+            if (agentType != AgentType.Agressif || (agentType != AgentType.Passif && i.transform.tag != "passif"))  continue;
+            if (FAggro.pourcentAgro > 70 || agentType == AgentType.Passif)                                          continue;
 
             ennemis.Add(i.transform);
             target = iFlockAgent;

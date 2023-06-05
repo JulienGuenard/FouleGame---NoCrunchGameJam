@@ -306,8 +306,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
-  isAgressif: 0
-  isPacifique: 1
+  agentType: 1
 --- !u!114 &4663919488440690876
 MonoBehaviour:
   m_ObjectHideFlags: 0
