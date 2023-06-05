@@ -42,8 +42,8 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        compteurAggro = flockAggro.FLifetime.compteur;
-        compteurPaco = flockPaco.FLifetime.compteur;
+        compteurAggro = flockAggro.FBehaviour.agents.Count;
+        compteurPaco = flockPaco.FBehaviour.agents.Count;
      
         compteurTotal = compteurPaco + compteurAggro;
         SetBars();

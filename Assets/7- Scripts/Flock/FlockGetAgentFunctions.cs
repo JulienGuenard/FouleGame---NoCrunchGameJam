@@ -13,7 +13,7 @@ public class FlockGetAgentFunctions : Flock
         {
             if (c == agent.AgentCollider || c.CompareTag("Cursor") || c.transform.parent == null) continue;
 
-            if (c.transform.parent.CompareTag("Neutre") && FLifetime.addnew && FOwnership.isPlayer)
+            if (c.transform.parent.CompareTag("Neutre") && FOwnership.isPlayer)
             {
                 Flock flockpassif = PlayerManager.instance.flockPaco;
                 Flock flockaggressif = PlayerManager.instance.flockAggro;
@@ -26,14 +26,12 @@ public class FlockGetAgentFunctions : Flock
                 {
                     c.transform.SetParent(flockpassif.transform, true);
                     flockpassif.FBehaviour.agents.Add(cflockAgent);
-                    FLifetime.addnew = false;
                 }
 
                 if (c.transform.tag == "agressif")
                 {
                     c.transform.SetParent(flockaggressif.transform, true);
                     flockaggressif.FBehaviour.agents.Add(cflockAgent);
-                    FLifetime.addnew = false;
                 }
             }
 
@@ -58,7 +56,7 @@ public class FlockGetAgentFunctions : Flock
             if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)               continue;
             if (FBehaviour.agents.Contains(iFlockAgent))                                                            continue;
             if (agentType != AgentType.Agressif || (agentType != AgentType.Passif && i.transform.tag != "passif"))  continue;
-            if (FAggro.pourcentAgro > 70 || agentType == AgentType.Passif)                                          continue;
+            if (FAggro.pourcentAggro > 70 || agentType == AgentType.Passif)                                         continue;
 
             ennemis.Add(i.transform);
             target = iFlockAgent;

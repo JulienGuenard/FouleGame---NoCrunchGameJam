@@ -21,14 +21,10 @@ public class FlockConversion : Flock
     {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            // Passif Conversion
-            if (this.tag == "Neutre")
-            {
-                if (agent.ConvertPercent > 0)
-                {
-                    agent.ConvertPercent = 0;
-                }
-            }
+            if (this.tag != "Neutre")       continue;
+            if (agent.ConvertPercent <= 0)  continue;
+
+            agent.ConvertPercent = 0;
         }
     }
 
@@ -36,9 +32,9 @@ public class FlockConversion : Flock
     {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent != null && FOwnership.chef != null)
+            if (agent == null && FOwnership.chef == null)
             {
-                if (!agent.mouseInteraction.isSelected)
+                if (agent.mouseInteraction.isSelected)
                 {
                     agent.CheckHP();
                 }
@@ -66,11 +62,22 @@ public class FlockConversion : Flock
         }
     }
 
+    public void Convert(FlockAgent agent, FlockAgent target)
+    {
+        FConversion.HasConvert = false;
+        FConversion.MaxConvert = 100;
+
+        if (FAggro.targetOnAggro.tag == "agressif") return;
+
+        if (FConversion.HasConvert == false && FAggro.targetOnAggro != null) StartCoroutine(FConversion.ConvertOther(FAggro.targetOnAggro.gameObject, agent));
+        else agent.Move(-FFear.Fear(agent.transform.position - target.transform.position) * 2);
+    }
+
     public IEnumerator ConvertOther(GameObject Pacifist, FlockAgent agent)
     {
         if (HasConvert == false)
         {
-            FAggro.ChaseAnotherEntity(FAggro.Target, agent);
+            FAggro.ChaseAnotherEntity(FAggro.targetOnAggro, agent);
         }
 
         if (Pacifist != null)
@@ -91,7 +98,7 @@ public class FlockConversion : Flock
                 }
                 if (Pacifist != null)
                 {
-                    if (FAggro.Target == null && Pacifist.GetComponent<FlockAgent>().ConvertPercent >= 0)
+                    if (FAggro.targetOnAggro == null && Pacifist.GetComponent<FlockAgent>().ConvertPercent >= 0)
                     {
                         HasConvert = true;
                         break;

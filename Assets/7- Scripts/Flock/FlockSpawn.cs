@@ -25,14 +25,15 @@ public class FlockSpawn : Flock
         for (int i = 0; i < startingCount; i++)
         {
             yield return new WaitForSeconds(0.01f);
-            FlockAgent newAgent = Instantiate(
+            FlockAgent newAgent = Instantiate
+            (
                 agentPrefab,
                 FOwnership.chef.transform.position + Random.insideUnitSphere * startingCount * agentDensity,
                 Quaternion.Euler(Vector3.forward * Random.Range(0, 360f)),
                 transform
-                );
+            );
             agentID++;
-            newAgent.name = "#" + agentID + "Agent " + i;
+            newAgent.name = "#" + agentID + " Agent " + i;
             newAgent.Initialize(GetComponent<Flock>());
             FBehaviour.agents.Add(newAgent);
         }

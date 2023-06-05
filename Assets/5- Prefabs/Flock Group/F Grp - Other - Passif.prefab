@@ -138,12 +138,9 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   destroy: 1
-  TIMER: 500
-  timebtwDeath: 5000
-  addnew: 0
+  delayUntilNextDeath: 5000
   compteur: 0
-  timer: 0
-  timer2: 0
+  delayUntilNextDeathActual: 0
 --- !u!114 &7154433168169977435
 MonoBehaviour:
   m_ObjectHideFlags: 0

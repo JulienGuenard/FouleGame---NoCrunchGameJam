@@ -5,68 +5,73 @@ using UnityEngine;
 public class FlockCharge : Flock
 {
     [Header("Charge")]
-    public float LauchForce;
-    public float ChargedTime;
-    public float RepulseForce;
-    public int DMG;
-    public float radius;
-    public float attackRange;
-    [HideInInspector] public bool IsLaunch = false;
-    [HideInInspector] public Vector2 DistancePos;
-    [HideInInspector] public float Ennemidistance;
-    [HideInInspector] public bool ennemis;
+    public float        launchForce;
+    public float        chargedTime;
+    public float        repulseForce;
+    public int          damage;
+    public float        radius;
+    public float        attackRange;
+    [HideInInspector]   public bool isLaunch = false;
+    [HideInInspector]   public Vector2 distancePos;
+    [HideInInspector]   public float ennemidistance;
+    [HideInInspector]   public bool ennemis;
+
+    public void Charge(FlockAgent agent)
+    {
+        StartCoroutine(FCharge.ChargedAttack(agent));
+    }
 
     public IEnumerator ChargedAttack(FlockAgent agent)
     {
-        yield return new WaitForSeconds(ChargedTime);
+        yield return new WaitForSeconds(chargedTime);
 
-        if (agent != null)
-        {
-            StartCoroutine(Charge(agent));
-        }
+        if (agent != null) StartCoroutine(ChargeMove(agent));
     }
 
-    public IEnumerator Charge(FlockAgent agent)
+    public IEnumerator ChargeMove(FlockAgent agent)
     {
-        if (FAggro.Target != null)
+        if (FAggro.targetOnAggro == null)   ChargeEnd(agent);
+        else                                MoveToTarget(agent);
+
+        yield return new WaitForSeconds(chargedTime);
+
+        if (agent != null && FAggro.targetOnAggro != null)
         {
-            float LaucnhDirectionX = FAggro.Target.transform.position.x;
-            float LaucnhDIrectionY = FAggro.Target.transform.position.y;
-            float posX = agent.transform.position.x;
-            float posY = agent.transform.position.y;
-
-            Vector2 lauchDir = new Vector2(LaucnhDirectionX - posX, LaucnhDIrectionY - posY).normalized;
-            DistancePos = lauchDir;
-            agent.Move(lauchDir * LauchForce);
-            IsLaunch = true;
-
-            agent.flockAgentAnimation.ChargeAnimation();
-        }
-        else
-        {
-            agent.flockAgentAnimation.EndChargeAnimation();
-        }
-
-
-        yield return new WaitForSeconds(ChargedTime);
-        if (agent != null && FAggro.Target != null)
-        {
-            Ennemidistance = Vector2.Distance(FAggro.Target.transform.position, agent.transform.position);
-        }
-
-
-        if (Ennemidistance <= attackRange && FAggro.Target != null && agent != null)
-        {
+            NewEnemyDistance(agent);
             CheckAttack(agent);
         }
 
-        IsLaunch = false;
+        isLaunch = false;
         ennemis = false;
     }
 
-    public void CheckAttack(FlockAgent agent)
+    void ChargeEnd(FlockAgent agent) { agent.flockAgentAnimation.EndChargeAnimation(); }
+
+    void MoveToTarget(FlockAgent agent)
     {
-        FAggro.Target.transform.GetComponent<FlockAgent>().TakeDamage(DMG);
-        agent.Move(-DistancePos * RepulseForce);
+        float LaucnhDirectionX = FAggro.targetOnAggro.transform.position.x;
+        float LaucnhDIrectionY = FAggro.targetOnAggro.transform.position.y;
+        float posX = agent.transform.position.x;
+        float posY = agent.transform.position.y;
+
+        Vector2 lauchDir = new Vector2(LaucnhDirectionX - posX, LaucnhDIrectionY - posY).normalized;
+        distancePos = lauchDir;
+        agent.Move(lauchDir * launchForce);
+        isLaunch = true;
+
+        agent.flockAgentAnimation.ChargeAnimation();
+    }
+
+    void NewEnemyDistance(FlockAgent agent)
+    {
+        ennemidistance = Vector2.Distance(FAggro.targetOnAggro.transform.position, agent.transform.position);
+    }
+
+    void CheckAttack(FlockAgent agent)
+    {
+        if (ennemidistance > attackRange) return;
+
+        FAggro.targetOnAggro.transform.GetComponent<FlockAgent>().TakeDamage(damage);
+        agent.Move(-distancePos * repulseForce);
     }
 }

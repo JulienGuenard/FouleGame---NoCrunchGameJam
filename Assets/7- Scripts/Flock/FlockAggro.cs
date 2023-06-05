@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FlockAggro : Flock
 {
-    [HideInInspector] public int pourcentAgro = 71;
-    [HideInInspector] public FlockAgent Target;
+    [HideInInspector] public int pourcentAggro = 71;
+    [HideInInspector] public FlockAgent targetOnAggro;
 
     private void Update()
     {
@@ -14,10 +14,10 @@ public class FlockAggro : Flock
 
     public void Aggro()
     {
-        if (FOwnership.isPlayer && PlayerManager.instance.compteurTotal != 0)
-        {
-            pourcentAgro = (100 * PlayerManager.instance.compteurAggro) / PlayerManager.instance.compteurTotal;
-        }
+        if (!FOwnership.isPlayer)                       return;
+        if (PlayerManager.instance.compteurTotal == 0)  return;
+
+        pourcentAggro = (100 * PlayerManager.instance.compteurAggro) / PlayerManager.instance.compteurTotal;
     }
 
     public void ChaseAnotherEntity(FlockAgent other, FlockAgent agent)

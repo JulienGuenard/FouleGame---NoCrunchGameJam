@@ -7,66 +7,37 @@ public class FlockLifetime : Flock
 {
     [Header("Lifetime")]
                         public bool destroy = true;
-                        public float TIMER = 2f;
-                        public float timebtwDeath;
-                        public bool addnew = true;
-    [HideInInspector]   public int compteur;
-    [HideInInspector]   public float timer;
-    [HideInInspector]   public float timer2;
+                        public float deathByTimeDelay;
+    [HideInInspector]   public float deathByTimeActual;
 
     private void Start()
     {
-        LifetimeSetup();
+        deathByTimeActual = deathByTimeDelay;
     }
 
     private void Update()
     {
-        FLifetime.IncrementTimedDead();
-        FLifetime.TimedDead();
+        FLifetime.IncrementNextTimedDead();
     }
 
-    void LifetimeSetup()
+    public void IncrementNextTimedDead()
     {
-        timer = TIMER;
+        if (FOwnership.isPlayer)            return;
+        if (FBehaviour.agents.Count == 0)   return;
+
+        deathByTimeActual -= Time.deltaTime;
+
+        if (deathByTimeActual > 0)          return;
+
+        Death(FBehaviour.agents.First());
+        deathByTimeActual = deathByTimeDelay;
     }
 
-    public void IncrementTimedDead()
+    void Death(FlockAgent agent)
     {
-        if (!addnew)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                addnew = true;
-                timer = TIMER;
-            }
-        }
-    }
+        FBehaviour.agents.First().flockAgentAnimation.DeadAnimation();
 
-    public void TimedDead()
-    {
-        compteur = FBehaviour.agents.Count;
-        if (FOwnership.isPlayer && FBehaviour.agents.Count != 0)
-        {
-            timer2 -= Time.deltaTime;
-            if (timer2 <= 0)
-            {
-                FBehaviour.agents.First().flockAgentAnimation.DeadAnimation();
-
-                Destroy(FBehaviour.agents.First().gameObject);
-                FBehaviour.agents.Remove(FBehaviour.agents.First());
-
-                timer2 = timebtwDeath;
-            }
-        }
-    }
-
-    public IEnumerator LifeTimer(int LifeTime)
-    {
-        destroy = false;
-        Destroy(FBehaviour.agents.Last());
-        FBehaviour.agents.Remove(FBehaviour.agents.Last());
-        yield return new WaitForSeconds(LifeTime);
-        destroy = true;
+        Destroy(FBehaviour.agents.First().gameObject);
+        FBehaviour.agents.Remove(FBehaviour.agents.First());
     }
 }

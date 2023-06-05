@@ -2366,6 +2366,22 @@ PrefabInstance:
       propertyPath: chef
       value: 
       objectReference: {fileID: 284271545}
+    - target: {fileID: 8707006619207764879, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707006619207764879, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: chargedTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707006619207764879, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: launchForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8707006619207764879, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
+      propertyPath: repulseForce
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c71131b7a40c5d4ebd951770d258125, type: 3}
 --- !u!1001 &1324123231640697878
@@ -2452,6 +2468,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 603968124}
     m_Modifications:
+    - target: {fileID: 2374002261422635010, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374002261422635010, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
+      propertyPath: chargedTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374002261422635010, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
+      propertyPath: launchForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374002261422635010, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
+      propertyPath: repulseForce
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 4411924906836831398, guid: 7bd7aabac08ce4a45ae6702f09348702, type: 3}
       propertyPath: m_Name
       value: F Grp - Other - Violent
