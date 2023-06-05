@@ -37,7 +37,6 @@ public class FlockMovement : Flock
             if (agent.mouseInteraction.isSelected && FOwnership.chef == null) continue;
 
             FlockAgent target;
-
             DetectEnemy(agent, out target);
             AimEnemy(target);
             MovementBehaviour(agent, target);
@@ -50,15 +49,19 @@ public class FlockMovement : Flock
     {
         target = null;
 
-        if (FAggro.targetOnAggro == null)       return;
-        if (!agent.canCheckEnemies)             return;
-        if (FAggro.targetOnAggro.Health > 0)    return;
+        if (FAggro.targetOnAggro != null && FAggro.targetOnAggro.Health > 0)    return;
+        if (!agent.canCheckEnemies)                                             return;
 
         agent.UnableCheckEnemies();
         FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);
     }
 
-    void AimEnemy(FlockAgent target) { FAggro.targetOnAggro = target; }
+    void AimEnemy(FlockAgent target) 
+    {
+        if (target == null) return;
+
+        FAggro.targetOnAggro = target; 
+    }
 
     void MovementBehaviour(FlockAgent agent, FlockAgent target)
     {

@@ -11,7 +11,9 @@ public class FlockGetAgentFunctions : Flock
 
         foreach (Collider2D c in contextColliders)
         {
-            if (c == agent.AgentCollider || c.CompareTag("Cursor") || c.transform.parent == null) continue;
+            if (c == agent.AgentCollider)   continue;
+            if (c.CompareTag("Cursor"))     continue;
+            if (c.transform.parent == null) continue;
 
             if (c.transform.parent.CompareTag("Neutre") && FOwnership.isPlayer)
             {

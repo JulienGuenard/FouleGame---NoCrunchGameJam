@@ -89,18 +89,14 @@ public class FlockAgent : MonoBehaviour
     }
     public void CheckHP()
     {
-        if (Health <= 0)
-        {
-            flockAgentAnimation.DeadAnimation();
-            parentflock.FBehaviour.agents.Remove(this);
-            Destroy(gameObject);
-        }
+        if (Health <= 0) parentflock.FDeath.Death(this);
     }
 
     public void TakeDamage(int Dmg)
     {
         this.Health -= Dmg;
-       
+        CheckHP();
+
         /*flockAnimation.DamagedAnimation();*/
     }
 

@@ -29,15 +29,7 @@ public class FlockLifetime : Flock
 
         if (deathByTimeActual > 0)          return;
 
-        Death(FBehaviour.agents.First());
+        FDeath.Death(FBehaviour.agents.First());
         deathByTimeActual = deathByTimeDelay;
-    }
-
-    void Death(FlockAgent agent)
-    {
-        FBehaviour.agents.First().flockAgentAnimation.DeadAnimation();
-
-        Destroy(FBehaviour.agents.First().gameObject);
-        FBehaviour.agents.Remove(FBehaviour.agents.First());
     }
 }

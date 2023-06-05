@@ -5,7 +5,7 @@ using UnityEngine;
 public class FlockAggro : Flock
 {
     [HideInInspector] public int pourcentAggro = 71;
-    [HideInInspector] public FlockAgent targetOnAggro;
+    public FlockAgent targetOnAggro;
 
     private void Update()
     {

@@ -18,7 +18,7 @@ public class FlockCharge : Flock
 
     public void Charge(FlockAgent agent)
     {
-        StartCoroutine(FCharge.ChargedAttack(agent));
+        StartCoroutine(ChargedAttack(agent));
     }
 
     public IEnumerator ChargedAttack(FlockAgent agent)

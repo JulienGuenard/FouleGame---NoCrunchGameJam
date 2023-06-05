@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         neutre = GameObject.FindGameObjectWithTag("Neutre");
-        neutreFlock = GameManager.neutre.GetComponent<Flock>();
+        if (neutre != null) neutreFlock = neutre.GetComponent<Flock>();
         GameMa = this;
         Player = GameObject.FindGameObjectWithTag("Player");
         MainCamera = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();

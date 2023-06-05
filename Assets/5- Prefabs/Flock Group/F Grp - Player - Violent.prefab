@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2471202849334205391}
   - component: {fileID: 2910173764469378479}
   - component: {fileID: 7965108602728196672}
+  - component: {fileID: 7193971780814236017}
   m_Layer: 0
   m_Name: F Grp - Player - Violent
   m_TagString: PlayerFlock
@@ -66,6 +67,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
 --- !u!114 &-397004206201492233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -89,8 +91,9 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
-  pourcentAgro: 71
-  Target: {fileID: 0}
+  FDeath: {fileID: 0}
+  pourcentAggro: 71
+  targetOnAggro: {fileID: 0}
 --- !u!114 &-5270092358273607296
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,6 +117,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
 --- !u!114 &8608783496074450651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,10 +141,10 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   destroy: 1
-  delayUntilNextDeath: 5000
-  compteur: 0
-  delayUntilNextDeathActual: 0
+  deathByTimeDelay: 5000
+  deathByTimeActual: 0
 --- !u!114 &-7757232491364086420
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,6 +168,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   driveFactor: 2
   maxSpeed: 2
   neighborRadius: 1.5
@@ -192,8 +197,9 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
-  startingCount: 10
+  startingCount: 1
   agentDensity: 0.08
 --- !u!114 &8707006619207764879
 MonoBehaviour:
@@ -218,15 +224,16 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
-  LauchForce: 2
-  ChargedTime: 1
-  RepulseForce: 10
-  DMG: 10
+  FDeath: {fileID: 0}
+  launchForce: 2
+  chargedTime: 1
+  repulseForce: 10
+  damage: 10
   radius: 2
   attackRange: 0.2
-  IsLaunch: 0
-  DistancePos: {x: 0, y: 0}
-  Ennemidistance: 0
+  isLaunch: 0
+  distancePos: {x: 0, y: 0}
+  ennemidistance: 0
   ennemis: 0
 --- !u!114 &604507668901935804
 MonoBehaviour:
@@ -251,6 +258,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   agents: []
   flockAgentBehaviour: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
 --- !u!114 &602416854662385878
@@ -276,6 +284,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   MaxConvert: 0
   Multiplicater: 0
   HasConvert: 0
@@ -303,6 +312,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   agentType: 0
 --- !u!114 &2910173764469378479
 MonoBehaviour:
@@ -327,6 +337,7 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
   isPlayer: 1
   chef: {fileID: 0}
 --- !u!114 &7965108602728196672
@@ -352,3 +363,28 @@ MonoBehaviour:
   FBehaviour: {fileID: 0}
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+--- !u!114 &7193971780814236017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 763596639306561507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf879e2159af0cc47a97b8a6ad841057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
