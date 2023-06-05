@@ -45,7 +45,7 @@ public class FlockCharge : Flock
         ennemis = false;
     }
 
-    void ChargeEnd(FlockAgent agent) { agent.flockAgentAnimation.EndChargeAnimation(); }
+    void ChargeEnd(FlockAgent agent) { agent.agentAnimation.EndChargeAnimation(); }
 
     void MoveToTarget(FlockAgent agent)
     {
@@ -56,10 +56,10 @@ public class FlockCharge : Flock
 
         Vector2 lauchDir = new Vector2(LaucnhDirectionX - posX, LaucnhDIrectionY - posY).normalized;
         distancePos = lauchDir;
-        agent.Move(lauchDir * launchForce);
+        agent.agentMovement.Move(lauchDir * launchForce);
         isLaunch = true;
 
-        agent.flockAgentAnimation.ChargeAnimation();
+        agent.agentAnimation.ChargeAnimation();
     }
 
     void NewEnemyDistance(FlockAgent agent)
@@ -71,7 +71,7 @@ public class FlockCharge : Flock
     {
         if (ennemidistance > attackRange) return;
 
-        FAggro.targetOnAggro.transform.GetComponent<FlockAgent>().TakeDamage(damage);
-        agent.Move(-distancePos * repulseForce);
+        FAggro.targetOnAggro.transform.GetComponent<FlockAgent>().agentLife.TakeDamage(damage);
+        agent.agentMovement.Move(-distancePos * repulseForce);
     }
 }

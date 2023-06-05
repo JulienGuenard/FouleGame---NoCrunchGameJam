@@ -36,13 +36,15 @@ public class FlockMovement : Flock
 
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent.mouseInteraction.isSelected && FOwnership.chef == null) continue;
+            if (agent.agentCursorInputs.isSelected && FOwnership.chef == null) continue;
 
             FlockAgent target;
             DetectEnemy(agent, out target);
             MovementBehaviour(agent, target);
 
-            agent.Move(agent.move);
+            if (agent == null) continue;
+
+            agent.agentMovement.Move(agent.agentMovement.move);
         }
     }
 
@@ -50,9 +52,11 @@ public class FlockMovement : Flock
     {
         target = null;
 
-        if (!agent.canCheckEnemies)                                             return;
+        if (!agent.agentCooldown.canCheckEnemies) return;
 
-        agent.UnableCheckEnemies();
+        if (agent == null) return;
+
+        agent.agentCooldown.UnableCheckEnemies();
         FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);
 
         AimEnemy(target);
@@ -75,16 +79,18 @@ public class FlockMovement : Flock
 
     void NextPoint(FlockAgent agent)
     {
+        if (agent == null) return;
+
         float distance = Vector2.Distance(FOwnership.chef.transform.position, agent.transform.position);
         float speed = Mathf.Clamp(distance, 1, maxSpeed);
 
-        if (!agent.canCalculateMove) return;
+        if (!agent.agentCooldown.canCalculateMove) return;
 
-        agent.UnableCalculateMove();
+        agent.agentCooldown.UnableCalculateMove();
         List<Transform> context = FGetAgentFunctions.GetNNearbyAgents(agent);
-        agent.move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
-        agent.move *= driveFactor;
+        agent.agentMovement.move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
+        agent.agentMovement.move *= driveFactor;
 
-        if (agent.move.sqrMagnitude > squareMaxSpeed) agent.move = agent.move.normalized * speed;
+        if (agent.agentMovement.move.sqrMagnitude > squareMaxSpeed) agent.agentMovement.move = agent.agentMovement.move.normalized * speed;
     }
 }

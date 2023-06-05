@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseInteraction : MonoBehaviour
+public class FA_CursorInputs : FlockAgent
 {
     private SpriteRenderer spriteR;
 
@@ -22,8 +22,9 @@ public class MouseInteraction : MonoBehaviour
     public Material outlineMat;
     private Material outlineMatInitial;
 
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         spriteR = sprite.GetComponentInChildren<SpriteRenderer>();
         outlineMatInitial = spriteR.material;
     }

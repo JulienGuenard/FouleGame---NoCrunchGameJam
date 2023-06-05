@@ -94,7 +94,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1324123231899656104}
   - component: {fileID: 1324123231899656107}
-  - component: {fileID: 1324123231899656106}
   - component: {fileID: 1324123231899656109}
   - component: {fileID: 1324123231899656108}
   m_Layer: 0
@@ -134,28 +133,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
---- !u!114 &1324123231899656106
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1324123231899656111}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec5e571bcf6bb614f8ed2d015fcfbbd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  flockAggro: {fileID: 0}
-  flockPaco: {fileID: 0}
-  AgressifBar: {fileID: 0}
-  PassifBar: {fileID: 0}
-  compteurAggro: 0
-  compteurPaco: 0
-  compteurTotal: 0
-  MinSize: 0
-  Scale: 0.7
-  cinemachine: {fileID: 0}
 --- !u!61 &1324123231899656109
 BoxCollider2D:
   m_ObjectHideFlags: 0

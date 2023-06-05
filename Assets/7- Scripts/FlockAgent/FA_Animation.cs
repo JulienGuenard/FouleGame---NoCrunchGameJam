@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FA_Animation : MonoBehaviour
+public class FA_Animation : FlockAgent
 {
     Animator animator;
 
     public GameObject deadEffect;
     
-    void Awake()
+    public override void Awake()
     {
+        base.Awake();
         animator = GetComponentInChildren<Animator>();
     }
 

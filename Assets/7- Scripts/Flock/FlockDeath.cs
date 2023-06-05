@@ -6,7 +6,7 @@ public class FlockDeath : Flock
 {
     public void Death(FlockAgent agent)
     {
-        agent.flockAgentAnimation.DeadAnimation();
+        agent.agentAnimation.DeadAnimation();
 
             Destroy(agent.gameObject);
             FBehaviour.agents.Remove(agent);

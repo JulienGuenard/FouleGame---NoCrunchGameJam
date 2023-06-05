@@ -41,7 +41,7 @@ public class FlockSpawn : Flock
             );
             agentID++;
             newAgent.name = "#" + agentID + " Agent " + i;
-            newAgent.Initialize(GetComponent<Flock>());
+            newAgent.agentOwnership.Initialize(GetComponent<Flock>());
             FBehaviour.agents.Add(newAgent);
         }
 
@@ -61,8 +61,8 @@ public class FlockSpawn : Flock
         foreach (FlockAgent agent in FBehaviour.agents)
         {
             yield return new WaitForSeconds(0.01f);
-            agent.canCalculateMove = true;
-            agent.canCheckEnemies = true;
+            agent.agentCooldown.canCalculateMove = true;
+            agent.agentCooldown.canCheckEnemies = true;
         }
     }
 }

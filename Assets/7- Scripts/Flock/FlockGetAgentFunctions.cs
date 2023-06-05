@@ -31,7 +31,7 @@ public class FlockGetAgentFunctions : Flock
             Flock flockpassif = PlayerManager.instance.flockPaco;
             Flock flockaggressif = PlayerManager.instance.flockAggro;
             FlockAgent cflockAgent = c.GetComponent<FlockAgent>();
-            Flock cflockParent = cflockAgent.parentflock;
+            Flock cflockParent = cflockAgent.agentOwnership.parentflock;
 
             cflockParent.FBehaviour.agents.Remove(cflockAgent);
 
@@ -60,7 +60,7 @@ public class FlockGetAgentFunctions : Flock
 
             if (iFlockAgent == null)                                                                    continue;
             if (i.transform.parent == null)                                                             continue;
-            if (agent.parentflock.FOwnership.isPlayer == iFlockAgent.parentflock.FOwnership.isPlayer)   continue;
+            if (agent.agentOwnership.parentflock.FOwnership.isPlayer == iFlockAgent.agentOwnership.parentflock.FOwnership.isPlayer)   continue;
             if (FBehaviour.agents.Contains(iFlockAgent))                                                continue;
             if (agentType != AgentType.Agressif && FAggro.pourcentAggro > 70)                           continue;
 

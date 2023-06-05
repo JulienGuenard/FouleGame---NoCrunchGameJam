@@ -32,7 +32,7 @@ public class SelectableManager : MonoBehaviour
     {
         foreach(GameObject obj in selectableUnitList)
         {
-            obj.GetComponent<MouseInteraction>().Hover();
+            obj.GetComponent<FA_CursorInputs>().Hover();
         }
     }
 
@@ -41,6 +41,6 @@ public class SelectableManager : MonoBehaviour
         if (!selectableUnitList.Contains(obj)) return;
 
         selectableUnitList.Remove(obj);
-        obj.GetComponent<MouseInteraction>().Unhover();
+        obj.GetComponent<FA_CursorInputs>().Unhover();
     }
 }

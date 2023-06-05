@@ -19,17 +19,17 @@ public class Flock : MonoBehaviour
 
     public virtual void Awake()
     {
-        FSpawn =                GetComponent<FlockSpawn>();
-        FAggro =                GetComponent<FlockAggro>();
-        FLifetime =             GetComponent<FlockLifetime>();
-        FMovement =             GetComponent<FlockMovement>();
-        FFear =                 GetComponent<FlockFear>();
-        FOwnership =            GetComponent<FlockOwnership>();
-        FType =                 GetComponent<FlockType>();
-        FConversion =           GetComponent<FlockConversion>();
-        FBehaviour =            GetComponent<FlockBehaviour>();
-        FCharge =               GetComponent<FlockCharge>();
-        FGetAgentFunctions =    GetComponent<FlockGetAgentFunctions>();
-        FDeath =                GetComponent<FlockDeath>();
+        FSpawn                  = GetComponent<FlockSpawn>();
+        FAggro                  = GetComponent<FlockAggro>();
+        FLifetime               = GetComponent<FlockLifetime>();
+        FMovement               = GetComponent<FlockMovement>();
+        FFear                   = GetComponent<FlockFear>();
+        FOwnership              = GetComponent<FlockOwnership>();
+        FType                   = GetComponent<FlockType>();
+        FConversion             = GetComponent<FlockConversion>();
+        FBehaviour              = GetComponent<FlockBehaviour>();
+        FCharge                 = GetComponent<FlockCharge>();
+        FGetAgentFunctions      = GetComponent<FlockGetAgentFunctions>();
+        FDeath                  = GetComponent<FlockDeath>();
     }
 }

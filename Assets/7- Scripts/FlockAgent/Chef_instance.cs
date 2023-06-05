@@ -22,7 +22,7 @@ public class Chef_instance : MonoBehaviour
     }
     private void Update()
     {
-        Health = GetComponent<FlockAgent>().Health;
+        Health = GetComponent<FA_Life>().Health;
         CheckHP();
     }
     public void CheckHP()

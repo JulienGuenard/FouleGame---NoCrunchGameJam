@@ -12,17 +12,14 @@ public class PlayerManager : MonoBehaviour
     public Bars_UI AgressifBar;
     public Bars_UI PassifBar;
   
-
     public int compteurAggro;
     public int compteurPaco;
     public int compteurTotal;
 
     public int MinSize;
-
+    public float camScale;
     float MinCamSize;
-
-    public float Scale;
-
+    
     public CinemachineVirtualCamera cinemachine;
 
     public static PlayerManager instance;
@@ -34,25 +31,32 @@ public class PlayerManager : MonoBehaviour
 
     void Start()
     {
-        /*cinemachine = GameManager.Cinemachine.GetComponent<CinemachineVirtualCamera>();*/
         MinCamSize = cinemachine.m_Lens.OrthographicSize;
         MinSize = flockAggro.FSpawn.startingCount + flockPaco.FSpawn.startingCount;
-     
     }
 
     void Update()
     {
+        UpdatePlayerAgentCount();
+        SetBars();
+        AdjustCamSize();
+    }
+
+    void UpdatePlayerAgentCount()
+    {
         compteurAggro = flockAggro.FBehaviour.agents.Count;
         compteurPaco = flockPaco.FBehaviour.agents.Count;
-     
-        compteurTotal = compteurPaco + compteurAggro;
-        SetBars();
 
-        float camsize = (MinCamSize * (compteurTotal*Scale)) / MinSize;
-        if(camsize >= 0)
-        {
-            cinemachine.m_Lens.OrthographicSize = Mathf.Log(camsize+3,2);
-        }
+        compteurTotal = compteurPaco + compteurAggro;
+    }
+
+    void AdjustCamSize()
+    {
+        float camsize = (MinCamSize * (compteurTotal * camScale)) / MinSize;
+
+        if (camsize < 0) return;
+
+        cinemachine.m_Lens.OrthographicSize = Mathf.Log(camsize + 3, 2);
     }
 
     public void SetBars()
@@ -65,10 +69,9 @@ public class PlayerManager : MonoBehaviour
 
     public void CHeckGameOver(int compteur)
     {
-        if(compteur == 0) 
-        {
-            MenuManager.Instance.LoadScene("MenuGameOver");
-        }
+        if (compteur != 0) return;
+
+        MenuManager.Instance.LoadScene("MenuGameOver");
     }
 
    
