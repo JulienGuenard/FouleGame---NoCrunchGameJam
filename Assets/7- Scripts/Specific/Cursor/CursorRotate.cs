@@ -4,62 +4,36 @@ using UnityEngine;
 
 public class CursorRotate : Cursor
 {
-    public Vector3 direction;
-    public Vector3 lastPos;
-    public Vector3 nextPos;
-    public float distance;
+    Vector3 direction;
+    Vector3 lastPos;
+    Vector3 nextPos;
+    Vector3 directionInitial;
+    float distance;
 
-    bool isRotating = false;
+    private void Start()
+    {
+        directionInitial = transform.up;
+    }
 
     public void Rotate()
     {
-        if (isRotating) return;
-
-        isRotating = true;
-        StartCoroutine(RotateDelay());
-    }
-
-    IEnumerator RotateDelay()
-    {
-        yield return new WaitForSeconds(.5f);
-    //    LastRotation();
-        yield return new WaitForSeconds(.5f);
-        NewRotation();
-    }
-
-    void LastRotation()
-    {
-        if (transform.position == nextPos) return;
-
-        lastPos = transform.position;
-
-        if (nextPos == Vector3.zero) return;
-
-        lastPos = nextPos;
-    }
-
-    void NewRotation()
-    {
-        isRotating = false;
-        
         if (nextPos == transform.position) return;
 
-        
+        lastPos = nextPos;
         Vector3 nextPosTemp = transform.position;
 
         distance = (lastPos - nextPosTemp).magnitude;
         distance *= 1000;
 
-          if (distance > 2000f || distance < -2000f)
-           {
-            Debug.Log(distance);
-        direction.z = Vector2.Angle(lastPos, nextPos);
-        transform.rotation = Quaternion.Euler(direction * 100);
+        if (distance < 800f && distance > -800f) return;
 
-            lastPos = nextPos;
-            nextPos = nextPosTemp;
-        }
+        nextPos = nextPosTemp;
+        Vector3 target = nextPos - lastPos;
 
-
+        direction.z = -Vector2.SignedAngle(target, directionInitial);
+        transform.rotation = Quaternion.Euler(direction);
     }
 }
+
+
+
