@@ -25,18 +25,13 @@ public class FlockMovement : Flock
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
     }
 
-    private void Update()
-    {
-        MoveEachAgent();
-    }
-
     public void MoveEachAgent()
     {
         if (FOwnership.chef == null) return;
 
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent.agentCursorInputs.isSelected && FOwnership.chef == null) continue;
+            if (agent.agentCursorInputs.isSelected) continue;
 
             FlockAgent target;
             DetectEnemy(agent, out target);
@@ -54,17 +49,9 @@ public class FlockMovement : Flock
 
         if (!agent.agentCooldown.canCheckEnemies) return;
 
-        if (agent == null) return;
-
         agent.agentCooldown.UnableCheckEnemies();
         FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);
-
-        AimEnemy(target);
-    }
-
-    void AimEnemy(FlockAgent target) 
-    {
-        FAggro.targetOnAggro = target; 
+        FAggro.targetOnAggro = target;
     }
 
     void MovementBehaviour(FlockAgent agent, FlockAgent target)

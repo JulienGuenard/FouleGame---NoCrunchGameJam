@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4411924906836831398
+--- !u!1 &2079756922325437378
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,49 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4411924906836831416}
-  - component: {fileID: 4411924906836831417}
-  - component: {fileID: -474806077506337294}
-  - component: {fileID: 4743472949197739604}
-  - component: {fileID: 6522407727921168270}
-  - component: {fileID: -2742118152861956444}
-  - component: {fileID: 2763920225283528311}
-  - component: {fileID: 2374002261422635010}
-  - component: {fileID: 4631359190623829946}
-  - component: {fileID: 3558569519171101397}
-  - component: {fileID: 1617968365404926347}
-  - component: {fileID: 7850867636802764830}
-  - component: {fileID: 8790436166803782706}
-  - component: {fileID: 3939271100421210478}
+  - component: {fileID: 2079756922325437404}
+  - component: {fileID: 2079756922325437379}
+  - component: {fileID: 6931309024744061887}
+  - component: {fileID: 1668861362895722377}
+  - component: {fileID: 6792420567280776856}
+  - component: {fileID: 7137758914845815595}
+  - component: {fileID: 854803938423504304}
+  - component: {fileID: 4255507214981844565}
+  - component: {fileID: 307927913381756910}
+  - component: {fileID: 1046643907542586875}
+  - component: {fileID: 4271497084746210184}
+  - component: {fileID: 4340365044631553342}
+  - component: {fileID: 2894946740142232407}
+  - component: {fileID: 6310583631773751306}
+  - component: {fileID: 757629466596033418}
   m_Layer: 0
-  m_Name: F Grp - Other - Violent
+  m_Name: FGrp (origin)
   m_TagString: Ennemi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4411924906836831416
+--- !u!4 &2079756922325437404
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.879602, y: 18.268501, z: 0}
+  m_GameObject: {fileID: 2079756922325437378}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.3, y: 10.3, z: -0.5002135}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4411924906836831417
+--- !u!114 &2079756922325437379
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
@@ -68,13 +69,102 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
---- !u!114 &-474806077506337294
+  FEvents: {fileID: 0}
+--- !u!114 &6931309024744061887
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b0ba64050d9a94f980c4aecbed2e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FEvents: {fileID: 0}
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1668861362895722377}
+        m_TargetAssemblyTypeName: FlockAggro, Assembly-CSharp
+        m_MethodName: Aggro
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4271497084746210184}
+        m_TargetAssemblyTypeName: FlockConversion, Assembly-CSharp
+        m_MethodName: PassifConversion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4271497084746210184}
+        m_TargetAssemblyTypeName: FlockConversion, Assembly-CSharp
+        m_MethodName: Conversion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7137758914845815595}
+        m_TargetAssemblyTypeName: FlockLifetime, Assembly-CSharp
+        m_MethodName: IncrementNextTimedDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 854803938423504304}
+        m_TargetAssemblyTypeName: FlockMovement, Assembly-CSharp
+        m_MethodName: MoveEachAgent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1668861362895722377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe85428f50e2b3049b76a5d13cb64f9e, type: 3}
@@ -92,15 +182,16 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
+  FEvents: {fileID: 0}
   pourcentAggro: 71
   targetOnAggro: {fileID: 0}
---- !u!114 &4743472949197739604
+--- !u!114 &6792420567280776856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bb48e4a09fc6aee4c8694ad3063b8029, type: 3}
@@ -118,13 +209,14 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
---- !u!114 &6522407727921168270
+  FEvents: {fileID: 0}
+--- !u!114 &7137758914845815595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d48a7ad8fc8b2c045b78465d8b80a8b5, type: 3}
@@ -142,16 +234,17 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
+  FEvents: {fileID: 0}
   destroy: 1
   deathByTimeDelay: 5000
   deathByTimeActual: 0
---- !u!114 &-2742118152861956444
+--- !u!114 &854803938423504304
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be08f80eff2661745aac09be91aa52d6, type: 3}
@@ -169,18 +262,19 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  driveFactor: 2
-  maxSpeed: 2
-  neighborRadius: 1.5
+  FEvents: {fileID: 0}
+  driveFactor: 1
+  maxSpeed: 1
+  neighborRadius: 1
   avoidanceRadiusMultiplier: 0.1
   squareMaxSpeed: 0
---- !u!114 &2763920225283528311
+--- !u!114 &4255507214981844565
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 923540092fa02a34b89080e2f1206fbf, type: 3}
@@ -198,18 +292,19 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
+  FEvents: {fileID: 0}
+  agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
   chefPrefab: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
-  noChef: 1
-  startingCount: 0
+  noChef: 0
+  startingCount: 5
   agentDensity: 0.08
---- !u!114 &2374002261422635010
+--- !u!114 &307927913381756910
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0332d3eaef84b3446bd4e41642d88152, type: 3}
@@ -227,23 +322,24 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  launchForce: 2
-  chargedTime: 1
-  repulseForce: 10
-  damage: 10
+  FEvents: {fileID: 0}
+  launchForce: 0
+  chargedTime: 0
+  repulseForce: 0
+  damage: 0
   radius: 2
   attackRange: 0.2
   isLaunch: 0
   distancePos: {x: 0, y: 0}
   ennemidistance: 0
   ennemis: 0
---- !u!114 &4631359190623829946
+--- !u!114 &1046643907542586875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b18d911dcbecce24a9c8d21e0f3b4ef6, type: 3}
@@ -261,15 +357,16 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
+  FEvents: {fileID: 0}
   agents: []
-  flockAgentBehaviour: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
---- !u!114 &3558569519171101397
+  flockAgentBehaviour: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
+--- !u!114 &4271497084746210184
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 20cde84d827b4c743acb944b05ab407d, type: 3}
@@ -287,17 +384,18 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
+  FEvents: {fileID: 0}
   MaxConvert: 0
-  Multiplicater: 0
+  Multiplicater: 1
   HasConvert: 0
   Flk: {fileID: 0}
---- !u!114 &1617968365404926347
+--- !u!114 &4340365044631553342
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7e47f61f602c5734a904e98dad45ea72, type: 3}
@@ -315,14 +413,15 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  agentType: 0
---- !u!114 &7850867636802764830
+  FEvents: {fileID: 0}
+  agentType: 1
+--- !u!114 &2894946740142232407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e66cf0cabdbc96b4298b882d9418d8a4, type: 3}
@@ -340,15 +439,16 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
+  FEvents: {fileID: 0}
   isPlayer: 0
   chef: {fileID: 0}
---- !u!114 &8790436166803782706
+--- !u!114 &6310583631773751306
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30ac9a8b223420040a3e8800b528ee8d, type: 3}
@@ -366,13 +466,14 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
---- !u!114 &3939271100421210478
+  FEvents: {fileID: 0}
+--- !u!114 &757629466596033418
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4411924906836831398}
+  m_GameObject: {fileID: 2079756922325437378}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cf879e2159af0cc47a97b8a6ad841057, type: 3}
@@ -390,3 +491,4 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
+  FEvents: {fileID: 0}

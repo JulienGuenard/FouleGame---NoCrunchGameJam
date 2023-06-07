@@ -16,6 +16,7 @@ public class Flock : MonoBehaviour
     [HideInInspector] public FlockCharge            FCharge;
     [HideInInspector] public FlockGetAgentFunctions FGetAgentFunctions;
     [HideInInspector] public FlockDeath             FDeath;
+    [HideInInspector] public FlockEvents            FEvents;
 
     public virtual void Awake()
     {
@@ -31,5 +32,6 @@ public class Flock : MonoBehaviour
         FCharge                 = GetComponent<FlockCharge>();
         FGetAgentFunctions      = GetComponent<FlockGetAgentFunctions>();
         FDeath                  = GetComponent<FlockDeath>();
+        FEvents                 = GetComponent<FlockEvents>();
     }
 }

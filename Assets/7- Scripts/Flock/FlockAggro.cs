@@ -1,16 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class FlockAggro : Flock
 {
     [HideInInspector] public int pourcentAggro = 71;
     public FlockAgent targetOnAggro;
-
-    private void Update()
-    {
-        Aggro();
-    }
 
     public void Aggro()
     {

@@ -15,11 +15,6 @@ public class FlockLifetime : Flock
         deathByTimeActual = deathByTimeDelay;
     }
 
-    private void Update()
-    {
-        FLifetime.IncrementNextTimedDead();
-    }
-
     public void IncrementNextTimedDead()
     {
         if (FOwnership.isPlayer)            return;

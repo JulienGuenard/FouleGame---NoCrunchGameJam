@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &193408955522650563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4651734604946234289, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: agentType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5169232674650706138, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: agentPrefab
+      value: 
+      objectReference: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
+    - target: {fileID: 5185106684406990087, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: Multiplicater
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161229, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_Name
+      value: FGrp_Player_Violent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.30000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 10.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.5002135
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: driveFactor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: neighborRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: chargedTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: launchForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
+      propertyPath: repulseForce
+      value: 10
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba8c79359a019294baadc4305ea65609, type: 3}

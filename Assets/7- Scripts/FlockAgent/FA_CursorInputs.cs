@@ -103,17 +103,26 @@ public class FA_CursorInputs : FlockAgent
     void Unselect()
     {
         isSelected = false;
-        Undrag();
+        Drop();
     }
 
     void Drag()
     {
-        transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition + offset) - new Vector3(0, 0, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+        Vector3 cursorPos       = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 cursorPosOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition + offset);
+        Vector3 newPos          = cursorPosOffset - new Vector3(0, 0, cursorPos.z);
+        transform.position      = newPos;
     }
 
-    void Undrag()
+    void Drop()
     {
         transform.position += undragOffset;
+        DropForce();
         TryToUnhover();
+    }
+
+    void DropForce()
+    {
+        rb.AddRelativeForce(transform.up);
     }
 }

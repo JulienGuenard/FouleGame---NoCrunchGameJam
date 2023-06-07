@@ -11,13 +11,7 @@ public class FlockConversion : Flock
 
     [HideInInspector] public Flock Flk;
 
-    private void Update()
-    {
-        PassifConversion();
-        Conversion();
-    }
-
-    void PassifConversion()
+    public void PassifConversion()
     {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
@@ -28,7 +22,7 @@ public class FlockConversion : Flock
         }
     }
 
-    void Conversion()
+    public void Conversion()
     {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {

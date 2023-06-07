@@ -5,16 +5,16 @@ using UnityEngine;
 public class FlockCharge : Flock
 {
     [Header("Charge")]
-    public float        launchForce;
-    public float        chargedTime;
-    public float        repulseForce;
-    public int          damage;
-    public float        radius;
-    public float        attackRange;
-    [HideInInspector]   public bool isLaunch = false;
-    [HideInInspector]   public Vector2 distancePos;
-    [HideInInspector]   public float ennemidistance;
-    [HideInInspector]   public bool ennemis;
+                        public float    launchForce;
+                        public float    chargedTime;
+                        public float    repulseForce;
+                        public int      damage;
+                        public float    radius;
+                        public float    attackRange;
+    [HideInInspector]   public bool     isLaunch = false;
+    [HideInInspector]   public Vector2  distancePos;
+    [HideInInspector]   public float    ennemidistance;
+    [HideInInspector]   public bool     ennemis;
 
     public void Charge(FlockAgent agent)
     {
