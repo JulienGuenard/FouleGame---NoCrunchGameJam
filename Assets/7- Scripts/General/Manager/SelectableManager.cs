@@ -22,17 +22,19 @@ public class SelectableManager : MonoBehaviour
 
     public void AddToSelectableUnitList(GameObject obj)
     {
+        if (GetSelectableUnitList().Contains(obj))              return;
         if (selectableUnitList.Count > selectableUnitNumberMax) return;
+        if (obj == null)                                        return;
 
         selectableUnitList.Add(obj);
-        HoverAll();
+        SelectableAll();
     }
 
-    void HoverAll()
+    void SelectableAll()
     {
         foreach(GameObject obj in selectableUnitList)
         {
-            obj.GetComponent<FA_CursorInputs>().Hover();
+            obj.GetComponent<FA_Selection>().Selectable();
         }
     }
 
@@ -41,6 +43,6 @@ public class SelectableManager : MonoBehaviour
         if (!selectableUnitList.Contains(obj)) return;
 
         selectableUnitList.Remove(obj);
-        obj.GetComponent<FA_CursorInputs>().Unhover();
+        obj.GetComponent<FA_Selection>().Unselectable();
     }
 }

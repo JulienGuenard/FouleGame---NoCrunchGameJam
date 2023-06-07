@@ -25,13 +25,13 @@ public class FlockMovement : Flock
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
     }
 
-    public void MoveEachAgent() // Appelé par FlockEvent (voir inspector)
+    public void MoveEachAgent() // Appelé par UpdateEvent (voir inspector)
     {
         if (FOwnership.chef == null) return;
 
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent.agentCursorInputs.isSelected) continue;
+            if (agent.agentSelection.isSelected) continue;
 
             FlockAgent target;
             DetectEnemy(agent, out target);

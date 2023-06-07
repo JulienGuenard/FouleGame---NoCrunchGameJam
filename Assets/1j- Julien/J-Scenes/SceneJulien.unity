@@ -493,18 +493,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7774864764471777482, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
-      propertyPath: PauseMenu
-      value: 
-      objectReference: {fileID: 1038062217}
-    - target: {fileID: 7774864764471777482, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
-      propertyPath: InterfaceIG
-      value: 
-      objectReference: {fileID: 2127654521}
-    - target: {fileID: 7785572302371704094, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
-      propertyPath: camScale
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 7785572302371704094, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
       propertyPath: PassifBar
       value: 
@@ -525,10 +513,6 @@ PrefabInstance:
       propertyPath: cinemachine
       value: 
       objectReference: {fileID: 1358689037}
-    - target: {fileID: 8425624715237728878, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
-      propertyPath: machine
-      value: 
-      objectReference: {fileID: 1358689036}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
 --- !u!1 &531915670
@@ -1027,28 +1011,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &837187783 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1289190960004233001, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
-  m_PrefabInstance: {fileID: 508679041}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &837187790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 837187783}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1436440f8c26ec42aaf6fd62620134e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chefFoule: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
-  nombreFouleActuelle: 0
-  maxNombreFoule: 3
-  "unit\xE9taille": 2
-  tailleGrille: 5
 --- !u!1 &913541222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1085,11 +1047,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8303978397446395024, guid: b67b13bbeb03c104f93848f13aa17815, type: 3}
   m_PrefabInstance: {fileID: 684219494}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1038062217 stripped
+--- !u!1 &983612937 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 4185859899849846435, guid: b053dda74e5220f44a80fd9e923cd07e, type: 3}
-  m_PrefabInstance: {fileID: 1424958820}
+  m_CorrespondingSourceObject: {fileID: 2246397654445279602, guid: 91faf4cc43271b34db6bf6f2173e08d7, type: 3}
+  m_PrefabInstance: {fileID: 1622435135}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &983612945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983612937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b09055617cbfea46a3e0e243fce3bcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1089529378
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,17 +1525,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8303978397446395024, guid: b67b13bbeb03c104f93848f13aa17815, type: 3}
   m_PrefabInstance: {fileID: 1782556731}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1358689036 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8675269313058673763, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
-  m_PrefabInstance: {fileID: 8675269314394089327}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1358689037 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8675269313058673762, guid: 2ff865c82ac4dfc4bb9856e9ef305e66, type: 3}
   m_PrefabInstance: {fileID: 8675269314394089327}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1358689036}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}

@@ -8,7 +8,7 @@ public class FlockAggro : Flock
     [HideInInspector] public int pourcentAggro = 71;
     public FlockAgent targetOnAggro;
 
-    public void Aggro() // Appelé par FlockEvent (voir inspector)
+    public void Aggro() // Appelé par UpdateEvent (voir inspector)
     {
         if (!FOwnership.isPlayer)                       return;
         if (PlayerManager.instance.compteurTotal == 0)  return;

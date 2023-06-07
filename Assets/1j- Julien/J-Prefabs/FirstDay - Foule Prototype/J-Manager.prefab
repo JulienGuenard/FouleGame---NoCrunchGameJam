@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1289190960004233011}
   - component: {fileID: 8425624715237728878}
+  - component: {fileID: 837187791}
   - component: {fileID: 1857541525}
   - component: {fileID: 508679043}
   - component: {fileID: 7774864764471777482}
   - component: {fileID: 7785572302371704094}
+  - component: {fileID: 837187790}
   m_Layer: 0
   m_Name: J-Manager
   m_TagString: Untagged
@@ -48,13 +50,33 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8b54a536140cc45942b2ba848dd2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  machine: {fileID: 0}
-  "unit\xE9taille": 2
-  tailleGrille: 5
-  ChefFoule: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
-  saferayon: 10
-  NombreFouleActuelle: 0
-  maxNombreFoule: 3
+--- !u!114 &837187791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289190960004233001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b0ba64050d9a94f980c4aecbed2e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 508679043}
+        m_TargetAssemblyTypeName: HoverManager, Assembly-CSharp
+        m_MethodName: HoverNewUnit
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1857541525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbf579877ad18674681b62979f5a31e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PauseMenu: {fileID: 0}
-  InterfaceIG: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  interfaceIG: {fileID: 0}
 --- !u!114 &7785572302371704094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,5 +136,22 @@ MonoBehaviour:
   compteurPaco: 0
   compteurTotal: 0
   MinSize: 0
-  Scale: 0.7
+  camScale: 0.7
   cinemachine: {fileID: 0}
+--- !u!114 &837187790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289190960004233001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1436440f8c26ec42aaf6fd62620134e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chefFoule: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
+  nombreFouleActuelle: 0
+  maxNombreFoule: 3
+  "unit\xE9taille": 2
+  tailleGrille: 5

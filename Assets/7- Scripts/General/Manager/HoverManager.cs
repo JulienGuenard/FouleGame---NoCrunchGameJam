@@ -15,22 +15,20 @@ public class HoverManager : MonoBehaviour
         if (instance == null) instance = this;
     }
 
-    private void Update()
-    {
-        HoverNewUnit();
-    }
-
-    void HoverNewUnit()
+    public void HoverNewUnit() // Appelé par UpdateEvent (voir inspector)
     {
         lastHoveredUnit = hoveredUnit;
-        SetHoveredUnit(null);
+        hoveredUnit = null;
 
-        if (hoveredUnitList.Count >= 1) HoverUnitAtCenter();
+        if (hoveredUnitList.Count < 1) return;
+
+        HoverUnitAtCenter();
     }
 
     public void HoverUnitAtCenter()
     {
-        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition) - new Vector3(0,0, Camera.main.ScreenToWorldPoint(Input.mousePosition).z);
+        Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        cursorPos -= new Vector3(0, 0, cursorPos.z);
         float distanceNearest = 0;
 
         foreach (GameObject obj in hoveredUnitList)
@@ -38,24 +36,19 @@ public class HoverManager : MonoBehaviour
             Vector3 objPos = obj.transform.position - new Vector3(0, 0, obj.transform.position.z);
             float distance = (objPos - cursorPos).magnitude;
 
-            if (SelectableManager.instance.GetSelectableUnitList().Contains(obj)) continue; // continue passe l'itération, break passe la boucle entière (comme return avec les fonctions)
+            if (SelectableManager.instance.GetSelectableUnitList().Contains(obj))   continue;
+            if (distanceNearest == 0)                                               distanceNearest = distance;
+            if (hoveredUnit != null && distance >= distanceNearest)                 continue;
 
-            if (distanceNearest == 0) distanceNearest = distance;
-
-            if (hoveredUnit == null || distance < distanceNearest)
-            {
-                distanceNearest = distance;
-                SetHoveredUnit(obj);
-            }
+            distanceNearest = distance;
+            hoveredUnit = obj;
         }
     }
-
-    void SetHoveredUnit(GameObject obj) { hoveredUnit = obj; }
 
     public void HoverUnit(GameObject obj)
     {
         HoverNewUnit();
-        Hover();
+        SelectableManager.instance.AddToSelectableUnitList(hoveredUnit);
 
         if (hoveredUnitList.Contains(obj)) return;
 
@@ -64,20 +57,7 @@ public class HoverManager : MonoBehaviour
 
     public void UnhoverUnit(GameObject obj)
     {
-        Unhover(obj);
-        hoveredUnitList.Remove(obj);
-    }
-
-    void Hover()
-    {
-        if (hoveredUnit == null) return;
-        if (SelectableManager.instance.GetSelectableUnitList().Contains(hoveredUnit)) return;
-
-        SelectableManager.instance.AddToSelectableUnitList(hoveredUnit);
-    }
-
-   void Unhover(GameObject obj)
-    {
         SelectableManager.instance.RemoveToSelectableUnitList(obj);
+        hoveredUnitList.Remove(obj);
     }
 }
