@@ -12,9 +12,12 @@ GameObject:
   - component: {fileID: 2334971315066540461}
   - component: {fileID: 2410042127897688657}
   - component: {fileID: 800841728}
+  - component: {fileID: 2187731872756718512}
+  - component: {fileID: 7087264074795762703}
   - component: {fileID: 5890212464531232548}
+  - component: {fileID: 2745911694000281205}
   m_Layer: 0
-  m_Name: CursorCollider
+  m_Name: Cursor
   m_TagString: Cursor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +127,59 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2187731872756718512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246397654445279602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b0ba64050d9a94f980c4aecbed2e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5890212464531232548}
+        m_TargetAssemblyTypeName: CursorFollow, Assembly-CSharp
+        m_MethodName: Follow
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2745911694000281205}
+        m_TargetAssemblyTypeName: CursorRotate, Assembly-CSharp
+        m_MethodName: Rotate
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &7087264074795762703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246397654445279602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91f74e68268adec4a958d9e16c7a8017, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorFollow: {fileID: 0}
+  cursorRotate: {fileID: 0}
 --- !u!114 &5890212464531232548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,4 +192,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8e6f35e0b11a7245aeeb4e507b3f68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorFollow: {fileID: 0}
+  cursorRotate: {fileID: 0}
+--- !u!114 &2745911694000281205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246397654445279602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bc1917942d1f05409105cfce9fe73c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorFollow: {fileID: 0}
+  cursorRotate: {fileID: 0}
   direction: {x: 0, y: 0, z: 0}

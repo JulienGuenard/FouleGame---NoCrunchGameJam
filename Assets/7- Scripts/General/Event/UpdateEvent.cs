@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class FlockEvents : Flock
+public class UpdateEvent : MonoBehaviour
 {
     public UnityEvent OnUpdate;
 

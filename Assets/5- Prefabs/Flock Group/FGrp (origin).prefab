@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2079756922325437404}
-  - component: {fileID: 2079756922325437379}
   - component: {fileID: 6931309024744061887}
+  - component: {fileID: 2079756922325437379}
   - component: {fileID: 1668861362895722377}
   - component: {fileID: 6792420567280776856}
   - component: {fileID: 7137758914845815595}
@@ -45,31 +45,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2079756922325437379
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2079756922325437378}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FSpawn: {fileID: 0}
-  FAggro: {fileID: 0}
-  FLifetime: {fileID: 0}
-  FMovement: {fileID: 0}
-  FFear: {fileID: 0}
-  FOwnership: {fileID: 0}
-  FType: {fileID: 0}
-  FConversion: {fileID: 0}
-  FBehaviour: {fileID: 0}
-  FCharge: {fileID: 0}
-  FGetAgentFunctions: {fileID: 0}
-  FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
 --- !u!114 &6931309024744061887
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,19 +57,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0b0ba64050d9a94f980c4aecbed2e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FSpawn: {fileID: 0}
-  FAggro: {fileID: 0}
-  FLifetime: {fileID: 0}
-  FMovement: {fileID: 0}
-  FFear: {fileID: 0}
-  FOwnership: {fileID: 0}
-  FType: {fileID: 0}
-  FConversion: {fileID: 0}
-  FBehaviour: {fileID: 0}
-  FCharge: {fileID: 0}
-  FGetAgentFunctions: {fileID: 0}
-  FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   OnUpdate:
     m_PersistentCalls:
       m_Calls:
@@ -158,6 +120,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2079756922325437379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2079756922325437378}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FAggro: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
 --- !u!114 &1668861362895722377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,7 +168,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   pourcentAggro: 71
   targetOnAggro: {fileID: 0}
 --- !u!114 &6792420567280776856
@@ -209,7 +194,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
 --- !u!114 &7137758914845815595
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +218,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   destroy: 1
   deathByTimeDelay: 5000
   deathByTimeActual: 0
@@ -262,7 +245,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   driveFactor: 1
   maxSpeed: 1
   neighborRadius: 1
@@ -292,7 +274,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   agentPrefab: {fileID: 5343778298011262044, guid: 25a090ea144af9a40810bb2dc7d30cc2, type: 3}
   chefPrefab: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
   noChef: 0
@@ -322,7 +303,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   launchForce: 0
   chargedTime: 0
   repulseForce: 0
@@ -357,7 +337,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   agents: []
   flockAgentBehaviour: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
 --- !u!114 &4271497084746210184
@@ -384,7 +363,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   MaxConvert: 0
   Multiplicater: 1
   HasConvert: 0
@@ -413,7 +391,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   agentType: 1
 --- !u!114 &2894946740142232407
 MonoBehaviour:
@@ -439,7 +416,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
   isPlayer: 0
   chef: {fileID: 0}
 --- !u!114 &6310583631773751306
@@ -466,7 +442,6 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
 --- !u!114 &757629466596033418
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -491,4 +466,3 @@ MonoBehaviour:
   FCharge: {fileID: 0}
   FGetAgentFunctions: {fileID: 0}
   FDeath: {fileID: 0}
-  FEvents: {fileID: 0}
