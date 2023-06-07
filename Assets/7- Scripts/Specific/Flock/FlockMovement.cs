@@ -25,7 +25,7 @@ public class FlockMovement : Flock
         squareAvoidanceRadius = squareNeighborRadius * avoidanceRadiusMultiplier * avoidanceRadiusMultiplier;
     }
 
-    public void MoveEachAgent()
+    public void MoveEachAgent() // Appelé par FlockEvent (voir inspector)
     {
         if (FOwnership.chef == null) return;
 

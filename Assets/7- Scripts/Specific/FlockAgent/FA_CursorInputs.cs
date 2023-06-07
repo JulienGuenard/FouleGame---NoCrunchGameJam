@@ -31,6 +31,8 @@ public class FA_CursorInputs : FlockAgent
 
     void Update()
     {
+        ForceUngrowth();
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (isHovered && !isSelected)
@@ -123,6 +125,16 @@ public class FA_CursorInputs : FlockAgent
 
     void DropForce()
     {
-        rb.AddRelativeForce(transform.up);
+        rb.AddForce(Cursor.instance.transform.up * forceOutput);
+    }
+
+    void ForceUngrowth()
+    {
+        if (rb == null) return;
+
+        if (rb.velocity.x > 0) rb.velocity -= new Vector2(0.1f, 0);
+        if (rb.velocity.y > 0) rb.velocity -= new Vector2(0, 0.1f);
+        if (rb.velocity.x < 0) rb.velocity += new Vector2(0.1f, 0f);
+        if (rb.velocity.y < 0) rb.velocity += new Vector2(0, 0.1f);
     }
 }

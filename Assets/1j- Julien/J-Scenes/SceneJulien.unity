@@ -1027,6 +1027,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &837187783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1289190960004233001, guid: 91efd5f9275a65945876d4bda9bd37a6, type: 3}
+  m_PrefabInstance: {fileID: 508679041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &837187790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837187783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1436440f8c26ec42aaf6fd62620134e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chefFoule: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
+  nombreFouleActuelle: 0
+  maxNombreFoule: 3
+  "unit\xE9taille": 2
+  tailleGrille: 5
 --- !u!1 &913541222
 GameObject:
   m_ObjectHideFlags: 0

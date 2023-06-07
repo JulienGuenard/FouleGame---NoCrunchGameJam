@@ -71,7 +71,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (compteur != 0) return;
 
-        MenuManager.Instance.LoadScene("MenuGameOver");
+        MenuManager.instance.LoadScene("MenuGameOver");
     }
 
    

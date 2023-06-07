@@ -15,7 +15,7 @@ public class FlockLifetime : Flock
         deathByTimeActual = deathByTimeDelay;
     }
 
-    public void IncrementNextTimedDead()
+    public void IncrementNextTimedDead() // Appelé par FlockEvent (voir inspector)
     {
         if (FOwnership.isPlayer)            return;
         if (FBehaviour.agents.Count == 0)   return;

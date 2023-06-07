@@ -29,7 +29,6 @@ public class FlockAgent : MonoBehaviour
         agentOwnership      = GetComponent<FA_Ownership>();
         agentMovement       = GetComponent<FA_Movement>();
         agentCooldown       = GetComponent<FA_Cooldown>();
-
         rb                  = GetComponent<Rigidbody2D>();
         collider            = GetComponent<Collider2D>();
     }

@@ -13,7 +13,6 @@ public class Chef_instance : MonoBehaviour
 
     private void Start()
     {
-        gamema = GameManager.GameMa;
     /*   if (Passif.FOwnership.chef == null)      Passif.FOwnership.chef = this.gameObject;
        if (Aggressif.FOwnership.chef == null)   Aggressif.FOwnership.chef = this.gameObject;
 
@@ -30,7 +29,7 @@ public class Chef_instance : MonoBehaviour
         if (Health <= 0)
         {
             Destroy(gameObject);
-            gamema.NombreFouleActuelle--;
+            SpawnManager.instance.nombreFouleActuelle--;
         }
     }
 

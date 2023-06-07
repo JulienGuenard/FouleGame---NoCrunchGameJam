@@ -26,10 +26,6 @@ public class HoverManager : MonoBehaviour
         SetHoveredUnit(null);
 
         if (hoveredUnitList.Count >= 1) HoverUnitAtCenter();
-
-     //   if (lastHoveredUnit != null && lastHoveredUnit != hoveredUnit) Unhover(lastHoveredUnit);
-
-     //   Hover();
     }
 
     public void HoverUnitAtCenter()

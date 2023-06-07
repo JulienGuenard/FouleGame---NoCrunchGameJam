@@ -5,21 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuManager : MonoBehaviour
 {
-    public static bool GameIsPaused = false;
-    [SerializeField] GameObject PauseMenu;
-    [SerializeField] GameObject InterfaceIG;
-    public static MenuManager Instance { get; private set; }
+    [SerializeField]    GameObject pauseMenu;
+    [SerializeField]    GameObject interfaceIG;
+                        public static bool gameIsPaused = false;
+                        public static MenuManager instance { get; private set; }
 
     private void Awake()
     {
-       if(Instance == null)
-       {
-            Instance = this;
-       }
-       else if (Instance != null && Instance != this)
-       {
-            Destroy(Instance);
-       }
+       if(instance == null) { instance = this; }
     }
 
     private void Update()
@@ -33,49 +26,31 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
-    public void QuitGame()
-    {
-        Application.Quit();
-    }
-
-    public void ActiveMenu(GameObject menu)
-    {
-        menu.SetActive(true);
-    }
-
-    public void ClearMenu(GameObject menu)
-    {
-        menu.SetActive(false);
-    }
+    public void QuitGame()                  { Application.Quit(); }
+    public void ActiveMenu(GameObject menu) { menu.SetActive(true); }
+    public void ClearMenu(GameObject menu)  { menu.SetActive(false); }
 
    public void ResumeGame()
     {
-        ClearMenu(PauseMenu);
+        ClearMenu(pauseMenu);
         Time.timeScale = 1f;
-        GameIsPaused = false;
-        ActiveMenu(InterfaceIG);
+        gameIsPaused = false;
+        ActiveMenu(interfaceIG);
     }
     public void Pause()
     {
-        ActiveMenu(PauseMenu);
+        ActiveMenu(pauseMenu);
         Time.timeScale = 0f;
-        GameIsPaused = true;
-        ClearMenu(InterfaceIG);
+        gameIsPaused = true;
+        ClearMenu(interfaceIG);
     }
 
     void CheckPause()
     {
-        if(Input.GetKeyUp(KeyCode.Escape) && PauseMenu != null)
-        {
-            if(GameIsPaused)
-            {
-                ResumeGame();
+        if (!Input.GetKeyUp(KeyCode.Escape))    return;
+        if (pauseMenu == null)                  return;
 
-            }
-            else
-            {
-               Pause();  
-            }
-        }
+        if(gameIsPaused)    ResumeGame();
+        else                Pause();
     }
 }

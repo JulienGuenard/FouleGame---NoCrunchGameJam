@@ -8,7 +8,7 @@ public class PlayerCamera : MonoBehaviour
 
     void Start()
     {
-        player = GameManager.Player;
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()
