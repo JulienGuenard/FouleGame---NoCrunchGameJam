@@ -31,7 +31,7 @@ public class FlockMovement : Flock
 
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent.agentSelection.isSelected) continue;
+            if (agent.agentSelection.isDragged) continue;
 
             FlockAgent target;
             DetectEnemy(agent, out target);

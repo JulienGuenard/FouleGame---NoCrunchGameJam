@@ -200,8 +200,6 @@ GameObject:
   - component: {fileID: 5147951918117751613}
   - component: {fileID: -7507464444877030924}
   - component: {fileID: 710307702039892263}
-  - component: {fileID: -380555333266714734}
-  - component: {fileID: -8933421732714259245}
   m_Layer: 0
   m_Name: Flck Agt - Violent
   m_TagString: agressif
@@ -300,7 +298,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 4158964545480397466}
@@ -327,7 +324,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -355,7 +351,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -382,7 +377,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -410,7 +404,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -439,7 +432,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -467,7 +459,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -495,7 +486,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -523,7 +513,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -553,7 +542,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -581,67 +569,10 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  isSelected: 0
---- !u!114 &-380555333266714734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189879585582541447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afeb09cd6b5151047935c443355993e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentAnimation: {fileID: 0}
-  agentLife: {fileID: 0}
-  agentCharge: {fileID: 0}
-  agentConversion: {fileID: 0}
-  agentOwnership: {fileID: 0}
-  agentMovement: {fileID: 0}
-  agentCooldown: {fileID: 0}
-  agentPhysics: {fileID: 0}
-  agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
-  agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
-  rb: {fileID: 0}
-  collider: {fileID: 0}
-  spriteR: {fileID: 0}
-  isHovered: 0
---- !u!114 &-8933421732714259245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189879585582541447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bb048edf0ef8740ae7a0f2bea1359e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentAnimation: {fileID: 0}
-  agentLife: {fileID: 0}
-  agentCharge: {fileID: 0}
-  agentConversion: {fileID: 0}
-  agentOwnership: {fileID: 0}
-  agentMovement: {fileID: 0}
-  agentCooldown: {fileID: 0}
-  agentPhysics: {fileID: 0}
-  agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
-  agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
-  rb: {fileID: 0}
-  collider: {fileID: 0}
-  spriteR: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
-  undragOffset: {x: 0, y: 0, z: 0}
+  isSelectable: 0
+  isDragged: 0

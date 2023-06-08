@@ -4,29 +4,18 @@ using UnityEngine;
 
 public class FA_Selection : FlockAgent
 {
-    public bool isSelected = false;
+    public bool isSelectable = false;
+    public bool isDragged = false;
 
     public void Selectable()
     {
-        agentHover.isHovered = true;
+        isSelectable = true;
         agentSprite.SelectOutline();
     }
 
     public void Unselectable()
     {
-        agentHover.isHovered = false;
+        isSelectable = false;
         agentSprite.UnselectOutline();
-    }
-
-    public void Select()
-    {
-        isSelected = true;
-        agentHover.isHovered = false;
-    }
-
-    public void Unselect()
-    {
-        isSelected = false;
-        agentDrag.Drop();
     }
 }

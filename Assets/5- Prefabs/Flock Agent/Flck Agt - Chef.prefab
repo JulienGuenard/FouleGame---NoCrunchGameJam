@@ -54,8 +54,6 @@ GameObject:
   - component: {fileID: -3707422877388387675}
   - component: {fileID: 4011786719334289041}
   - component: {fileID: 2175871815892377176}
-  - component: {fileID: 3504690168627028221}
-  - component: {fileID: 1297211761173932781}
   m_Layer: 0
   m_Name: Flck Agt - Chef
   m_TagString: Chefs
@@ -127,7 +125,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -135,7 +132,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -170,7 +166,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -178,7 +173,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -198,7 +192,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -206,7 +199,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -227,7 +219,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -235,7 +226,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -256,7 +246,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -264,7 +253,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -286,7 +274,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -294,7 +281,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -315,7 +301,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -323,7 +308,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -344,7 +328,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -352,7 +335,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -373,7 +355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -381,13 +362,11 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  sprite: {fileID: 0}
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
   outlineOffsetPos: {x: 0, y: 0.15, z: 0}
   outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
@@ -405,7 +384,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -413,7 +391,6 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
@@ -434,7 +411,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -442,72 +418,13 @@ MonoBehaviour:
   agentCooldown: {fileID: 0}
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
   agentSprite: {fileID: 0}
   agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  isSelected: 0
---- !u!114 &3504690168627028221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724783979569385447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: afeb09cd6b5151047935c443355993e0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentAnimation: {fileID: 0}
-  agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
-  agentCharge: {fileID: 0}
-  agentConversion: {fileID: 0}
-  agentOwnership: {fileID: 0}
-  agentMovement: {fileID: 0}
-  agentCooldown: {fileID: 0}
-  agentPhysics: {fileID: 0}
-  agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
-  agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
-  rb: {fileID: 0}
-  collider: {fileID: 0}
-  spriteR: {fileID: 0}
-  isHovered: 0
---- !u!114 &1297211761173932781
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2724783979569385447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3bb048edf0ef8740ae7a0f2bea1359e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentAnimation: {fileID: 0}
-  agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
-  agentCharge: {fileID: 0}
-  agentConversion: {fileID: 0}
-  agentOwnership: {fileID: 0}
-  agentMovement: {fileID: 0}
-  agentCooldown: {fileID: 0}
-  agentPhysics: {fileID: 0}
-  agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
-  agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
-  rb: {fileID: 0}
-  collider: {fileID: 0}
-  spriteR: {fileID: 0}
-  offset: {x: 0, y: 0, z: 0}
-  undragOffset: {x: 0, y: 0, z: 0}
+  isSelectable: 0
+  isDragged: 0
 --- !u!1 &3510281759723149692
 GameObject:
   m_ObjectHideFlags: 0

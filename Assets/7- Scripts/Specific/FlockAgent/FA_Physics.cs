@@ -11,7 +11,7 @@ public class FA_Physics : FlockAgent
         ForceUngrowth();
     }
 
-    public void DropForce()
+    public void Drop()
     {
         rb.AddForce(Cursor.instance.transform.up * forceOutput);
     }

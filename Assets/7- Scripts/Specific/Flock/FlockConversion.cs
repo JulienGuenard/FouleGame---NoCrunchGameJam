@@ -38,7 +38,7 @@ public class FlockConversion : Flock
 
     void CheckHP(FlockAgent agent)
     {
-        if (agent.agentSelection.isSelected) return;
+        if (agent.agentSelection.isDragged) return;
 
         agent.agentLife.CheckHP();
     }

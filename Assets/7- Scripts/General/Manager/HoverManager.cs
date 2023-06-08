@@ -15,7 +15,8 @@ public class HoverManager : MonoBehaviour
 
     public void Hover(GameObject obj)
     {
-        HoverNew(obj);
+        AddToHoverList(obj);
+        HoverUnitAtCenter();
         SelectableManager.instance.Selectable(obj);
     }
 
@@ -23,12 +24,6 @@ public class HoverManager : MonoBehaviour
     {
         SelectableManager.instance.Unselectable(obj);
         hoveredUnitList.Remove(obj);
-    }
-
-    void HoverNew(GameObject obj)
-    {
-       AddToHoverList(obj);
-       HoverUnitAtCenter();
     }
 
     void AddToHoverList(GameObject obj)

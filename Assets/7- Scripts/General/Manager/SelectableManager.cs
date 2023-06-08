@@ -27,7 +27,10 @@ public class SelectableManager : MonoBehaviour
 
     public void Unselectable(GameObject obj)
     {
+        if (DragManager.instance.GetDraggedUnitList().Contains(obj)) return;
+
         RemoveToSelectableUnitList(obj);
+        obj.GetComponent<FA_Selection>().Unselectable();
     }
 
     public void AddToSelectableUnitList(GameObject obj)
@@ -51,8 +54,7 @@ public class SelectableManager : MonoBehaviour
     public void RemoveToSelectableUnitList(GameObject obj)
     {
         if (!selectableUnitList.Contains(obj)) return;
-
+        
         selectableUnitList.Remove(obj);
-        obj.GetComponent<FA_Selection>().Unselectable();
     }
 }
