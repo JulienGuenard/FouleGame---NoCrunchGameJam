@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,6 +100,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -107,10 +131,10 @@ TextureImporter:
       name: Run Frt_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 47
-        height: 48
+        x: 2
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,10 +152,10 @@ TextureImporter:
       name: Run Frt_1
       rect:
         serializedVersion: 2
-        x: 47
-        y: 1
-        width: 47
-        height: 48
+        x: 50
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,10 +173,10 @@ TextureImporter:
       name: Run Frt_2
       rect:
         serializedVersion: 2
-        x: 94
-        y: 1
-        width: 47
-        height: 48
+        x: 98
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,10 +194,10 @@ TextureImporter:
       name: Run Frt_3
       rect:
         serializedVersion: 2
-        x: 141
-        y: 1
-        width: 47
-        height: 48
+        x: 146
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,10 +215,10 @@ TextureImporter:
       name: Run Frt_4
       rect:
         serializedVersion: 2
-        x: 188
-        y: 1
-        width: 47
-        height: 48
+        x: 194
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,10 +236,10 @@ TextureImporter:
       name: Run Frt_5
       rect:
         serializedVersion: 2
-        x: 235
-        y: 1
-        width: 47
-        height: 48
+        x: 242
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -233,10 +257,10 @@ TextureImporter:
       name: Run Frt_6
       rect:
         serializedVersion: 2
-        x: 282
-        y: 1
-        width: 47
-        height: 48
+        x: 290
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,10 +278,10 @@ TextureImporter:
       name: Run Frt_7
       rect:
         serializedVersion: 2
-        x: 329
-        y: 1
-        width: 47
-        height: 48
+        x: 338
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

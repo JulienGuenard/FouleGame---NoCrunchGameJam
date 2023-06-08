@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,6 +100,30 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -107,12 +131,12 @@ TextureImporter:
       name: passif run R_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 1
-        width: 48
-        height: 48
+        x: 4
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -128,12 +152,12 @@ TextureImporter:
       name: passif run R_1
       rect:
         serializedVersion: 2
-        x: 48
-        y: 1
-        width: 48
-        height: 48
+        x: 52
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -149,12 +173,12 @@ TextureImporter:
       name: passif run R_2
       rect:
         serializedVersion: 2
-        x: 96
-        y: 1
-        width: 48
-        height: 48
+        x: 100
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -170,12 +194,12 @@ TextureImporter:
       name: passif run R_3
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1
-        width: 48
-        height: 48
+        x: 148
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -191,12 +215,12 @@ TextureImporter:
       name: passif run R_4
       rect:
         serializedVersion: 2
-        x: 192
-        y: 1
-        width: 48
-        height: 48
+        x: 196
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -212,12 +236,12 @@ TextureImporter:
       name: passif run R_5
       rect:
         serializedVersion: 2
-        x: 240
-        y: 1
-        width: 48
-        height: 48
+        x: 244
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -233,18 +257,18 @@ TextureImporter:
       name: passif run R_6
       rect:
         serializedVersion: 2
-        x: 288
-        y: 1
-        width: 48
-        height: 48
+        x: 292
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 133fbcd0d4720164995123062938d59f
+      spriteID: e80089cb7d2391341ade4c503e858337
       internalID: -2123950777
       vertices: []
       indices: 
@@ -254,18 +278,18 @@ TextureImporter:
       name: passif run R_7
       rect:
         serializedVersion: 2
-        x: 336
-        y: 1
-        width: 48
-        height: 48
+        x: 340
+        y: 9
+        width: 32
+        height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d528ac66991a1a54a94755bc1c466db3
+      spriteID: 197be540d976bdd4087fd309f2494450
       internalID: -1786014797
       vertices: []
       indices: 

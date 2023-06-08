@@ -30,8 +30,8 @@ public class SpawnManager : MonoBehaviour
         for (int i = 0; i < maxNombreFoule; i++)
         {
             nombreFouleActuelle++;
-            Instantiate(chefFoule, new Vector2(transform.position.x + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille)),
-            transform.position.y + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille))), transform.rotation);
+            Instantiate(chefFoule, new Vector3(transform.position.x + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille)),
+            transform.position.y + (unitétaille * generateRandomNumber(-tailleGrille, tailleGrille)), 0), transform.rotation);
         }
     }
 

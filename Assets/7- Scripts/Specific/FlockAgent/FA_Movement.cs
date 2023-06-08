@@ -8,6 +8,7 @@ public class FA_Movement : FlockAgent
 
     public void Move(Vector2 velocity)
     {
+        transform.position = new Vector3(transform.position.x, transform.position.y, 0);
         transform.up = velocity;
         transform.position += (Vector3)velocity * Time.deltaTime;
     }

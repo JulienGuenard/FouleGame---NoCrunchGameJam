@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class CursorDrag : MonoBehaviour
 {
-    public Vector3 offset;
-    public Vector3 undragOffset;
-
     public AnimationCurve dragIncrementCurveX;
     public AnimationCurve dragIncrementCurveY;
     public float dragIncrementEcartX;
@@ -52,12 +49,13 @@ public class CursorDrag : MonoBehaviour
         foreach (GameObject obj in DragManager.instance.GetDraggedUnitList())
         {
             Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            Vector3 cursorPosOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition + offset);
+            Vector3 cursorPosOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 newPos = cursorPosOffset - new Vector3(0, 0, cursorPos.z) + offsetIncrement;
             offsetIncrement = new Vector3((dragIncrementCurveX.Evaluate(iX) -0.5f) * dragIncrementEcartX, (dragIncrementCurveY.Evaluate(iY) -0.5f) * dragIncrementEcartY, 0) * dragIncrementEcart;
             obj.transform.position = newPos;
             iX += iX_Increment;
             iY += iY_Increment;
+            obj.transform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
 }

@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class RotateWithParent : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public bool canRotate = true;
+
+    void Update()
     {
-        
+        Rotate();
     }
 
-    // Update is called once per frame
-    void Update()
+
+    void Rotate()
     {
         transform.localRotation = Quaternion.Euler(-transform.parent.rotation.eulerAngles);
     }
