@@ -6,21 +6,17 @@ public class CursorTrigger : MonoBehaviour
 {
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.tag != "passif" && col.tag != "agressif") return;
+        if (col.tag != "passif")    return;
+        if (col.tag != "agressif")  return;
 
-        FA_Hover colHover = col.GetComponent<FA_Hover>();
-
-        if (colHover.isHovered) return;
-
-        HoverManager.instance.HoverUnit(col.gameObject);
+        HoverManager.instance.Hover(col.gameObject);
     }
 
     private void OnTriggerExit2D(Collider2D col)
     {
-        if (col.tag != "passif" && col.tag != "agressif") return;
+        if (col.tag != "passif")    return;
+        if (col.tag != "agressif")  return;
 
-        FA_CursorInputs colCursor = col.GetComponent<FA_CursorInputs>();
-
-        HoverManager.instance.UnhoverUnit(col.gameObject);
+        HoverManager.instance.Unhover(col.gameObject);
     }
 }

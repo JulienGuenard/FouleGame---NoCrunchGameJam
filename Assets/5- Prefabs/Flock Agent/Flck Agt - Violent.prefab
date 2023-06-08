@@ -189,8 +189,8 @@ GameObject:
   - component: {fileID: 4158964545480397466}
   - component: {fileID: 7406124451690299001}
   - component: {fileID: 6024399551065564511}
-  - component: {fileID: 4625386005827005024}
   - component: {fileID: 5343778298011262044}
+  - component: {fileID: 4625386005827005024}
   - component: {fileID: -3281202139090311457}
   - component: {fileID: 2764614285181434599}
   - component: {fileID: -12452405554990601}
@@ -279,35 +279,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.07
---- !u!114 &4625386005827005024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4189879585582541447}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3de126ae7dd77040b9e61078bcfe42b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  agentAnimation: {fileID: 0}
-  agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
-  agentCharge: {fileID: 0}
-  agentConversion: {fileID: 0}
-  agentOwnership: {fileID: 0}
-  agentMovement: {fileID: 0}
-  agentCooldown: {fileID: 0}
-  agentPhysics: {fileID: 0}
-  agentSelection: {fileID: 0}
-  agentHover: {fileID: 0}
-  agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
-  rb: {fileID: 0}
-  collider: {fileID: 0}
-  spriteR: {fileID: 0}
-  deadEffect: {fileID: 6928413279097990055, guid: 30ca69a7cdb543c4fad8684687e3078f, type: 3}
 --- !u!114 &5343778298011262044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,7 +293,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -336,6 +306,34 @@ MonoBehaviour:
   rb: {fileID: 4158964545480397466}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
+--- !u!114 &4625386005827005024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4189879585582541447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3de126ae7dd77040b9e61078bcfe42b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentAnimation: {fileID: 0}
+  agentLife: {fileID: 0}
+  agentCharge: {fileID: 0}
+  agentConversion: {fileID: 0}
+  agentOwnership: {fileID: 0}
+  agentMovement: {fileID: 0}
+  agentCooldown: {fileID: 0}
+  agentPhysics: {fileID: 0}
+  agentSelection: {fileID: 0}
+  agentHover: {fileID: 0}
+  agentSprite: {fileID: 0}
+  agentDrag: {fileID: 0}
+  rb: {fileID: 0}
+  collider: {fileID: 0}
+  spriteR: {fileID: 0}
+  deadEffect: {fileID: 6928413279097990055, guid: 30ca69a7cdb543c4fad8684687e3078f, type: 3}
 --- !u!114 &-3281202139090311457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -350,7 +348,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -378,7 +375,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -407,7 +403,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -437,7 +432,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -466,7 +460,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -495,7 +488,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -524,7 +516,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -538,7 +529,6 @@ MonoBehaviour:
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  sprite: {fileID: 0}
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
   outlineOffsetPos: {x: 0, y: 0.15, z: 0}
   outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
@@ -556,7 +546,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -585,7 +574,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -614,7 +602,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}
@@ -643,7 +630,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agentAnimation: {fileID: 0}
   agentLife: {fileID: 0}
-  agentCursorInputs: {fileID: 0}
   agentCharge: {fileID: 0}
   agentConversion: {fileID: 0}
   agentOwnership: {fileID: 0}

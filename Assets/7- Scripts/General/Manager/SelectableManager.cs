@@ -20,6 +20,16 @@ public class SelectableManager : MonoBehaviour
         return selectableUnitList;
     }
 
+    public void Selectable(GameObject obj)
+    {
+        AddToSelectableUnitList(obj);
+    }
+
+    public void Unselectable(GameObject obj)
+    {
+        RemoveToSelectableUnitList(obj);
+    }
+
     public void AddToSelectableUnitList(GameObject obj)
     {
         if (GetSelectableUnitList().Contains(obj))              return;

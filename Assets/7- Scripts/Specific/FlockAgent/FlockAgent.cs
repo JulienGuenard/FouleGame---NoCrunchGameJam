@@ -7,7 +7,6 @@ public class FlockAgent : MonoBehaviour
 {
     [HideInInspector]   public FA_Animation         agentAnimation;
     [HideInInspector]   public FA_Life              agentLife;
-    [HideInInspector]   public FA_CursorInputs      agentCursorInputs;
     [HideInInspector]   public FA_Charge            agentCharge;
     [HideInInspector]   public FA_Conversion        agentConversion;
     [HideInInspector]   public FA_Ownership         agentOwnership;
@@ -29,7 +28,6 @@ public class FlockAgent : MonoBehaviour
     {
         agentAnimation      = GetComponent<FA_Animation>();
         agentLife           = GetComponent<FA_Life>();
-        agentCursorInputs   = GetComponent<FA_CursorInputs>();
         agentCharge         = GetComponent<FA_Charge>();
         agentConversion     = GetComponent<FA_Conversion>();
         agentOwnership      = GetComponent<FA_Ownership>();

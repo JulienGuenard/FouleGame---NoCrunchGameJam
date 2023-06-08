@@ -24,6 +24,5 @@ public class FA_Drag : FlockAgent
     {
         transform.position += undragOffset;
         agentPhysics.DropForce();
-        HoverManager.instance.UnhoverUnit(this.gameObject);
     }
 }

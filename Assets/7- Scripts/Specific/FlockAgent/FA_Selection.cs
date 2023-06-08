@@ -6,15 +6,6 @@ public class FA_Selection : FlockAgent
 {
     public bool isSelected = false;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (agentHover.isHovered && !isSelected) Select();
-            else if (isSelected) Unselect();
-        }
-    }
-
     public void Selectable()
     {
         agentHover.isHovered = true;
