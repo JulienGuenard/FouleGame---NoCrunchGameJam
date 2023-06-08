@@ -7,6 +7,15 @@ public class CursorDrag : MonoBehaviour
     public Vector3 offset;
     public Vector3 undragOffset;
 
+    public AnimationCurve dragIncrementCurveX;
+    public AnimationCurve dragIncrementCurveY;
+    public float dragIncrementEcartX;
+    public float dragIncrementEcartY;
+    public float dragIncrementEcart;
+    public float curveIncrement;
+    public float iX_Increment;
+    public float iY_Increment;
+
     private void Update()
     {
         DragAroundCursor();
@@ -14,11 +23,23 @@ public class CursorDrag : MonoBehaviour
 
     public void Drag() // Appelé par InputEvent (voir inspector)
     {
-        foreach(GameObject obj in SelectableManager.instance.GetSelectableUnitList())
+        List<GameObject> list = new List<GameObject>();
+        list.AddRange(DragManager.instance.GetDraggedUnitList());
+
+        foreach (GameObject obj in list)
         {
             FA_Selection objSelection = obj.GetComponent<FA_Selection>();
 
-            if (objSelection.isDragged)     { DragManager.instance.Undragged(obj);  continue; }
+            if (objSelection.isDragged) { DragManager.instance.Undragged(obj); continue; }
+        }
+
+        list.Clear();
+        list.AddRange(SelectableManager.instance.GetSelectableUnitList());
+
+        foreach (GameObject obj in list)
+        {
+            FA_Selection objSelection = obj.GetComponent<FA_Selection>();
+
             if (objSelection.isSelectable)  { DragManager.instance.Dragged(obj);    continue; }
         }
     }
@@ -26,13 +47,17 @@ public class CursorDrag : MonoBehaviour
     void DragAroundCursor()
     {
         Vector3 offsetIncrement = Vector3.zero;
+        float iX = 0;
+        float iY = 0;
         foreach (GameObject obj in DragManager.instance.GetDraggedUnitList())
         {
             Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 cursorPosOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition + offset);
             Vector3 newPos = cursorPosOffset - new Vector3(0, 0, cursorPos.z) + offsetIncrement;
-            offsetIncrement += new Vector3(0.2f, 0, 0);
+            offsetIncrement = new Vector3((dragIncrementCurveX.Evaluate(iX) -0.5f) * dragIncrementEcartX, (dragIncrementCurveY.Evaluate(iY) -0.5f) * dragIncrementEcartY, 0) * dragIncrementEcart;
             obj.transform.position = newPos;
+            iX += iX_Increment;
+            iY += iY_Increment;
         }
     }
 }

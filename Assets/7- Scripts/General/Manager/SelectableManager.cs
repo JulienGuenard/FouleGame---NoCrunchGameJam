@@ -22,25 +22,24 @@ public class SelectableManager : MonoBehaviour
 
     public void Selectable(GameObject obj)
     {
+        if (GetSelectableUnitList().Contains(obj)) return;
+        if (DragManager.instance.GetDraggedUnitList().Count != 0) return;
+        if (selectableUnitList.Count > selectableUnitNumberMax) return;
+        if (obj == null) return;
+
         AddToSelectableUnitList(obj);
+        SelectableAll();
     }
 
     public void Unselectable(GameObject obj)
     {
-        if (DragManager.instance.GetDraggedUnitList().Contains(obj)) return;
-
         RemoveToSelectableUnitList(obj);
         obj.GetComponent<FA_Selection>().Unselectable();
     }
 
     public void AddToSelectableUnitList(GameObject obj)
     {
-        if (GetSelectableUnitList().Contains(obj))              return;
-        if (selectableUnitList.Count > selectableUnitNumberMax) return;
-        if (obj == null)                                        return;
-
         selectableUnitList.Add(obj);
-        SelectableAll();
     }
 
     void SelectableAll()

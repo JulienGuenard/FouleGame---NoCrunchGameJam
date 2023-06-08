@@ -20,6 +20,7 @@ public class DragManager : MonoBehaviour
 
     public void Dragged(GameObject obj)
     {
+        SelectableManager.instance.Unselectable(obj);
         AddToDraggedUnitList(obj);
         obj.GetComponent<FA_Selection>().isDragged = true;
     }
