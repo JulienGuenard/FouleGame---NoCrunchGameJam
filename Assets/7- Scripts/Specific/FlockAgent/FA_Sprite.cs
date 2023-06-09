@@ -23,7 +23,12 @@ public class FA_Sprite : FlockAgent
         outlineInstancied = Instantiate(outline, transform.position, Quaternion.identity);
         outlineInstancied.transform.parent = spriteR.transform;
         outlineInstancied.transform.localPosition = outlineOffsetPos;
-        spriteR.material = outlineMat;
+
+        Material[] materialArray = { outlineMat, outlineMatInitial };
+        spriteR.materials = materialArray;
+
+
+        // spriteR.material = outlineMat;
     }
 
     public void UnselectOutline()
@@ -31,6 +36,11 @@ public class FA_Sprite : FlockAgent
         if (outlineInstancied == null) return;
 
         Destroy(outlineInstancied);
-        spriteR.material = outlineMatInitial;
+
+
+        Material[] materialArray = { outlineMatInitial };
+        spriteR.materials = materialArray;
+
+      //  spriteR.material = outlineMatInitial;
     }
 }

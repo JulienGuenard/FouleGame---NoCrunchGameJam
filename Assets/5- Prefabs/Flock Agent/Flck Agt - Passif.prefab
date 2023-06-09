@@ -560,6 +560,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   parentflock: {fileID: 0}
+  isPlayer: 0
 --- !u!114 &5460473722672767089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +589,7 @@ MonoBehaviour:
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
   outlineOffsetPos: {x: 0, y: 0.35, z: 0}
   outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
+  enemyColorSwapMat: {fileID: 2100000, guid: 5af5b79291b528a4e83d96af32236b66, type: 2}
 --- !u!114 &4081681331104794900
 MonoBehaviour:
   m_ObjectHideFlags: 0

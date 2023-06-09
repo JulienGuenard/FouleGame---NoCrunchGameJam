@@ -17,6 +17,7 @@ public class HoverManager : MonoBehaviour
     {
         AddToHoverList(obj);
         HoverUnitAtCenter();
+
         SelectableManager.instance.Selectable(obj);
     }
 
