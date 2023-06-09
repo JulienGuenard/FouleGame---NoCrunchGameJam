@@ -19,6 +19,7 @@ GameObject:
   - component: {fileID: 5890212464531232548}
   - component: {fileID: 2745911694000281205}
   - component: {fileID: 1742912895762161783}
+  - component: {fileID: 706778385}
   m_Layer: 0
   m_Name: Cursor
   m_TagString: Cursor
@@ -48,7 +49,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2246397654445279602}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -212,6 +213,7 @@ MonoBehaviour:
   cursorRotate: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
+  cursorSprite: {fileID: 0}
 --- !u!114 &983612945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -224,6 +226,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b09055617cbfea46a3e0e243fce3bcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorFollow: {fileID: 0}
+  cursorRotate: {fileID: 0}
+  cursorTrigger: {fileID: 0}
+  cursorDrag: {fileID: 0}
+  cursorSprite: {fileID: 0}
 --- !u!114 &5890212464531232548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +247,7 @@ MonoBehaviour:
   cursorRotate: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
+  cursorSprite: {fileID: 0}
 --- !u!114 &2745911694000281205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -256,6 +264,7 @@ MonoBehaviour:
   cursorRotate: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
+  cursorSprite: {fileID: 0}
 --- !u!114 &1742912895762161783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -268,21 +277,82 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728787e4772131e4ebd557301878697b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursorFollow: {fileID: 0}
+  cursorRotate: {fileID: 0}
+  cursorTrigger: {fileID: 0}
+  cursorDrag: {fileID: 0}
+  cursorSprite: {fileID: 0}
   dragIncrementCurveX:
     serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
     m_RotationOrder: 4
   dragIncrementCurveY:
     serializedVersion: 2
-    m_Curve: []
-    m_PreInfinity: 2
-    m_PostInfinity: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
     m_RotationOrder: 4
-  dragIncrementEcartX: 0
-  dragIncrementEcartY: 0
-  dragIncrementEcart: 0
+  dragIncrementEcartX: 1.1
+  dragIncrementEcartY: 0.8
+  dragIncrementEcart: 0.6
   curveIncrement: 0
-  iX_Increment: 0
-  iY_Increment: 0
+  iX_Increment: 0.4
+  iY_Increment: 0.7
+--- !u!114 &706778385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2246397654445279602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3b80dca6dcaede4f94a9fa317639a37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cursorFollow: {fileID: 0}
+  cursorRotate: {fileID: 0}
+  cursorTrigger: {fileID: 0}
+  cursorDrag: {fileID: 0}
+  cursorSprite: {fileID: 0}
+  cursorIdle: {fileID: 2800000, guid: 62e7c7b8789af8b4598d4a6081c6bb75, type: 3}
+  cursorSelectable: {fileID: 2800000, guid: cbff8a9897c188d4f9e037779eb6663d, type: 3}
+  cursorDrag: {fileID: 2800000, guid: 2a81a7cbd6426e44eb20f47b00e14a88, type: 3}

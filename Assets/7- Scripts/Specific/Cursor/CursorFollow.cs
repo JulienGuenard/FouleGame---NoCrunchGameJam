@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorFollow : Cursor
+public class CursorFollow : CursorM
 {
     public void Follow()
     {

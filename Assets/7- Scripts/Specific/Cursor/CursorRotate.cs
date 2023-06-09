@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorRotate : Cursor
+public class CursorRotate : CursorM
 {
     Vector3 directionInitial;
     Vector3 directionNext;

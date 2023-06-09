@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorDrag : MonoBehaviour
+public class CursorDrag : CursorM
 {
     public AnimationCurve dragIncrementCurveX;
     public AnimationCurve dragIncrementCurveY;

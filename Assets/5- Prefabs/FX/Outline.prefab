@@ -94,6 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1357209619899036491}
   - component: {fileID: 2045129414750619219}
+  - component: {fileID: 2697223456069053464}
   m_Layer: 0
   m_Name: Outline
   m_TagString: Untagged
@@ -137,3 +138,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2697223456069053464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7641612273616305618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f2c278004dd3f54e9cb391ce8f898d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
