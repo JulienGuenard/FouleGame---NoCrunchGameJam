@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class FA_Physics : FlockAgent
 {
-    public float forceOutput;
-
     private void Update()
     {
         ForceUngrowth();
@@ -13,7 +11,7 @@ public class FA_Physics : FlockAgent
 
     public void Drop()
     {
-        rb.AddForce(CursorM.instance.transform.up * forceOutput);
+        rb.AddForce(CursorM.instance.transform.up * CursorM.instance.cursorDrop.GetForceOutputActual());
     }
 
     void ForceUngrowth()

@@ -12,6 +12,8 @@ TagManager:
   - agressif
   - passif
   - Neutre1
+  - UiPassif
+  - UiAgressif
   layers:
   - Default
   - TransparentFX
@@ -48,4 +50,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: NoPlayerLight
+    uniqueID: 956229541
     locked: 0

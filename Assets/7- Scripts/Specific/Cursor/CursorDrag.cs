@@ -52,6 +52,7 @@ public class CursorDrag : CursorM
             Vector3 cursorPosOffset = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             Vector3 newPos = cursorPosOffset - new Vector3(0, 0, cursorPos.z) + offsetIncrement;
             offsetIncrement = new Vector3((dragIncrementCurveX.Evaluate(iX) -0.5f) * dragIncrementEcartX, (dragIncrementCurveY.Evaluate(iY) -0.5f) * dragIncrementEcartY, 0) * dragIncrementEcart;
+            if (obj == null) continue;
             obj.transform.position = newPos;
             iX += iX_Increment;
             iY += iY_Increment;

@@ -8,12 +8,13 @@ public class FA_Animation : FlockAgent
     Animator animator;
 
     public GameObject deadEffect;
-    public SpriteRenderer shadow;
+    public GameObject shadow;
     
     public override void Awake()
     {
         base.Awake();
         animator = GetComponentInChildren<Animator>();
+        if (shadow != null) shadow.SetActive(false);
     }
 
     private void Update()
@@ -42,17 +43,15 @@ public class FA_Animation : FlockAgent
 
     public void DragAnimation()         
     {
-        if (shadow != null) shadow.enabled = true;
+        if (shadow != null) shadow.SetActive(true);
         animator.SetFloat("randomDragInitial", Random.Range(0f, 2f));
         animator.SetBool("isDragged", true);
-        animator.GetComponent<ShadowCaster2D>().enabled = false;       
         animator.applyRootMotion = false;
     }
     public void EndDragAnimation()      
     {
-        if (shadow != null) shadow.enabled = false;
+        if (shadow != null) shadow.SetActive(false);
         animator.SetBool("isDragged", false);
-        animator.GetComponent<ShadowCaster2D>().enabled = true;
         animator.applyRootMotion = true;
         spriteR.transform.localPosition = Vector3.zero;
     }

@@ -2,8 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CursorRotate : CursorM
+public class CursorDrop : CursorM
 {
+    public float forceOutput;
+    float forceOutputActual;
+
     Vector3 directionInitial;
     Vector3 directionNext;
     Vector3 posLast;
@@ -13,7 +16,10 @@ public class CursorRotate : CursorM
     private void Start()
     {
         directionInitial = transform.up;
+        forceOutputActual = 0;
     }
+
+    public float GetForceOutputActual() { return forceOutputActual; }
 
     public void Rotate()
     {
@@ -25,13 +31,24 @@ public class CursorRotate : CursorM
         distance = (posLast - nextPosTemp).magnitude;
         distance *= 1000;
 
-        if (distance < 800f && distance > -800f) return;
+        if (distance < 600f && distance > -600f) return;
 
         postNext = nextPosTemp;
         Vector3 target = postNext - posLast;
 
         directionNext.z = -Vector2.SignedAngle(target, directionInitial);
         transform.rotation = Quaternion.Euler(directionNext);
+
+        forceOutputActual = forceOutput;
+
+        StopCoroutine(StandForce());
+        StartCoroutine(StandForce());
+    }
+
+    IEnumerator StandForce()
+    {
+        yield return new WaitForSeconds(0.2f);
+        forceOutputActual = 0;
     }
 }
 

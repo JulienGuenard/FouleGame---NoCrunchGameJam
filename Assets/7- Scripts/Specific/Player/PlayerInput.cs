@@ -6,9 +6,16 @@ public class PlayerInput : MonoBehaviour
 {
     [SerializeField] private float speed;
 
+    Rigidbody2D rb;
+
+    private void Awake()
+    {
+        rb = GetComponent<Rigidbody2D>();
+    }
+
     void Update()
     {
         Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
-        transform.position += input * speed * Time.deltaTime;
+        rb.velocity = input * speed * Time.deltaTime;
     }
 }

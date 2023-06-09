@@ -15,7 +15,7 @@ public class FlockConversion : Flock
     {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (this.tag != "Neutre")       continue;
+            if (this.tag != "Neutre")                       continue;
             if (agent.agentConversion.ConvertPercent <= 0)  continue;
 
             agent.agentConversion.ConvertPercent = 0;
@@ -53,6 +53,7 @@ public class FlockConversion : Flock
         agent.transform.SetParent(PlayerManager.instance.flockPaco.transform, true);
         PlayerManager.instance.flockPaco.FBehaviour.agents.Add(agent);
         agent.agentOwnership.parentflock = PlayerManager.instance.flockPaco;
+        agent.agentOwnership.isPlayer = FOwnership.isPlayer;
 
         if (FBehaviour.agents.Count == 0) Destroy(gameObject);
     }

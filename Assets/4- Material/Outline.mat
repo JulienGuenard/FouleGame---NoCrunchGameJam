@@ -109,14 +109,14 @@ Material:
     - _ColorRampOutline: 0
     - _ColorSwapBlend: 1
     - _ColorSwapBlueLuminosity: 0.5
-    - _ColorSwapGreenLuminosity: 0.5
+    - _ColorSwapGreenLuminosity: 0.37
     - _ColorSwapRedLuminosity: 0.5
     - _Contrast: 1
     - _CullingOption: 0
     - _DistortAmount: 0.5
     - _DistortTexXSpeed: 5
     - _DistortTexYSpeed: 5
-    - _EditorDrawers: 7
+    - _EditorDrawers: 3
     - _EnableExternalAlpha: 0
     - _FadeAmount: -0.1
     - _FadeBurnGlow: 2

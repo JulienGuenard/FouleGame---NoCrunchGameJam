@@ -5,7 +5,7 @@ using UnityEngine;
 public class CursorM : MonoBehaviour
 {
     [HideInInspector] public CursorFollow   cursorFollow;
-    [HideInInspector] public CursorRotate   cursorRotate;
+    [HideInInspector] public CursorDrop     cursorDrop;
     [HideInInspector] public CursorTrigger  cursorTrigger;
     [HideInInspector] public CursorDrag     cursorDrag;
     [HideInInspector] public CursorSprite   cursorSprite;
@@ -17,7 +17,7 @@ public class CursorM : MonoBehaviour
         if (instance == null) instance = this;
 
         cursorFollow    = GetComponent<CursorFollow>();
-        cursorRotate    = GetComponent<CursorRotate>();
+        cursorDrop      = GetComponent<CursorDrop>();
         cursorTrigger   = GetComponent<CursorTrigger>();
         cursorDrag      = GetComponent<CursorDrag>();
         cursorSprite    = GetComponent<CursorSprite>();

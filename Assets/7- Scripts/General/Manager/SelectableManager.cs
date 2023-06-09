@@ -22,10 +22,11 @@ public class SelectableManager : MonoBehaviour
 
     public void Selectable(GameObject obj)
     {
-        if (GetSelectableUnitList().Contains(obj)) return;
-        if (DragManager.instance.GetDraggedUnitList().Count != 0) return;
-        if (selectableUnitList.Count > selectableUnitNumberMax) return;
-        if (obj == null) return;
+        if (!obj.GetComponent<FA_Ownership>().isPlayer)             return;
+        if (GetSelectableUnitList().Contains(obj))                  return;
+        if (DragManager.instance.GetDraggedUnitList().Count != 0)   return;
+        if (selectableUnitList.Count > selectableUnitNumberMax)     return;
+        if (obj == null)                                            return;
 
         AddToSelectableUnitList(obj);
         SelectableAll();
