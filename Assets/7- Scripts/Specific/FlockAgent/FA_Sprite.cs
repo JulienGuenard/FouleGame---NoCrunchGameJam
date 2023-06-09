@@ -20,8 +20,9 @@ public class FA_Sprite : FlockAgent
     {
         if (agentSprite.outlineInstancied != null) return;
 
-        outlineInstancied = Instantiate(outline, transform.position + outlineOffsetPos, Quaternion.identity);
+        outlineInstancied = Instantiate(outline, transform.position, Quaternion.identity);
         outlineInstancied.transform.parent = spriteR.transform;
+        outlineInstancied.transform.localPosition = outlineOffsetPos;
         spriteR.material = outlineMat;
     }
 

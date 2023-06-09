@@ -133,7 +133,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -174,7 +173,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -200,11 +198,11 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   deadEffect: {fileID: 6928413279097990055, guid: 30ca69a7cdb543c4fad8684687e3078f, type: 3}
+  shadow: {fileID: 0}
 --- !u!114 &-5758111776200917404
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,7 +225,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -254,7 +251,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -282,7 +278,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -309,7 +304,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -336,7 +330,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -363,12 +356,11 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
-  outlineOffsetPos: {x: 0, y: 0.15, z: 0}
+  outlineOffsetPos: {x: 0, y: 0.35, z: 0}
   outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
 --- !u!114 &4011786719334289041
 MonoBehaviour:
@@ -392,7 +384,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -419,7 +410,6 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
-  agentDrag: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}

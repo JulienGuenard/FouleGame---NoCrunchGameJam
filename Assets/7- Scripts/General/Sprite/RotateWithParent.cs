@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class RotateWithParent : MonoBehaviour
 {
-    public bool canRotate = true;
-
     void Update()
     {
         Rotate();

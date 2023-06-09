@@ -221,7 +221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f2c278004dd3f54e9cb391ce8f898d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canRotate: 1
 --- !u!114 &2483067724479132079
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,7 +582,7 @@ MonoBehaviour:
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   outline: {fileID: 7641612273616305618, guid: 05d1d9730c0916d4bb32596c69a1f8a9, type: 3}
-  outlineOffsetPos: {x: 0, y: 0.15, z: 0}
+  outlineOffsetPos: {x: 0, y: 0.35, z: 0}
   outlineMat: {fileID: 2100000, guid: 63b533c525283e54ebc097b043780698, type: 2}
 --- !u!114 &4081681331104794900
 MonoBehaviour:
