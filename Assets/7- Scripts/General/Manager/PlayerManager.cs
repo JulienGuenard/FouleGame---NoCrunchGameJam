@@ -61,10 +61,15 @@ public class PlayerManager : MonoBehaviour
 
     public void SetBars()
     {
-        PassifBar.SetMax(compteurTotal);
-        AgressifBar.SetMax(compteurTotal);
-        AgressifBar.SetBar(compteurAggro);
-        PassifBar.SetBar(compteurPaco);
+        if (compteurTotal == 0) return;
+
+
+
+
+        float   fill = (float)(compteurTotal - compteurAggro) / compteurTotal;
+        PassifBar.SetBar(fill);
+                fill = (float)(compteurTotal - compteurPaco) / compteurTotal;
+        AgressifBar.SetBar(fill);
     }
 
     public void CHeckGameOver(int compteur)

@@ -6,19 +6,16 @@ using UnityEngine.UI;
 
 public class Bars_UI : MonoBehaviour
 {
-    public PlayerManager PlayerManager;
+    Image slider;
 
-    public Slider Bar;
-
-    public void SetBar(int compteur)
+    private void Awake()
     {
-       
-        Bar.value = compteur;
+        slider = GetComponent<Image>();
     }
 
-    public void SetMax(int compteur)
+    public void SetBar(float compteur)
     {
-        Bar.maxValue = compteur;
+        Debug.Log(compteur);
+        slider.fillAmount = compteur;
     }
-
 }
