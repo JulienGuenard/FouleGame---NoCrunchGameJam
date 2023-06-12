@@ -15,7 +15,6 @@ public class Bars_UI : MonoBehaviour
 
     public void SetBar(float compteur)
     {
-        Debug.Log(compteur);
         slider.fillAmount = compteur;
     }
 }

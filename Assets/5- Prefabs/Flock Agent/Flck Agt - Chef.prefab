@@ -301,6 +301,12 @@ MonoBehaviour:
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   parentflock: {fileID: 0}
+  isPlayer: 0
+  matColorSwap:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 07ede2f900982de48aecd2f4e28d998d, type: 2}
+  matPlayer:
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
 --- !u!114 &-3707422877388387675
 MonoBehaviour:
   m_ObjectHideFlags: 0

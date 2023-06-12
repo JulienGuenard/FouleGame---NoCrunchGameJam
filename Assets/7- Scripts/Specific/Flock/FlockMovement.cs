@@ -47,7 +47,8 @@ public class FlockMovement : Flock
     {
         target = null;
 
-        if (!agent.agentCooldown.canCheckEnemies) return;
+        if (agent == null)                          return;
+        if (!agent.agentCooldown.canCheckEnemies)   return;
 
         agent.agentCooldown.UnableCheckEnemies();
         FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);

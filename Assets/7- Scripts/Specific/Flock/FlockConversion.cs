@@ -54,6 +54,7 @@ public class FlockConversion : Flock
         PlayerManager.instance.flockPaco.FBehaviour.agents.Add(agent);
         agent.agentOwnership.parentflock = PlayerManager.instance.flockPaco;
         agent.agentOwnership.isPlayer = FOwnership.isPlayer;
+        if (!FOwnership.isPlayer) agent.agentOwnership.SwapColor();
 
         if (FBehaviour.agents.Count == 0) Destroy(gameObject);
     }
