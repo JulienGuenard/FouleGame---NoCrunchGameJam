@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1046643907542586875, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: flockAgentBehaviour
+      value: 
+      objectReference: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
     - target: {fileID: 2079756922325437378, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_Name
       value: FGrp_Other_Passif
@@ -17,15 +21,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.754397
+      value: 2.4999995
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.11774
+      value: 15.2
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5002135
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,5 +59,86 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4255507214981844565, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: startingCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 737595337582112254}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 5941788396438013277}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 4226574775824976838}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PassifConversion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Conversion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: IncrementNextTimedDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: MoveEachAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FlockConversion, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: FlockLifetime, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: FlockMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+--- !u!114 &737595337582112254 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4271497084746210184, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+  m_PrefabInstance: {fileID: 3565462198874207862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cde84d827b4c743acb944b05ab407d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4226574775824976838 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 854803938423504304, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+  m_PrefabInstance: {fileID: 3565462198874207862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be08f80eff2661745aac09be91aa52d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5941788396438013277 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7137758914845815595, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+  m_PrefabInstance: {fileID: 3565462198874207862}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48a7ad8fc8b2c045b78465d8b80a8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

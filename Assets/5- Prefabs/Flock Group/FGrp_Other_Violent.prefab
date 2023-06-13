@@ -7,9 +7,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 307927913381756910, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: damage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 307927913381756910, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: chargedTime
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 307927913381756910, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: launchForce
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 307927913381756910, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: repulseForce
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 854803938423504304, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: maxSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 854803938423504304, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: driveFactor
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 854803938423504304, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: neighborRadius
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1046643907542586875, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: flockAgentBehaviour
+      value: 
+      objectReference: {fileID: 11400000, guid: 4560189fc636b514b973fa68bc68b646, type: 2}
     - target: {fileID: 2079756922325437378, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_Name
-      value: FGrp_Other_Agressif
+      value: FGrp_Other_Violent
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_RootOrder
@@ -17,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.217812
+      value: -0.58
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 23.666521
+      value: 22.31
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.5002135
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2079756922325437404, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
       propertyPath: m_LocalRotation.w
@@ -55,5 +87,98 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4255507214981844565, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: agentPrefab
+      value: 
+      objectReference: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
+    - target: {fileID: 4255507214981844565, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: startingCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271497084746210184, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: Multiplicater
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4340365044631553342, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: agentType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5185106684406990087}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 2286769863789391268}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_Target
+      value: 
+      objectReference: {fileID: 8605969173990433599}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PassifConversion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Conversion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: IncrementNextTimedDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
+      value: MoveEachAgent
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FlockConversion, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: FlockLifetime, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6931309024744061887, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
+      value: FlockMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+--- !u!114 &2286769863789391268 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7137758914845815595, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+  m_PrefabInstance: {fileID: 8985337635618627215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d48a7ad8fc8b2c045b78465d8b80a8b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5185106684406990087 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4271497084746210184, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+  m_PrefabInstance: {fileID: 8985337635618627215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cde84d827b4c743acb944b05ab407d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8605969173990433599 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 854803938423504304, guid: f7ce829912dbcde43aa8ba1230fce463, type: 3}
+  m_PrefabInstance: {fileID: 8985337635618627215}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be08f80eff2661745aac09be91aa52d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

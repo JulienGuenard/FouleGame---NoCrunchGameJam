@@ -15,6 +15,9 @@ public class FlockAgent : MonoBehaviour
     [HideInInspector]   public FA_Physics           agentPhysics;
     [HideInInspector]   public FA_Selection         agentSelection;
     [HideInInspector]   public FA_Sprite            agentSprite;
+    [HideInInspector]   public FA_Aggro             agentAggro;
+    [HideInInspector]   public FA_Trigger           agentTrigger;
+    [HideInInspector]   public FlockAgent           agentMain;
     [HideInInspector]   public Rigidbody2D          rb;
     [HideInInspector]   new public Collider2D       collider;
                         public Collider2D           AgentCollider { get { return collider; } }
@@ -34,6 +37,9 @@ public class FlockAgent : MonoBehaviour
         agentPhysics        = GetComponent<FA_Physics>();
         agentSelection      = GetComponent<FA_Selection>();
         agentSprite         = GetComponent<FA_Sprite>();
+        agentAggro          = GetComponent<FA_Aggro>();
+        agentTrigger        = GetComponentInChildren<FA_Trigger>();
+        agentMain           = GetComponent<FlockAgent>();
         rb                  = GetComponent<Rigidbody2D>();
         collider            = GetComponent<Collider2D>();
         spriteR             = GetComponentInChildren<SpriteRenderer>();

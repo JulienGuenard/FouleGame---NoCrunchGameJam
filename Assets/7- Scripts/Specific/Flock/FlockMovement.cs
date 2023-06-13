@@ -32,37 +32,11 @@ public class FlockMovement : Flock
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
             if (agent.agentSelection.isDragged) continue;
-
-            FlockAgent target;
-            DetectEnemy(agent, out target);
-            MovementBehaviour(agent, target);
-
-            if (agent == null) continue;
-
+            if (agent.agentAggro.targetOnAggro != null) continue;
+            
+            NextPoint(agent);
             agent.agentMovement.Move(agent.agentMovement.move);
         }
-    }
-
-    void DetectEnemy(FlockAgent agent, out FlockAgent target)
-    {
-        target = null;
-
-        if (agent == null)                          return;
-        if (!agent.agentCooldown.canCheckEnemies)   return;
-
-        agent.agentCooldown.UnableCheckEnemies();
-        FCharge.ennemis = FGetAgentFunctions.GetAgents(agent, out target, FType.agentType);
-        FAggro.targetOnAggro = target;
-    }
-
-    void MovementBehaviour(FlockAgent agent, FlockAgent target)
-    {
-        if (FCharge.ennemis == true && FAggro.targetOnAggro != null)
-        {
-            if (FType.agentType == AgentType.Agressif)  FCharge.Charge(agent);
-            if (FType.agentType == AgentType.Passif)    FConversion.Convert(agent, target);
-        }
-        else NextPoint(agent);
     }
 
     void NextPoint(FlockAgent agent)

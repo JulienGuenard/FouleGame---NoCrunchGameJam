@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: -3707422877388387675}
   - component: {fileID: 4011786719334289041}
   - component: {fileID: 2175871815892377176}
+  - component: {fileID: 4806600287182203647}
   m_Layer: 0
   m_Name: Flck Agt - Chef
   m_TagString: Chefs
@@ -43,6 +44,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7994523529623589876}
+  - {fileID: 930889706111150299}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -100,6 +102,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -140,6 +145,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -165,6 +173,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -192,6 +203,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -218,6 +232,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -245,6 +262,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -271,6 +291,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -297,6 +320,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -329,6 +355,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -357,6 +386,9 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
@@ -382,11 +414,43 @@ MonoBehaviour:
   agentPhysics: {fileID: 0}
   agentSelection: {fileID: 0}
   agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   isSelectable: 0
   isDragged: 0
+--- !u!114 &4806600287182203647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2724783979569385447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22c74e6c5c63d9341a79edcc23f06773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentAnimation: {fileID: 0}
+  agentLife: {fileID: 0}
+  agentCharge: {fileID: 0}
+  agentConversion: {fileID: 0}
+  agentOwnership: {fileID: 0}
+  agentMovement: {fileID: 0}
+  agentCooldown: {fileID: 0}
+  agentPhysics: {fileID: 0}
+  agentSelection: {fileID: 0}
+  agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
+  rb: {fileID: 0}
+  collider: {fileID: 0}
+  spriteR: {fileID: 0}
+  targetOnAggro: {fileID: 0}
 --- !u!1 &3510281759723149692
 GameObject:
   m_ObjectHideFlags: 0
@@ -487,3 +551,80 @@ MonoBehaviour:
   layerOffset: 0
   lookAtParent: 0
   changeZ: 0
+--- !u!1 &5814651915587459652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 930889706111150299}
+  - component: {fileID: 3451275562320935892}
+  - component: {fileID: 4132086804786847096}
+  m_Layer: 0
+  m_Name: AggroRange
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &930889706111150299
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814651915587459652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.65, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4173662819818017828}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &3451275562320935892
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814651915587459652}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1
+--- !u!114 &4132086804786847096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5814651915587459652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8633fccb58603b4aa7a812b838f0ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentAnimation: {fileID: 0}
+  agentLife: {fileID: 0}
+  agentCharge: {fileID: 0}
+  agentConversion: {fileID: 0}
+  agentOwnership: {fileID: 0}
+  agentMovement: {fileID: 0}
+  agentCooldown: {fileID: 0}
+  agentPhysics: {fileID: 0}
+  agentSelection: {fileID: 0}
+  agentSprite: {fileID: 0}
+  agentAggro: {fileID: 0}
+  agentTrigger: {fileID: 0}
+  agentMain: {fileID: 0}
+  rb: {fileID: 0}
+  collider: {fileID: 0}
+  spriteR: {fileID: 0}

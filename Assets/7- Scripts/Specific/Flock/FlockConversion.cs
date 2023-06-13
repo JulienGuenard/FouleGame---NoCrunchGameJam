@@ -64,19 +64,19 @@ public class FlockConversion : Flock
         FConversion.HasConvert = false;
         FConversion.MaxConvert = 100;
 
-        if (FAggro.targetOnAggro.tag == "agressif") return;
+        if (agent.agentAggro.targetOnAggro.tag == "agressif") return;
 
         if (agent == null) return;
 
-        if (FConversion.HasConvert == false && FAggro.targetOnAggro != null) 
-                StartCoroutine(ConvertOther(FAggro.targetOnAggro.gameObject, agent));
+        if (FConversion.HasConvert == false && agent.agentAggro.targetOnAggro != null) 
+                StartCoroutine(ConvertOther(agent.agentAggro.targetOnAggro.gameObject, agent));
         else    agent.agentMovement.Move(-FFear.Fear(agent.transform.position - target.transform.position) * 2);
 
     }
 
     public IEnumerator ConvertOther(GameObject Pacifist, FlockAgent agent)
     {
-        if (HasConvert == false) FAggro.ChaseAnotherEntity(FAggro.targetOnAggro, agent);
+        if (HasConvert == false) agent.agentAggro.ChaseAnotherEntity(agent.agentAggro.targetOnAggro, agent);
 
         if (Pacifist == null) yield break;
 
@@ -92,7 +92,7 @@ public class FlockConversion : Flock
 
             if (Pacifist == null) break;
 
-            if (FAggro.targetOnAggro == null && Pacifist.GetComponent<FlockAgent>().agentConversion.ConvertPercent >= 0) 
+            if (agent.agentAggro.targetOnAggro == null && Pacifist.GetComponent<FlockAgent>().agentConversion.ConvertPercent >= 0) 
             { HasConvert = true; break; }
 
             if (Pacifist.GetComponent<FlockAgent>().agentConversion.ConvertPercent == MaxConvert) 

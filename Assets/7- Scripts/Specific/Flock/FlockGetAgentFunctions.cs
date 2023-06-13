@@ -48,27 +48,4 @@ public class FlockGetAgentFunctions : Flock
             }
         }
     }
-
-    public bool GetAgents(FlockAgent agent, out FlockAgent target, AgentType agentType)
-    {
-        List<Transform> ennemis = new List<Transform>();
-        Collider2D[] ennemisCollider = Physics2D.OverlapCircleAll(agent.transform.position, FCharge.radius);
-
-        foreach (Collider2D i in ennemisCollider)
-        {
-            FlockAgent iFlockAgent = i.transform.gameObject.GetComponent<FlockAgent>();
-
-            if (iFlockAgent == null)                                                                    continue;
-            if (i.transform.parent == null)                                                             continue;
-            if (agent.agentOwnership.parentflock.FOwnership.isPlayer == iFlockAgent.agentOwnership.parentflock.FOwnership.isPlayer)   continue;
-            if (FBehaviour.agents.Contains(iFlockAgent))                                                continue;
-            if (agentType != AgentType.Agressif && FAggro.pourcentAggro > 70)                           continue;
-
-            ennemis.Add(i.transform);
-            target = iFlockAgent;
-            return true;
-        }
-        target = null;
-        return false;
-    }
 }
