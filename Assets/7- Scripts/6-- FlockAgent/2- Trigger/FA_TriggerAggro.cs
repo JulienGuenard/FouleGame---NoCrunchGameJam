@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FA_DamageTrigger : MonoBehaviour
+public class FA_TriggerAggro : MonoBehaviour
 {
     [HideInInspector] public FlockAgent agentMain;
 
@@ -13,8 +13,9 @@ public class FA_DamageTrigger : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.tag != "attack") return;
+        if (col.tag != "agressif" && col.tag != "passif")   return;
+        if (agentMain.agentAggro.targetOnAggro != null)     return;
 
-        agentMain.agentLife.TakeDamage(1);
+        agentMain.agentAggro.DetectEnemy(col.GetComponent<FlockAgent>());
     }
 }

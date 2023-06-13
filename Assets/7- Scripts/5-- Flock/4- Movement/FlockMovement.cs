@@ -31,8 +31,9 @@ public class FlockMovement : Flock
 
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent.agentSelection.isDragged) continue;
-            if (agent.agentAggro.targetOnAggro != null) continue;
+            if (agent == null)                              continue;
+            if (agent.agentSelection.isDragged)             continue;
+            if (agent.agentAggro.targetOnAggro != null)     continue;
             
             NextPoint(agent);
             agent.agentMovement.Move(agent.agentMovement.move);

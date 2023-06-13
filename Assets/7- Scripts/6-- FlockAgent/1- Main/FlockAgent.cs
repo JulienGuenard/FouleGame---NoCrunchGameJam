@@ -16,8 +16,12 @@ public class FlockAgent : MonoBehaviour
     [HideInInspector]   public FA_Selection         agentSelection;
     [HideInInspector]   public FA_Sprite            agentSprite;
     [HideInInspector]   public FA_Aggro             agentAggro;
-    [HideInInspector]   public FA_AggroTrigger      agentAggroTrigger;
-    [HideInInspector]   public FA_DamageTrigger     agentDamageTrigger;
+    [HideInInspector]   public FA_Attack            agentAttack;
+
+    [HideInInspector]   public FA_TriggerAggro      triggerAggro;
+    [HideInInspector]   public FA_TriggerDamage     triggerDamage;
+    [HideInInspector]   public FA_TriggerAttack     triggerAttack;
+
     [HideInInspector]   public FlockAgent           agentMain;
     [HideInInspector]   public Rigidbody2D          rb;
     [HideInInspector]   new public Collider2D       collider;
@@ -39,8 +43,12 @@ public class FlockAgent : MonoBehaviour
         agentSelection      = GetComponent<FA_Selection>();
         agentSprite         = GetComponent<FA_Sprite>();
         agentAggro          = GetComponent<FA_Aggro>();
-        agentAggroTrigger   = GetComponentInChildren<FA_AggroTrigger>();
-        agentDamageTrigger  = GetComponentInChildren<FA_DamageTrigger>();
+        agentAttack         = GetComponent<FA_Attack>();
+
+        triggerAggro        = GetComponentInChildren<FA_TriggerAggro>();
+        triggerDamage       = GetComponentInChildren<FA_TriggerDamage>();
+        triggerAttack       = GetComponentInChildren<FA_TriggerAttack>();
+
         agentMain           = GetComponent<FlockAgent>();
         rb                  = GetComponent<Rigidbody2D>();
         collider            = GetComponent<Collider2D>();
