@@ -50,19 +50,17 @@ public class FlockSpawn : Flock
             Destroy(FOwnership.chef);
             FOwnership.chef = null;
         }
-
         StartCoroutine(AgentsActivationDelayer());
     }
 
     IEnumerator AgentsActivationDelayer()
     {
-        yield return new WaitForSeconds(1f);
-
+        yield return new WaitForSeconds(0.01f);
         foreach (FlockAgent agent in FBehaviour.agents)
         {
-            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForSeconds(0.06f);
             agent.agentCooldown.canCalculateMove = true;
-            agent.agentCooldown.canCheckEnemies = true;
+            agent.agentCooldown.UnableCheckEnemies();
         }
     }
 }

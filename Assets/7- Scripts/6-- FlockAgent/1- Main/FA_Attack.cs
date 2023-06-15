@@ -10,9 +10,15 @@ public class FA_Attack : FlockAgent
                         public int damage;
 
     [HideInInspector]   public FlockAgent targetAttacked;
-    [HideInInspector]   public bool hasAttacked = false;
-    [HideInInspector]   public bool isAttacking = false;
-    
+    [HideInInspector]   public bool hasAttacked;
+    [HideInInspector]   public bool isAttacking;
+
+    private void Start()
+    {
+        hasAttacked = false;
+        isAttacking = false;
+    }
+
     private void Update()
     {
         if (targetAttacked == null) AttackEnd();
@@ -22,11 +28,10 @@ public class FA_Attack : FlockAgent
     public void AttackStart(FlockAgent target) 
     {
         if (targetAttacked == null) agentAnimation.AttackPrepStart();
-
         isAttacking = true;
         targetAttacked = target;
 
-        if (!hasAttacked)   StartCoroutine(AttackPreparation()); 
+        if (!hasAttacked)           StartCoroutine(AttackPreparation()); 
     }
 
     public void AttackEnd()
@@ -51,7 +56,7 @@ public class FA_Attack : FlockAgent
     void AttackSpawn()
     {
         if (targetAttacked == null) return;
-
+        
         GameObject  atk = Instantiate(attack, targetAttacked.transform.position, Quaternion.identity);
                     atk.GetComponent<DestroyAfterTime>().delay = 1f;
 

@@ -8,9 +8,18 @@ public class FA_TriggerAttack : MonoBehaviour
 
                         FlockAgent target;
 
+    [HideInInspector] public CircleCollider2D circleCollider;
+
     private void Awake()
     {
         agentMain = GetComponentInParent<FlockAgent>();
+        circleCollider = GetComponent<CircleCollider2D>();
+    }
+
+    private void Update()
+    {
+        if (agentMain.agentCooldown.canCheckEnemies)    circleCollider.enabled = true;
+        else                                            circleCollider.enabled = false;
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -23,7 +32,7 @@ public class FA_TriggerAttack : MonoBehaviour
 
         agentMain.agentAttack.AttackStart(target);
     }
-
+/*
     private void OnTriggerExit2D(Collider2D col)
     {
        
@@ -32,5 +41,5 @@ public class FA_TriggerAttack : MonoBehaviour
 
         target = null;
         agentMain.agentAttack.AttackEnd();
-    }
+    }*/
 }

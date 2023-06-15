@@ -305,7 +305,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  move: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
 --- !u!114 &8517951475084884120
 MonoBehaviour:
   m_ObjectHideFlags: 0
