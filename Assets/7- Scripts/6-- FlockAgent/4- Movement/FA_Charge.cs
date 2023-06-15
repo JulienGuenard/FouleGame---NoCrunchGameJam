@@ -13,8 +13,9 @@ public class FA_Charge : FlockAgent
 
     public void ChargeStart()
     {
-        if (isCharging)     { Charge(); return; }
-        if (!isPrepCharging) StartCoroutine(ChargePreparation());
+        if (isCharging) {               Charge(); return; }
+        if (!isPrepCharging)            StartCoroutine(ChargePreparation());
+        if (agentAttack.isAttacking)    ChargeEnd();
     }
 
     public void ChargeEnd()

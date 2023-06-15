@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class FA_TriggerAttack : MonoBehaviour
 {
-    [HideInInspector]   public bool hasAttacked = false;
-
     [HideInInspector]   public FlockAgent agentMain;
+
+                        FlockAgent target;
 
     private void Awake()
     {
@@ -15,14 +15,22 @@ public class FA_TriggerAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (hasAttacked)                                                            return;
         if (col.tag != "agressif" && col.tag != "passif")                           return;
 
-        FlockAgent target = col.GetComponent<FlockAgent>();
+        target = col.GetComponent<FlockAgent>();
 
         if (target.agentOwnership.isPlayer == agentMain.agentOwnership.isPlayer)    return;
 
-        hasAttacked = true;
-        agentMain.agentAttack.Attack(target);
+        agentMain.agentAttack.AttackStart(target);
+    }
+
+    private void OnTriggerExit2D(Collider2D col)
+    {
+       
+        if (col.tag != "agressif" && col.tag != "passif")   return;
+        if (col.GetComponent<FlockAgent>() != target)       return;
+
+        target = null;
+        agentMain.agentAttack.AttackEnd();
     }
 }

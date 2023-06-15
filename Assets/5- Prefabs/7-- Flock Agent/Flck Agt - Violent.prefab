@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.34
+  m_Radius: 0.27
 --- !u!114 &6323232791162317443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,7 +61,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de74fb1c039e7f04a928c9eaba621890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasAttacked: 0
   agentMain: {fileID: 0}
 --- !u!1 &2974469221391435463
 GameObject:
@@ -460,7 +459,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -898,6 +897,9 @@ MonoBehaviour:
   attackPreparation: 1
   attackCooldown: 2
   damage: 1
+  targetAttacked: {fileID: 0}
+  hasAttacked: 0
+  isAttacking: 0
 --- !u!1 &4323945594282233002
 GameObject:
   m_ObjectHideFlags: 0

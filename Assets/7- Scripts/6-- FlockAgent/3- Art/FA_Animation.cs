@@ -26,9 +26,9 @@ public class FA_Animation : FlockAgent
     public void UpdateMovements(float rotation) { animator.SetFloat("rotation", rotation / 360); }
 
     ///     // Damaged
-    public void DamagedStart()                  { animator.SetBool("isDamaged", true); StartCoroutine(DelayAfterNoDamageAnimation()); }
+    public void DamagedStart()                  { spriteR.color = Color.red; StartCoroutine(DelayAfterNoDamageAnimation()); }
     IEnumerator DelayAfterNoDamageAnimation()   { yield return new WaitForSeconds(1f); DamagedEnd(); }
-    public void DamagedEnd()                    { animator.SetBool("isDamaged", false); }
+    public void DamagedEnd()                    { spriteR.color = Color.white; }
 
     ///     // Charge Preparation
     public void ChargePrepStart()               { animator.SetBool("inPrepToCharge", true); }
