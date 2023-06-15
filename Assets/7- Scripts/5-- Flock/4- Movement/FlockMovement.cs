@@ -13,6 +13,8 @@ public class FlockMovement : Flock
                             float squareNeighborRadius, squareAvoidanceRadius;
                             public float SquareAvoidanceRadius { get { return squareAvoidanceRadius; } }
 
+    public List<Transform> context;
+
     private void Start()
     {
         SquareNumberSetup();
@@ -36,7 +38,7 @@ public class FlockMovement : Flock
             if (agent.agentAggro.targetOnAggro != null)     continue;
             
             NextPoint(agent);
-            agent.agentMovement.Move(agent.agentMovement.move);
+            agent.agentMovement.Move(agent.agentMovement.velocity);
         }
     }
 
@@ -50,10 +52,10 @@ public class FlockMovement : Flock
         if (!agent.agentCooldown.canCalculateMove) return;
 
         agent.agentCooldown.UnableCalculateMove();
-        List<Transform> context = FGetAgentFunctions.GetNNearbyAgents(agent);
-        agent.agentMovement.move = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, this, FOwnership.chef.transform.position);
-        agent.agentMovement.move *= driveFactor;
+        context = FGetAgentFunctions.GetNNearbyAgents(agent);
+        agent.agentMovement.velocity = FBehaviour.flockAgentBehaviour.CalculateMove(agent, context, FMain, FOwnership.chef.transform.position);
+        agent.agentMovement.velocity *= driveFactor;
 
-        if (agent.agentMovement.move.sqrMagnitude > squareMaxSpeed) agent.agentMovement.move = agent.agentMovement.move.normalized * speed;
+        if (agent.agentMovement.velocity.sqrMagnitude > squareMaxSpeed) agent.agentMovement.velocity = agent.agentMovement.velocity.normalized * speed;
     }
 }

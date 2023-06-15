@@ -5,7 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Flock/Behavior/Steere Cohesion")]
 public class SteereCohesionBehavior : FilteredFlockBehaviour
 {
-
     Vector2 currentVelocity;
     public float agentSmoothTime = 0.5f;
 
@@ -26,6 +25,7 @@ public class SteereCohesionBehavior : FilteredFlockBehaviour
 
         //create offset from agent position
         cohesionMove -= (Vector2)agent.transform.position;
+        currentVelocity = agent.agentMovement.velocity;
         cohesionMove = Vector2.SmoothDamp(agent.transform.up, cohesionMove, ref currentVelocity, agentSmoothTime);
         return cohesionMove;
     }
