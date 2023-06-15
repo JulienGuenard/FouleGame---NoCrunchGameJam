@@ -15,10 +15,14 @@ public class FA_TriggerAttack : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (hasAttacked)                                    return;
-        if (col.tag != "agressif" && col.tag != "passif")   return;
+        if (hasAttacked)                                                            return;
+        if (col.tag != "agressif" && col.tag != "passif")                           return;
+
+        FlockAgent target = col.GetComponent<FlockAgent>();
+
+        if (target.agentOwnership.isPlayer == agentMain.agentOwnership.isPlayer)    return;
 
         hasAttacked = true;
-        agentMain.agentAttack.Attack(col.GetComponent<FlockAgent>());
+        agentMain.agentAttack.Attack(target);
     }
 }

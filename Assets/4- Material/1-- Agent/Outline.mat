@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: a36b7719ff0465b42ab1407d67672c5f, type: 3}
   m_ValidKeywords:
   - CHANGECOLOR2_ON
+  - OUTBASEPIXELPERF_ON
   - OUTBASE_ON
   - PREMULTIPLYALPHA_ON
   m_InvalidKeywords: []
@@ -181,10 +182,10 @@ Material:
     - _OutlineDistortTexXSpeed: 5
     - _OutlineDistortTexYSpeed: 5
     - _OutlineGlow: 100
-    - _OutlinePixelWidth: 1
+    - _OutlinePixelWidth: 4
     - _OutlineTexXSpeed: 10
     - _OutlineTexYSpeed: 0
-    - _OutlineWidth: 0.004
+    - _OutlineWidth: 0.2
     - _OverlayBlend: 1
     - _OverlayGlow: 1
     - _PinchUvAmount: 0.35

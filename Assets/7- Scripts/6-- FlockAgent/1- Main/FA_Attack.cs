@@ -5,14 +5,21 @@ using UnityEngine;
 public class FA_Attack : FlockAgent
 {
     public GameObject attack;
+    public float attackPreparation;
     public float attackCooldown;
     public int damage;
 
     public void Attack(FlockAgent target)
     {
-        if (target.agentOwnership.isPlayer == agentOwnership.isPlayer) return;
-
+        StartCoroutine(AttackPreparation(target));
         StartCoroutine(AttackCooldown());
+    }
+
+    IEnumerator AttackPreparation(FlockAgent target)
+    {
+        agentAnimation.AttackPrepStart();
+        yield return new WaitForSeconds(attackPreparation);
+        agentAnimation.AttackPrepEnd();
         AttackSpawn(target);
     }
 

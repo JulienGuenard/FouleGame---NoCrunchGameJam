@@ -4,11 +4,30 @@ using UnityEngine;
 
 public class FA_Charge : FlockAgent
 {
+    public float chargePreparation;
     public float attackRange;
     public float chargeSpeed;
 
-    public void Charge()
+    bool isPrepCharging = false;
+    bool isCharging     = false;
+
+    public void ChargeStart()
     {
+        if (isCharging)     { Charge(); return; }
+        if (!isPrepCharging) StartCoroutine(ChargePreparation());
+    }
+
+    public void ChargeEnd()
+    {
+        isPrepCharging = false;
+        isCharging = false;
+        agentAnimation.ChargeEnd();
+    }
+
+    void Charge()
+    {
+        agentAnimation.ChargeStart();
+
         float targetPosX = agentAggro.targetOnAggro.transform.position.x;
         float targetPosY = agentAggro.targetOnAggro.transform.position.y;
         float posX = transform.position.x;
@@ -21,7 +40,17 @@ public class FA_Charge : FlockAgent
 
         if (ennemiDistance > attackRange) return;
 
-       // agent.agentAggro.targetOnAggro.transform.GetComponent<FlockAgent>().agentLife.TakeDamage(damage);
         agentMovement.Move(directionToTarget);
+    }
+
+    IEnumerator ChargePreparation()
+    {
+        isPrepCharging = true;
+        agentAnimation.ChargePrepStart();
+        yield return new WaitForSeconds(chargePreparation);
+        isCharging = true;
+        isPrepCharging = false;
+        agentAnimation.ChargePrepEnd();
+        
     }
 }

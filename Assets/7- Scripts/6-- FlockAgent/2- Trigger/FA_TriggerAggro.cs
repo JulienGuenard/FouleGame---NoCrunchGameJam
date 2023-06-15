@@ -13,8 +13,9 @@ public class FA_TriggerAggro : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (col.tag != "agressif" && col.tag != "passif")   return;
-        if (agentMain.agentAggro.targetOnAggro != null)     return;
+        if (col.tag != "agressif" && col.tag != "passif")                                   return;
+        if (agentMain.agentAggro.targetOnAggro != null)                                     return;
+        if (agentMain.agentOwnership.isPlayer == col.GetComponent<FA_Ownership>().isPlayer) return;
 
         agentMain.agentAggro.DetectEnemy(col.GetComponent<FlockAgent>());
     }

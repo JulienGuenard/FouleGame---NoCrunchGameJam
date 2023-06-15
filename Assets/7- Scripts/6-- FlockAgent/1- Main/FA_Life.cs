@@ -6,30 +6,25 @@ public class FA_Life : FlockAgent
 {
     public int Health;
     public float takeDamageCooldown;
+    public float takeDamageDelay;
 
-    public void CheckHP()
+    public void TakeDamage(AttackTarget atk) { StartCoroutine(DamageAfterDelay(atk)); }
+
+    IEnumerator DamageAfterDelay(AttackTarget atk)
     {
-        if (Health <= 0) agentOwnership.parentflock.FDeath.Death(this);
-    }
-
-    public void TakeDamage(AttackTarget atk)
-    {
-        if (atk.damage < 1) return;
-
-        StartCoroutine(TakeDamageCooldown());
+        agentAnimation.DamagedStart();
+        yield return new WaitForSeconds(takeDamageDelay);
+        agentAnimation.DamagedEnd();
         this.Health -= atk.damage;
         CheckHP();
+        StartCoroutine(TakeDamageCooldown());
     }
+
+    public void CheckHP() { if (Health <= 0) agentOwnership.parentflock.FDeath.Death(this); }
 
     IEnumerator TakeDamageCooldown()
     {
         yield return new WaitForSeconds(takeDamageCooldown);
         triggerDamage.isDamaged = false;
-    }
-
-    public IEnumerator LifeTimer(int LifeTime)
-    {
-        yield return new WaitForSeconds(LifeTime);
-        Destroy(gameObject);
     }
 }

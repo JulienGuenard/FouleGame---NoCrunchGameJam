@@ -23,14 +23,14 @@ public class DragManager : MonoBehaviour
         SelectableManager.instance.Unselectable(obj);
         AddToDraggedUnitList(obj);
         obj.GetComponent<FA_Selection>().isDragged = true;
-        obj.GetComponent<FA_Animation>().DragAnimation();
+        obj.GetComponent<FA_Animation>().DragStart();
     }
 
     public void Undragged(GameObject obj)
     {
         RemoveToUndraggedUnitList(obj);
         obj.GetComponent<FA_Selection>().isDragged = false;
-        obj.GetComponent<FA_Animation>().EndDragAnimation();
+        obj.GetComponent<FA_Animation>().DragEnd();
         obj.GetComponent<FA_Physics>().Drop();
     }
 

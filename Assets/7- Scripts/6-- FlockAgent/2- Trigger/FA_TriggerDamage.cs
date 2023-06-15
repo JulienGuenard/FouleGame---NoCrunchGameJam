@@ -20,6 +20,7 @@ public class FA_TriggerDamage : MonoBehaviour
 
         AttackTarget attackTarget = col.GetComponent<AttackTarget>();
 
+        if (attackTarget.damage == 0)           return;
         if (attackTarget.target != agentMain)   return;
 
         isDamaged = true;

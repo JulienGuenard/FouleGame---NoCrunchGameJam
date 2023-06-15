@@ -8,13 +8,13 @@ public class FA_Aggro : FlockAgent
 
     private void Update()
     {
-        if (targetOnAggro != null) agentCharge.Charge();
+        if (targetOnAggro != null)  agentCharge.ChargeStart();
+        else                        agentCharge.ChargeEnd();
     }
 
     public void DetectEnemy(FlockAgent target)
     {
         targetOnAggro = target;
-        
     }
 
     public void ChaseAnotherEntity(FlockAgent other, FlockAgent agent)
