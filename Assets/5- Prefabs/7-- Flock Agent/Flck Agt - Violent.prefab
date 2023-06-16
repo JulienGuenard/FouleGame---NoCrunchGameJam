@@ -48,7 +48,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.27
+  m_Radius: 0.45
 --- !u!114 &6323232791162317443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 2967927771478887553}
   m_Layer: 0
   m_Name: DamageRange
-  m_TagString: Untagged
+  m_TagString: agressif
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -403,7 +403,7 @@ GameObject:
   - component: {fileID: 710307702039892263}
   - component: {fileID: 7679203634002311405}
   - component: {fileID: -2526020933866527561}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flck Agt - Violent
   m_TagString: agressif
   m_Icon: {fileID: 0}
@@ -466,7 +466,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
+  m_Radius: 0.15
 --- !u!114 &5343778298011262044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,9 +562,9 @@ MonoBehaviour:
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  chargePreparation: 1
-  attackRange: 10
-  chargeSpeed: 0.4
+  chargePreparation: 0.45
+  attackRange: 5
+  chargeSpeed: 2.5
 --- !u!114 &2764614285181434599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -896,8 +896,8 @@ MonoBehaviour:
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   attack: {fileID: 4756096007706976531, guid: e847fba16f66cac489055e5d648763b4, type: 3}
-  attackPreparation: 1
-  attackCooldown: 2
+  attackPreparation: 1.2
+  attackCooldown: 0.15
   damage: 1
   targetAttacked: {fileID: 0}
   hasAttacked: 0
@@ -950,7 +950,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 1.44
+  m_Radius: 2.25
 --- !u!114 &5752272176114402281
 MonoBehaviour:
   m_ObjectHideFlags: 0

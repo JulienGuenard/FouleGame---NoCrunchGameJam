@@ -11,11 +11,10 @@ public class FlockGetAgentFunctions : Flock
 
         foreach (Collider2D c in contextColliders)
         {
-            if (c == agent.AgentCollider)                               continue;
-            if (!c.CompareTag("agressif") && !c.CompareTag("passif"))   continue;
-            if (c.transform.parent == null)                             continue;
+            if (c == agent.AgentCollider)   continue;
+            if (c.gameObject.layer != 3)    continue;
 
-            GetNeutralAgents(c);
+        //    GetNeutralAgents(c);
 
             context.Add(c.transform);
 
@@ -23,7 +22,7 @@ public class FlockGetAgentFunctions : Flock
 
         return context;
     }
-
+    /*
     void GetNeutralAgents(Collider2D c)
     {
         if (c.transform.parent.CompareTag("Neutre") && FOwnership.isPlayer)
@@ -47,5 +46,5 @@ public class FlockGetAgentFunctions : Flock
                 flockaggressif.FBehaviour.agents.Add(cflockAgent);
             }
         }
-    }
+    }*/
 }

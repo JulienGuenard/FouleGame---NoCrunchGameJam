@@ -9,14 +9,20 @@ public class FA_TriggerAggro : MonoBehaviour
 
                         bool canAggro = true;
 
+    bool isShaping = true;
+
     private void Awake()
     {
         agentMain       = GetComponentInParent<FlockAgent>();
         circleCollider  = GetComponent<CircleCollider2D>();
+
+        StartCoroutine(GenerateShapes());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (isShaping) { circleCollider.enabled = true; return; }
+
         if (agentMain.agentAggro.targetOnAggro == null) canAggro = true;
         else                                            canAggro = false;
 
@@ -24,12 +30,18 @@ public class FA_TriggerAggro : MonoBehaviour
         else                                                        circleCollider.enabled = false;
     }
 
+    IEnumerator GenerateShapes()
+    {
+        yield return new WaitForSeconds(1f);
+        isShaping = false;
+    }
+
     private void OnTriggerStay2D(Collider2D col)
     {
         if (agentMain.agentAggro.targetOnAggro != null) {                                   canAggro = false; circleCollider.enabled = false; }
         if (col.tag != "agressif" && col.tag != "passif")                                   return;
-        if (agentMain.agentOwnership.isPlayer == col.GetComponent<FA_Ownership>().isPlayer) return;
+        if (agentMain.agentOwnership.isPlayer == col.GetComponentInParent<FA_Ownership>().isPlayer) return;
 
-        agentMain.agentAggro.DetectEnemy(col.GetComponent<FlockAgent>());
+        agentMain.agentAggro.DetectEnemy(col.GetComponentInParent<FlockAgent>());
     }
 }

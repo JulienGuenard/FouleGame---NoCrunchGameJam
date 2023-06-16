@@ -12,6 +12,8 @@ public class FlockSpawn : Flock
     public float agentDensity = 0.08f;
     static int agentID = 0;
 
+    public GameObject attackGMB;
+
     private void Start()
     {
         SpawnAgents();
@@ -39,6 +41,9 @@ public class FlockSpawn : Flock
                 Quaternion.Euler(Vector3.forward * Random.Range(0, 360f)),
                 transform
             );
+
+            AttackManager.instance.SpawnNewAttack();
+
             agentID++;
             newAgent.name = "#" + agentID + " Agent " + i;
             newAgent.agentOwnership.Initialize(GetComponent<Flock>());
@@ -58,8 +63,10 @@ public class FlockSpawn : Flock
         yield return new WaitForSeconds(0.01f);
         foreach (FlockAgent agent in FBehaviour.agents)
         {
-            yield return new WaitForSeconds(0.06f);
+            yield return new WaitForSeconds(0.01f);
+            yield return new WaitForFixedUpdate();
             agent.agentCooldown.canCalculateMove = true;
+            agent.agentCooldown.canCheckEnemies = true;
             agent.agentCooldown.UnableCheckEnemies();
         }
     }

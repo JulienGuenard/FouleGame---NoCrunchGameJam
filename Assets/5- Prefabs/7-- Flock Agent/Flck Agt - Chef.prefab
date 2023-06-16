@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: -3707422877388387675}
   - component: {fileID: 4011786719334289041}
   - component: {fileID: 2175871815892377176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flck Agt - Chef
   m_TagString: Chefs
   m_Icon: {fileID: 0}
@@ -605,3 +605,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDamaged: 0
   agentMain: {fileID: 0}
+  circleCollider: {fileID: 0}

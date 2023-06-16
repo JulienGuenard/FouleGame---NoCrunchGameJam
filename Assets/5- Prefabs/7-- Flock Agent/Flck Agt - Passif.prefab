@@ -63,6 +63,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDamaged: 0
   agentMain: {fileID: 0}
+  circleCollider: {fileID: 0}
 --- !u!1 &2502375738489457962
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,8 +125,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de74fb1c039e7f04a928c9eaba621890, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasAttacked: 0
   agentMain: {fileID: 0}
+  circleCollider: {fileID: 0}
 --- !u!1 &2947440666733655259
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,7 +403,7 @@ GameObject:
   - component: {fileID: -5329903006461756155}
   - component: {fileID: 2861252964058591503}
   - component: {fileID: 1362627707365956223}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Flck Agt - Passif
   m_TagString: passif
   m_Icon: {fileID: 0}
@@ -561,6 +562,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
+  chargePreparation: 0
   attackRange: 0
   chargeSpeed: 0
 --- !u!114 &-3457962881247478957
@@ -693,7 +695,7 @@ MonoBehaviour:
   rb: {fileID: 0}
   collider: {fileID: 0}
   spriteR: {fileID: 0}
-  move: {x: 0, y: 0}
+  velocity: {x: 0, y: 0}
 --- !u!114 &-2309856628994307556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -894,8 +896,12 @@ MonoBehaviour:
   collider: {fileID: 0}
   spriteR: {fileID: 0}
   attack: {fileID: 4756096007706976531, guid: e847fba16f66cac489055e5d648763b4, type: 3}
+  attackPreparation: 0
   attackCooldown: 2
   damage: 1
+  targetAttacked: {fileID: 0}
+  hasAttacked: 0
+  isAttacking: 0
 --- !u!1 &5089000281084824948
 GameObject:
   m_ObjectHideFlags: 0
@@ -958,3 +964,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agentMain: {fileID: 0}
+  circleCollider: {fileID: 0}

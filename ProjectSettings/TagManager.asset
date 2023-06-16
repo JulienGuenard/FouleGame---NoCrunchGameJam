@@ -19,15 +19,15 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Agent
   - Water
   - UI
+  - null
+  - Attack
   - 
   - 
-  - 
-  - 
-  - 
-  - 
+  - Player 1
+  - Player 2
   - 
   - 
   - 

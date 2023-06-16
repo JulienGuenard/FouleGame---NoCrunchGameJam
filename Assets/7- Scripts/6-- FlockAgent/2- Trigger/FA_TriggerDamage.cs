@@ -11,16 +11,28 @@ public class FA_TriggerDamage : MonoBehaviour
 
     bool canTrigger = true;
 
+    bool isShaping = true;
+
     private void Awake()
     {
         agentMain = GetComponentInParent<FlockAgent>();
         circleCollider = GetComponent<CircleCollider2D>();
+
+        StartCoroutine(GenerateShapes());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
+        if (isShaping) { circleCollider.enabled = true; return; }
+
         if (agentMain.agentCooldown.canCheckEnemies)    circleCollider.enabled = true;
         else                                            circleCollider.enabled = false;
+    }
+
+    IEnumerator GenerateShapes()
+    {
+        yield return new WaitForSeconds(1f);
+        isShaping = false;
     }
 
     private void OnTriggerStay2D(Collider2D col)
@@ -32,6 +44,7 @@ public class FA_TriggerDamage : MonoBehaviour
 
         if (attackTarget.damage == 0)           return;
         if (attackTarget.target != agentMain)   return;
+
         isDamaged = true;
         canTrigger = false;
         agentMain.agentLife.TakeDamage(attackTarget);

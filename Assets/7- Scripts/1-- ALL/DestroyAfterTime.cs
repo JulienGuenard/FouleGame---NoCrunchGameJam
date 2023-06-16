@@ -8,12 +8,12 @@ public class DestroyAfterTime : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine(DestroyAfterDelay());
+       // StartCoroutine(DestroyAfterDelay());
     }
 
-    IEnumerator DestroyAfterDelay()
+    public IEnumerator DestroyAfterDelay()
     {
         yield return new WaitForSeconds(delay);
-        Destroy(this.gameObject);
+        AttackManager.instance.BackToPullingList(this.gameObject);
     }
 }

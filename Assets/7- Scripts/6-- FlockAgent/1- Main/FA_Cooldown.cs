@@ -10,7 +10,7 @@ public class FA_Cooldown : FlockAgent
     public override void Awake()
     {
         base.Awake();
-        canCheckEnemies = true;
+        canCheckEnemies = false;
         canCalculateMove = false;
     }
 
@@ -32,15 +32,16 @@ public class FA_Cooldown : FlockAgent
 
     IEnumerator CalculateMoveDelay()
     {
-        yield return new WaitForSeconds(8f * Time.deltaTime);
+        yield return new WaitForSeconds(0.1f);
         canCalculateMove = true;
     }
 
     IEnumerator CheckEnemiesDelay()
     {
-        yield return new WaitForSeconds(.35f);
+        yield return new WaitForSeconds(.1f);
         canCheckEnemies = true;
-        yield return new WaitForSeconds(0.07f);
+        yield return new WaitForFixedUpdate();
+        yield return new WaitForFixedUpdate();
         UnableCheckEnemies();
     }
 }

@@ -36,6 +36,8 @@ public class FA_Attack : FlockAgent
 
     public void AttackEnd()
     {
+        if (!isAttacking && targetAttacked == null) return;
+
         isAttacking = false;
         targetAttacked = null;
         agentAnimation.AttackPrepEnd();
@@ -46,7 +48,7 @@ public class FA_Attack : FlockAgent
     IEnumerator AttackPreparation()
     {
         hasAttacked = true;
-        agentAnimation.AttackStart();
+        agentAnimation.AttackStart(1 / attackPreparation);
         yield return new WaitForSeconds(attackPreparation);
         agentAnimation.AttackEnd();
         AttackSpawn();
@@ -56,13 +58,8 @@ public class FA_Attack : FlockAgent
     void AttackSpawn()
     {
         if (targetAttacked == null) return;
-        
-        GameObject  atk = Instantiate(attack, targetAttacked.transform.position, Quaternion.identity);
-                    atk.GetComponent<DestroyAfterTime>().delay = 1f;
 
-        AttackTarget    atkTarget = atk.GetComponent<AttackTarget>(); 
-                        atkTarget.target = targetAttacked;
-                        atkTarget.damage = damage;
+        AttackManager.instance.SpawnAttackAtPos(targetAttacked.transform.position, targetAttacked, damage);
     }
 
     IEnumerator AttackCooldown()

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 377097218}
   - component: {fileID: 377097217}
   - component: {fileID: -7007201056239474986}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Attack
   m_TagString: Attack
   m_Icon: {fileID: 0}
@@ -96,3 +96,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 642aedc5e853c7643a858fe0c8969432, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  damage: 0

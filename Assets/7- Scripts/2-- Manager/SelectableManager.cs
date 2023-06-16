@@ -22,6 +22,7 @@ public class SelectableManager : MonoBehaviour
 
     public void Selectable(GameObject obj)
     {
+        if (obj.GetComponent<FA_Ownership>() == null) return;
         if (!obj.GetComponent<FA_Ownership>().isPlayer)             return;
         if (GetSelectableUnitList().Contains(obj))                  return;
         if (DragManager.instance.GetDraggedUnitList().Count != 0)   return;
@@ -34,6 +35,9 @@ public class SelectableManager : MonoBehaviour
 
     public void Unselectable(GameObject obj)
     {
+        if (obj == null) return;
+        if (obj.GetComponent<FA_Selection>() == null) return;
+
         RemoveToSelectableUnitList(obj);
         obj.GetComponent<FA_Selection>().Unselectable();
     }

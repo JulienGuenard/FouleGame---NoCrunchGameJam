@@ -20,14 +20,26 @@ public class FA_Charge : FlockAgent
 
     public void ChargeEnd()
     {
+        if (!isCharging && !isPrepCharging) return;
+
         isPrepCharging = false;
         isCharging = false;
         agentAnimation.ChargeEnd();
+        StopCoroutine(TriggerBack());
+        StartCoroutine(TriggerBack());
+    }
+
+    IEnumerator TriggerBack()
+    {
+        yield return new WaitForSeconds(100f);
+        collider.isTrigger = false;
     }
 
     void Charge()
     {
+        StopCoroutine(TriggerBack());
         agentAnimation.ChargeStart();
+        collider.isTrigger = true;
 
         float targetPosX = agentAggro.targetOnAggro.transform.position.x;
         float targetPosY = agentAggro.targetOnAggro.transform.position.y;

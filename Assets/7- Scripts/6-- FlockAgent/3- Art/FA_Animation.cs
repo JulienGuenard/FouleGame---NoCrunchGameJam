@@ -23,28 +23,28 @@ public class FA_Animation : FlockAgent
     }
 
     ///     // Move
-    public void UpdateMovements(float rotation) { animator.SetFloat("rotation", rotation / 360); }
+    public void UpdateMovements(float rotation)     { animator.SetFloat("rotation", rotation / 360); }
 
     ///     // Damaged
-    public void DamagedStart()                  { spriteR.color = Color.red; StartCoroutine(DelayAfterNoDamageAnimation()); }
-    IEnumerator DelayAfterNoDamageAnimation()   { yield return new WaitForSeconds(1f); DamagedEnd(); }
-    public void DamagedEnd()                    { spriteR.color = Color.white; }
+    public void DamagedStart()                      { spriteR.color = Color.red; StartCoroutine(DelayAfterNoDamageAnimation()); }
+    IEnumerator DelayAfterNoDamageAnimation()       { yield return new WaitForSeconds(1f); DamagedEnd(); }
+    public void DamagedEnd()                        { spriteR.color = Color.white; }
 
     ///     // Charge Preparation
-    public void ChargePrepStart()               { animator.SetBool("inPrepToCharge", true); }
-    public void ChargePrepEnd()                 { animator.SetBool("inPrepToCharge", false); }
+    public void ChargePrepStart()  { animator.SetBool("inPrepToCharge", true);  }
+    public void ChargePrepEnd()                     { animator.SetBool("inPrepToCharge", false); }
 
     ///     // Charge
-    public void ChargeStart()                   { animator.SetBool("isCharging", true); }
-    public void ChargeEnd()                     { animator.SetBool("isCharging", false); }
+    public void ChargeStart()                       { animator.SetBool("isCharging", true); }
+    public void ChargeEnd()                         { animator.SetBool("isCharging", false); }
 
     ///     // Attack Preparation
-    public void AttackPrepStart()               { animator.SetBool("inPrepToAttack", true); }
-    public void AttackPrepEnd()                 { animator.SetBool("inPrepToAttack", false); }
+    public void AttackPrepStart()                   { animator.SetBool("inPrepToAttack", true);  }
+    public void AttackPrepEnd()                     { animator.SetBool("inPrepToAttack", false); }
 
     ///     // Attack
-    public void AttackStart()                   { animator.SetBool("isAttacking", true); }
-    public void AttackEnd()                     { animator.SetBool("isAttacking", false); }
+    public void AttackStart(float attackSpeed)      { animator.SetBool("isAttacking", true); animator.SetFloat("attackSpeed", attackSpeed); }
+    public void AttackEnd()                         { animator.SetBool("isAttacking", false); }
 
     ///     // Drag
     public void DragStart()         

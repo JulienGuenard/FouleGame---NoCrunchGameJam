@@ -10,23 +10,35 @@ public class FA_TriggerAttack : MonoBehaviour
 
     [HideInInspector] public CircleCollider2D circleCollider;
 
+    bool isShaping = true;
+
     private void Awake()
     {
         agentMain = GetComponentInParent<FlockAgent>();
         circleCollider = GetComponent<CircleCollider2D>();
+
+        StartCoroutine(GenerateShapes());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
-        if (agentMain.agentCooldown.canCheckEnemies)    circleCollider.enabled = true;
-        else                                            circleCollider.enabled = false;
+        if (isShaping) { circleCollider.enabled = true; return; }
+
+        if (agentMain.agentCooldown.canCheckEnemies && agentMain.agentAggro.targetOnAggro != null)  circleCollider.enabled = true;
+        else                                                                                        circleCollider.enabled = false;
+    }
+
+    IEnumerator GenerateShapes()
+    {
+        yield return new WaitForSeconds(1f);
+        isShaping = false;
     }
 
     private void OnTriggerStay2D(Collider2D col)
     {
         if (col.tag != "agressif" && col.tag != "passif")                           return;
 
-        target = col.GetComponent<FlockAgent>();
+        target = col.GetComponentInParent<FlockAgent>();
 
         if (target.agentOwnership.isPlayer == agentMain.agentOwnership.isPlayer)    return;
 
