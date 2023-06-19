@@ -21,7 +21,7 @@ public class FA_TriggerAggro : MonoBehaviour
         StartCoroutine(GenerateShapes());
     }
 
-    /*  private void FixedUpdate()
+      private void FixedUpdate()
       {
           if (isShaping) { circleCollider.enabled = true; return; }
 
@@ -31,7 +31,7 @@ public class FA_TriggerAggro : MonoBehaviour
           if (agentMain.agentCooldown.canCheckEnemies && canAggro)    circleCollider.enabled = true;
           else                                                        circleCollider.enabled = false;
       }
-    */
+    
 
     IEnumerator GenerateShapes()
     {
@@ -41,7 +41,7 @@ public class FA_TriggerAggro : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-    //    if (agentMain.agentAggro.targetOnAggro != null) {                                   canAggro = false; circleCollider.enabled = false; }
+        if (agentMain.agentAggro.targetOnAggro != null) {                                   canAggro = false; circleCollider.enabled = false; }
         if (col.tag != "agressif" && col.tag != "passif")                                   return;
         if (agentMain.agentOwnership.isPlayer == col.GetComponentInParent<FA_Ownership>().isPlayer) return;
 

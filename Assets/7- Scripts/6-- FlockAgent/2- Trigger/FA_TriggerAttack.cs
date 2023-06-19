@@ -24,8 +24,8 @@ public class FA_TriggerAttack : MonoBehaviour
     {
         if (isShaping) { circleCollider.enabled = true; return; }
 
-        if (agentMain.agentCooldown.canCheckEnemies && agentMain.agentAggro.targetOnAggro != null)  circleCollider.enabled = true;
-        else                                                                                        circleCollider.enabled = false;
+        if (agentMain.agentCooldown.canCheckEnemies && agentMain.agentAggro.targetOnAggro != null && !agentMain.agentAttack.hasAttacked)    circleCollider.enabled = true;
+        else                                                                                                                                circleCollider.enabled = false;
     }
 
     IEnumerator GenerateShapes()
@@ -42,9 +42,10 @@ public class FA_TriggerAttack : MonoBehaviour
 
         if (target.agentOwnership.isPlayer == agentMain.agentOwnership.isPlayer)    return;
 
+        circleCollider.enabled = false;
         agentMain.agentAttack.AttackStart(target);
     }
-/*
+
     private void OnTriggerExit2D(Collider2D col)
     {
        
@@ -53,5 +54,5 @@ public class FA_TriggerAttack : MonoBehaviour
 
         target = null;
         agentMain.agentAttack.AttackEnd();
-    }*/
+    }
 }

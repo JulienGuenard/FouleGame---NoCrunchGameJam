@@ -25,8 +25,8 @@ public class FA_TriggerDamage : MonoBehaviour
     {
         if (isShaping) { circleCollider.enabled = true; return; }
 
-        if (agentMain.agentCooldown.canCheckEnemies)    circleCollider.enabled = true;
-        else                                            circleCollider.enabled = false;
+        if (agentMain.agentCooldown.canCheckEnemies && !isDamaged)      circleCollider.enabled = true;
+        else                                                            circleCollider.enabled = false;
     }
 
     IEnumerator GenerateShapes()
