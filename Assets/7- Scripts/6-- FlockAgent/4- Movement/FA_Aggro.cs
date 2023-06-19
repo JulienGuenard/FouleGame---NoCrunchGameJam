@@ -8,8 +8,8 @@ public class FA_Aggro : FlockAgent
 
     private void Update()
     {
-        if (targetOnAggro != null)  agentCharge.ChargeStart();
-        else                        agentCharge.ChargeEnd();
+        if (targetOnAggro != null && !targetOnAggro.agentSelection.isDragged && !agentSelection.isDragged)  agentCharge.ChargeStart();
+        else                                                                                                agentCharge.ChargeEnd();
     }
 
     public void DetectEnemy(FlockAgent target)

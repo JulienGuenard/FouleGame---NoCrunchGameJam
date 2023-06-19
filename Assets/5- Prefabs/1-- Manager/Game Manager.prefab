@@ -9,8 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5234291104452767382}
-  - component: {fileID: 5234291104452767391}
+  - component: {fileID: 8574876767689007099}
   - component: {fileID: 5234291104452767384}
+  - component: {fileID: 5234291104452767391}
   - component: {fileID: 5234291104452767385}
   - component: {fileID: 5234291104452767386}
   - component: {fileID: 5234291104452767387}
@@ -39,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5234291104452767391
+--- !u!114 &8574876767689007099
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,9 +49,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 5234291104452767383}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed0017d7e1222a242865402bb58d9ffd, type: 3}
+  m_Script: {fileID: 11500000, guid: c0b0ba64050d9a94f980c4aecbed2e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5234291104452767391}
+        m_TargetAssemblyTypeName: DragManager, Assembly-CSharp
+        m_MethodName: FollowCursor
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &5234291104452767384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63,6 +79,72 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f8b54a536140cc45942b2ba848dd2bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5234291104452767391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5234291104452767383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0017d7e1222a242865402bb58d9ffd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dragIncrementCurveX:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  dragIncrementCurveY:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 0
+    m_PostInfinity: 0
+    m_RotationOrder: 4
+  dragIncrementEcartX: 1.1
+  dragIncrementEcartY: 0.8
+  dragIncrementEcart: 0.6
+  curveIncrement: 0
+  iX_Increment: 0.4
+  iY_Increment: 0.7
 --- !u!114 &5234291104452767385
 MonoBehaviour:
   m_ObjectHideFlags: 0

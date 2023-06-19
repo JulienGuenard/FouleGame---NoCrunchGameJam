@@ -21,8 +21,13 @@ public class FA_Attack : FlockAgent
 
     private void Update()
     {
-        if (targetAttacked == null) AttackEnd();
-        if (this == null)           StopAllCoroutines();
+        if (agentSelection.isDragged)   AttackEnd();
+        if (targetAttacked == null)     AttackEnd();
+        if (this == null)               StopAllCoroutines();
+        if (targetAttacked != null)
+        {
+            if (targetAttacked.agentSelection.isDragged) AttackEnd();
+        }
     }
 
     public void AttackStart(FlockAgent target) 
