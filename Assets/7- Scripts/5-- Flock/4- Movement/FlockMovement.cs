@@ -31,14 +31,20 @@ public class FlockMovement : Flock
     {
         if (FOwnership.chef == null) return;
 
+        StartCoroutine(MoveEachAgentDelay());
+    }
+
+    IEnumerator MoveEachAgentDelay()
+    {
         foreach (FlockAgent agent in FBehaviour.agents.ToArray())
         {
-            if (agent == null)                              continue;
-            if (agent.agentSelection.isDragged)             continue;
-            if (agent.agentAggro.targetOnAggro != null)     continue;
-            
+            if (agent == null) continue;
+            if (agent.agentSelection.isDragged) continue;
+            if (agent.agentAggro.targetOnAggro != null) continue;
+
             NextPoint(agent);
             agent.agentMovement.Move(agent.agentMovement.velocity);
+            yield return new WaitForSeconds(0.01f);
         }
     }
 

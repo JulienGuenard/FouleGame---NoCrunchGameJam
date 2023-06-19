@@ -22,7 +22,7 @@ public class AttackManager : MonoBehaviour
 
     public void SpawnNewAttack()
     {
-        GameObject atk = Instantiate(attackGMB);
+        GameObject atk = Instantiate(attackGMB, new Vector3(999,999,0), Quaternion.identity);
         AttackManager.instance.attackList.Add(atk);
         atk.transform.parent = objPulling;
     }

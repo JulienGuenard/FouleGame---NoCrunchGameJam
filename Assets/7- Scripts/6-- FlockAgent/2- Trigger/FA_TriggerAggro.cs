@@ -11,6 +11,8 @@ public class FA_TriggerAggro : MonoBehaviour
 
     bool isShaping = true;
 
+    private float timer;
+
     private void Awake()
     {
         agentMain       = GetComponentInParent<FlockAgent>();
@@ -19,16 +21,17 @@ public class FA_TriggerAggro : MonoBehaviour
         StartCoroutine(GenerateShapes());
     }
 
-    private void FixedUpdate()
-    {
-        if (isShaping) { circleCollider.enabled = true; return; }
+    /*  private void FixedUpdate()
+      {
+          if (isShaping) { circleCollider.enabled = true; return; }
 
-        if (agentMain.agentAggro.targetOnAggro == null) canAggro = true;
-        else                                            canAggro = false;
+          if (agentMain.agentAggro.targetOnAggro == null) canAggro = true;
+          else                                            canAggro = false;
 
-        if (agentMain.agentCooldown.canCheckEnemies && canAggro)    circleCollider.enabled = true;
-        else                                                        circleCollider.enabled = false;
-    }
+          if (agentMain.agentCooldown.canCheckEnemies && canAggro)    circleCollider.enabled = true;
+          else                                                        circleCollider.enabled = false;
+      }
+    */
 
     IEnumerator GenerateShapes()
     {
@@ -38,7 +41,7 @@ public class FA_TriggerAggro : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D col)
     {
-        if (agentMain.agentAggro.targetOnAggro != null) {                                   canAggro = false; circleCollider.enabled = false; }
+    //    if (agentMain.agentAggro.targetOnAggro != null) {                                   canAggro = false; circleCollider.enabled = false; }
         if (col.tag != "agressif" && col.tag != "passif")                                   return;
         if (agentMain.agentOwnership.isPlayer == col.GetComponentInParent<FA_Ownership>().isPlayer) return;
 
