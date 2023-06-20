@@ -20,7 +20,7 @@ GameObject:
   - component: {fileID: 2745911694000281205}
   - component: {fileID: 1742912895762161783}
   - component: {fileID: 706778385}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cursor
   m_TagString: Cursor
   m_Icon: {fileID: 0}
@@ -146,8 +146,8 @@ MonoBehaviour:
   OnLeftClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1742912895762161783}
-        m_TargetAssemblyTypeName: CursorDrag, Assembly-CSharp
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: DragManager, Assembly-CSharp
         m_MethodName: Drag
         m_Mode: 1
         m_Arguments:
@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorFollow: {fileID: 0}
-  cursorRotate: {fileID: 0}
+  cursorDrop: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
   cursorSprite: {fileID: 0}
@@ -227,7 +227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorFollow: {fileID: 0}
-  cursorRotate: {fileID: 0}
+  cursorDrop: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
   cursorSprite: {fileID: 0}
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorFollow: {fileID: 0}
-  cursorRotate: {fileID: 0}
+  cursorDrop: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
   cursorSprite: {fileID: 0}
@@ -261,10 +261,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorFollow: {fileID: 0}
-  cursorRotate: {fileID: 0}
+  cursorDrop: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
   cursorSprite: {fileID: 0}
+  forceOutput: 375
 --- !u!114 &1742912895762161783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -278,7 +279,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorFollow: {fileID: 0}
-  cursorRotate: {fileID: 0}
+  cursorDrop: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
   cursorSprite: {fileID: 0}
@@ -349,10 +350,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cursorFollow: {fileID: 0}
-  cursorRotate: {fileID: 0}
+  cursorDrop: {fileID: 0}
   cursorTrigger: {fileID: 0}
   cursorDrag: {fileID: 0}
   cursorSprite: {fileID: 0}
-  cursorIdle: {fileID: 2800000, guid: 62e7c7b8789af8b4598d4a6081c6bb75, type: 3}
-  cursorSelectable: {fileID: 2800000, guid: cbff8a9897c188d4f9e037779eb6663d, type: 3}
-  cursorDrag: {fileID: 2800000, guid: 2a81a7cbd6426e44eb20f47b00e14a88, type: 3}
+  idleTexture: {fileID: 2800000, guid: a133be21c84f5a2478eae3e52255a496, type: 3}
+  selectableTexture: {fileID: 2800000, guid: cbff8a9897c188d4f9e037779eb6663d, type: 3}
+  dragTexture: {fileID: 2800000, guid: 2a81a7cbd6426e44eb20f47b00e14a88, type: 3}

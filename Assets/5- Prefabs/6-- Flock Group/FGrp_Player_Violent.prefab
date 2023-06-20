@@ -1,184 +1,421 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &193408955522650563
-PrefabInstance:
+--- !u!1 &3730529433836499676
+GameObject:
   m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 4997328061651981508}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_Target
-      value: 
-      objectReference: {fileID: 2095050656589200487}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 8485251419512238844}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PassifConversion
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Conversion
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: IncrementNextTimedDead
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
-      value: MoveEachAgent
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: FlockConversion, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
-      value: FlockLifetime, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 2054380494055482672, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: OnUpdate.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
-      value: FlockMovement, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4651734604946234289, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: agentType
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5169232674650706138, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: agentPrefab
-      value: 
-      objectReference: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
-    - target: {fileID: 5169232674650706138, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: startingCount
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5185106684406990087, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: Multiplicater
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6097520136118685144, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: isPlayer
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161229, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_Name
-      value: FGrp_Player_Violent
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.30000004
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 10.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6948653040654161235, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: maxSpeed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: driveFactor
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: neighborRadius
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: damage
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: chargedTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: launchForce
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8716627156663591265, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-      propertyPath: repulseForce
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ba8c79359a019294baadc4305ea65609, type: 3}
---- !u!114 &2095050656589200487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2286769863789391268, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-  m_PrefabInstance: {fileID: 193408955522650563}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8562039585299468349}
+  - component: {fileID: 8562039585299468331}
+  - component: {fileID: 8562039585299468350}
+  - component: {fileID: 8562039585299468329}
+  - component: {fileID: 8562039585299468328}
+  - component: {fileID: 8562039585299468343}
+  - component: {fileID: 8562039585299468342}
+  - component: {fileID: 8562039585299468341}
+  - component: {fileID: 8562039585299468340}
+  - component: {fileID: 8562039585299468339}
+  - component: {fileID: 8562039585299468338}
+  - component: {fileID: 8562039585299468337}
+  - component: {fileID: 8562039585299468336}
+  - component: {fileID: 8562039585299468351}
+  m_Layer: 0
+  m_Name: FGrp_Player_Violent
+  m_TagString: Ennemi
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8562039585299468349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.30000004, y: 10.3, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8562039585299468331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b0ba64050d9a94f980c4aecbed2e0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnUpdate:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8562039585299468339}
+        m_TargetAssemblyTypeName: FlockConversion, Assembly-CSharp
+        m_MethodName: PassifConversion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8562039585299468339}
+        m_TargetAssemblyTypeName: FlockConversion, Assembly-CSharp
+        m_MethodName: Conversion
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8562039585299468328}
+        m_TargetAssemblyTypeName: FlockLifetime, Assembly-CSharp
+        m_MethodName: IncrementNextTimedDead
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8562039585299468343}
+        m_TargetAssemblyTypeName: FlockMovement, Assembly-CSharp
+        m_MethodName: MoveEachAgent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &8562039585299468350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf9ce4c572c0e438aeeb9d0bb1d4d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+--- !u!114 &8562039585299468329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb48e4a09fc6aee4c8694ad3063b8029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+--- !u!114 &8562039585299468328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d48a7ad8fc8b2c045b78465d8b80a8b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4997328061651981508 stripped
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  destroy: 1
+  deathByTimeDelay: 5000
+  deathByTimeActual: 0
+--- !u!114 &8562039585299468343
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5185106684406990087, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-  m_PrefabInstance: {fileID: 193408955522650563}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20cde84d827b4c743acb944b05ab407d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &8485251419512238844 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8605969173990433599, guid: ba8c79359a019294baadc4305ea65609, type: 3}
-  m_PrefabInstance: {fileID: 193408955522650563}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: be08f80eff2661745aac09be91aa52d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  driveFactor: 2
+  maxSpeed: 2
+  neighborRadius: 1.5
+  avoidanceRadiusMultiplier: 0.1
+  squareMaxSpeed: 0
+  context: []
+--- !u!114 &8562039585299468342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923540092fa02a34b89080e2f1206fbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  agentPrefab: {fileID: 5343778298011262044, guid: 451078c732875134b9404b71414030b1, type: 3}
+  chefPrefab: {fileID: 2724783979569385447, guid: 2d5970d71930c134995be16caa34350a, type: 3}
+  noChef: 0
+  startingCount: 10
+  agentDensity: 0.02
+  attackGMB: {fileID: 0}
+--- !u!114 &8562039585299468341
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0332d3eaef84b3446bd4e41642d88152, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+--- !u!114 &8562039585299468340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b18d911dcbecce24a9c8d21e0f3b4ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  agents: []
+  flockAgentBehaviour: {fileID: 11400000, guid: 553b271ff7d180b4fba5d6033b2eed76, type: 2}
+--- !u!114 &8562039585299468339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20cde84d827b4c743acb944b05ab407d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  MaxConvert: 0
+  Multiplicater: 0
+  HasConvert: 0
+  Flk: {fileID: 0}
+--- !u!114 &8562039585299468338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e47f61f602c5734a904e98dad45ea72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  agentType: 0
+--- !u!114 &8562039585299468337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e66cf0cabdbc96b4298b882d9418d8a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+  isPlayer: 1
+  chef: {fileID: 0}
+--- !u!114 &8562039585299468336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30ac9a8b223420040a3e8800b528ee8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}
+--- !u!114 &8562039585299468351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3730529433836499676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf879e2159af0cc47a97b8a6ad841057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FSpawn: {fileID: 0}
+  FLifetime: {fileID: 0}
+  FMovement: {fileID: 0}
+  FFear: {fileID: 0}
+  FOwnership: {fileID: 0}
+  FType: {fileID: 0}
+  FConversion: {fileID: 0}
+  FBehaviour: {fileID: 0}
+  FCharge: {fileID: 0}
+  FGetAgentFunctions: {fileID: 0}
+  FDeath: {fileID: 0}
+  FMain: {fileID: 0}

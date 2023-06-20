@@ -6,8 +6,6 @@ public class TransformRotateWithParent : MonoBehaviour
 {
     void Update()
     {
-        Rotate();
+        transform.localRotation = Quaternion.Euler(-transform.parent.rotation.eulerAngles);
     }
-
-    void Rotate() { transform.localRotation = Quaternion.Euler(-transform.parent.rotation.eulerAngles); }
 }

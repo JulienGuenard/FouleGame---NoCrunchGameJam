@@ -5,7 +5,6 @@ using UnityEngine;
 public class Flock : MonoBehaviour
 {
     [HideInInspector] public FlockSpawn             FSpawn;
-    [HideInInspector] public FlockAggro             FAggro;
     [HideInInspector] public FlockLifetime          FLifetime;
     [HideInInspector] public FlockMovement          FMovement;
     [HideInInspector] public FlockFear              FFear;
@@ -21,7 +20,6 @@ public class Flock : MonoBehaviour
     public virtual void Awake()
     {
         FSpawn                  = GetComponent<FlockSpawn>();
-        FAggro                  = GetComponent<FlockAggro>();
         FLifetime               = GetComponent<FlockLifetime>();
         FMovement               = GetComponent<FlockMovement>();
         FFear                   = GetComponent<FlockFear>();

@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DestroyAfterTime : MonoBehaviour
+public class RemoveEvent : MonoBehaviour
 {
-    public float delay;
-
-    void Start()
+    public void RemoveAfterDelay(float delay)
     {
-       // StartCoroutine(DestroyAfterDelay());
+        StartCoroutine(Remove(delay));
     }
 
-    public IEnumerator DestroyAfterDelay()
+    public IEnumerator Remove(float delay)
     {
         yield return new WaitForSeconds(delay);
         AttackManager.instance.BackToPullingList(this.gameObject);

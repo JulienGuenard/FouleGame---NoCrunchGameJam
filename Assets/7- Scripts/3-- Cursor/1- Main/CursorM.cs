@@ -7,7 +7,6 @@ public class CursorM : MonoBehaviour
     [HideInInspector] public CursorFollow   cursorFollow;
     [HideInInspector] public CursorDrop     cursorDrop;
     [HideInInspector] public CursorTrigger  cursorTrigger;
-    [HideInInspector] public CursorDrag     cursorDrag;
     [HideInInspector] public CursorSprite   cursorSprite;
 
     public static CursorM instance;
@@ -19,7 +18,6 @@ public class CursorM : MonoBehaviour
         cursorFollow    = GetComponent<CursorFollow>();
         cursorDrop      = GetComponent<CursorDrop>();
         cursorTrigger   = GetComponent<CursorTrigger>();
-        cursorDrag      = GetComponent<CursorDrag>();
         cursorSprite    = GetComponent<CursorSprite>();
     }
 }

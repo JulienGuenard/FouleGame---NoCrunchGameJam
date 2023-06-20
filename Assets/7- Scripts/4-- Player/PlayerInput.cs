@@ -15,7 +15,7 @@ public class PlayerInput : MonoBehaviour
         animator    = GetComponentInChildren<Animator>();
     }
 
-    void FixedUpdate()
+    public void Move() // Appelé par UpdateEvent (voir inspector)
     {
         Vector3 input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
         rb.velocity = input * speed * Time.deltaTime;

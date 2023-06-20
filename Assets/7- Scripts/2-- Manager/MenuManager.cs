@@ -7,17 +7,14 @@ public class MenuManager : MonoBehaviour
 {
     [SerializeField]    GameObject pauseMenu;
     [SerializeField]    GameObject interfaceIG;
+
                         public static bool gameIsPaused = false;
+
                         public static MenuManager instance { get; private set; }
 
     private void Awake()
     {
-       if(instance == null) { instance = this; }
-    }
-
-    private void Update()
-    {
-        CheckPause();
+       if(instance == null) instance = this;
     }
 
     public void LoadScene(string sceneName)
@@ -45,7 +42,7 @@ public class MenuManager : MonoBehaviour
         ClearMenu(interfaceIG);
     }
 
-    void CheckPause()
+    public void CheckPause()
     {
         if (!Input.GetKeyUp(KeyCode.Escape))    return;
         if (pauseMenu == null)                  return;

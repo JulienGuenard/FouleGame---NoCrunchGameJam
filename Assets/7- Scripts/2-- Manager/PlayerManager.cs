@@ -6,22 +6,27 @@ using Cinemachine;
 
 public class PlayerManager : MonoBehaviour
 {
-    public Flock flockAggro;
-    public Flock flockPaco;
 
-    public Bars_UI AgressifBar;
-    public Bars_UI PassifBar;
-  
-    public int compteurAggro;
-    public int compteurPaco;
-    public int compteurTotal;
 
-    public int MinSize;
-    public float camScale;
-    float MinCamSize;
-    
+    [Header("Agressif Player Group")]
+    public Flock    agressifFlock;
+    public Bars_UI  agressifBar;
+    public int      compteurAgressif;
+
+    [Header("Passif Player Group")]
+    public Flock    passifFlock;
+    public Bars_UI  passifBar;
+    public int      compteurPassif;
+
+    [Header("Total Player Group")]
+    public int      compteurTotal;
+
+    [Header("Camera")]
     public CinemachineVirtualCamera cinemachine;
-
+    public int      MinSize;
+    public float    camScale;
+    float           MinCamSize;
+    
     public static PlayerManager instance;
 
     void Awake()
@@ -32,7 +37,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         MinCamSize = cinemachine.m_Lens.OrthographicSize;
-        MinSize = flockAggro.FSpawn.startingCount + flockPaco.FSpawn.startingCount;
+        MinSize = agressifFlock.FSpawn.startingCount + passifFlock.FSpawn.startingCount;
     }
 
     void Update()
@@ -44,10 +49,10 @@ public class PlayerManager : MonoBehaviour
 
     void UpdatePlayerAgentCount()
     {
-        compteurAggro = flockAggro.FBehaviour.agents.Count;
-        compteurPaco = flockPaco.FBehaviour.agents.Count;
+        compteurAgressif    = agressifFlock.FBehaviour.agents.Count;
+        compteurPassif      = passifFlock.FBehaviour.agents.Count;
 
-        compteurTotal = compteurPaco + compteurAggro;
+        compteurTotal       = compteurPassif + compteurAgressif;
     }
 
     void AdjustCamSize()
@@ -63,21 +68,16 @@ public class PlayerManager : MonoBehaviour
     {
         if (compteurTotal == 0) return;
 
-
-
-
-        float   fill = (float)(compteurTotal - compteurAggro) / compteurTotal;
-        PassifBar.SetBar(fill);
-                fill = (float)(compteurTotal - compteurPaco) / compteurTotal;
-        AgressifBar.SetBar(fill);
+        float   fill = (float)(compteurTotal - compteurAgressif) / compteurTotal;
+                passifBar.SetBar(fill);
+                fill = (float)(compteurTotal - compteurPassif) / compteurTotal;
+                agressifBar.SetBar(fill);
     }
 
-    public void CHeckGameOver(int compteur)
+    public void CheckGameOver(int compteur)
     {
         if (compteur != 0) return;
 
         MenuManager.instance.LoadScene("MenuGameOver");
     }
-
-   
 }

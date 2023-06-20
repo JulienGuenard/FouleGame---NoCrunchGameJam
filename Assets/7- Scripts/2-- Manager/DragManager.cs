@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class DragManager : MonoBehaviour
 {
-    public static DragManager instance;
-
     public AnimationCurve dragIncrementCurveX;
     public AnimationCurve dragIncrementCurveY;
     public float dragIncrementEcartX;
@@ -17,6 +15,8 @@ public class DragManager : MonoBehaviour
 
     List<GameObject> draggedUnitList = new List<GameObject>();
 
+    public static DragManager instance;
+
     void Awake()
     {
         if (instance == null) instance = this;
@@ -27,36 +27,13 @@ public class DragManager : MonoBehaviour
         return draggedUnitList;
     }
 
-    public void Drag() // Appelé par InputEvent du Curseur (voir inspector)
-    {
-        List<GameObject> list = new List<GameObject>();
-        list.AddRange(draggedUnitList);
-
-        foreach (GameObject obj in list)
-        {
-            if (obj == null) continue;
-            FA_Selection objSelection = obj.GetComponent<FA_Selection>();
-
-            if (objSelection.isDragged) { UndragUnit(obj); continue; }
-        }
-
-        list.Clear();
-        list.AddRange(SelectableManager.instance.GetSelectableUnitList());
-
-        foreach (GameObject obj in list)
-        {
-            FA_Selection objSelection = obj.GetComponent<FA_Selection>();
-
-            if (objSelection.isSelectable) { DragUnit(obj); continue; }
-        }
-    }
-
-    public void FollowCursor() // Appelé par UpdateEvent (voir inspector)
+    ////////////////////////////////// UPDATE //////////////////////////////////////////////
+    public void DraggedUnitsFollowCursor() // Appelé par UpdateEvent (voir inspector)
     {
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3 offsetIncrement = Vector3.zero;
         float iX = 0, iY = 0;
-        
+
         foreach (GameObject obj in draggedUnitList)
         {
             if (obj == null) continue;
@@ -66,12 +43,42 @@ public class DragManager : MonoBehaviour
             float posX = (dragIncrementCurveX.Evaluate(iX) - 0.5f) * dragIncrementEcartX;
             float posY = (dragIncrementCurveY.Evaluate(iY) - 0.5f) * dragIncrementEcartY;
             offsetIncrement = new Vector3(posX, posY, 0) * dragIncrementEcart;
-            
+
             obj.transform.position = newPos;
             obj.transform.localRotation = Quaternion.Euler(0, 0, 0);
 
             iX += iX_Increment;
             iY += iY_Increment;
+        }
+    }
+
+    ////////////////////////////////// LEFT CLICK //////////////////////////////////////////////
+    public void Drag() // Appelé par InputEvent du Curseur (voir inspector)
+    {
+        List<GameObject>    list = new List<GameObject>();
+                            list.AddRange(draggedUnitList);
+                            TryToUndrag(list);
+                            list.Clear();
+                            list.AddRange(SelectableManager.instance.GetSelectableUnitList());
+                            TryToDrag(list);
+    }
+
+    void TryToUndrag(List<GameObject> list)
+    {
+        foreach (GameObject obj in list)
+        {
+            if (obj == null) continue;
+            FA_Selection objSelection = obj.GetComponent<FA_Selection>();
+            if (objSelection.isDragged) UndragUnit(obj);
+        }
+    }
+
+    void TryToDrag(List<GameObject> list)
+    {
+        foreach (GameObject obj in list)
+        {
+            FA_Selection objSelection = obj.GetComponent<FA_Selection>();
+            if (objSelection.isSelectable) DragUnit(obj);
         }
     }
 

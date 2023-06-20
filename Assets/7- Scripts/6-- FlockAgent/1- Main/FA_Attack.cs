@@ -64,7 +64,7 @@ public class FA_Attack : FlockAgent
     {
         if (targetAttacked == null) return;
 
-        AttackManager.instance.SpawnAttackAtPos(targetAttacked.transform.position, targetAttacked, damage);
+        AttackManager.instance.SpawnAttackAtTarget(targetAttacked, damage);
     }
 
     IEnumerator AttackCooldown()

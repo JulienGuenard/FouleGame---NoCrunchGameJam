@@ -9,6 +9,7 @@ public class SpawnManager : MonoBehaviour
     public int maxNombreFoule;
     public int unitétaille;
     public int tailleGrille;
+
     static int lastRandomNumber;
 
     public static SpawnManager instance;

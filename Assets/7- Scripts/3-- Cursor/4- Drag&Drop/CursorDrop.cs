@@ -10,8 +10,8 @@ public class CursorDrop : CursorM
     Vector3 directionInitial;
     Vector3 directionNext;
     Vector3 posLast;
-    Vector3 postNext;
-    float   distance;
+    Vector3 posNext;
+    float distance;
 
     private void Start()
     {
@@ -23,26 +23,33 @@ public class CursorDrop : CursorM
 
     public void Rotate()
     {
-        if (postNext == transform.position) return;
+        CheckCursorMovement();
 
-        posLast = postNext;
+        if (distance < 600f && distance > -600f) return;
+
+        ThrowForce();
+        StopCoroutine(StandForce());
+        StartCoroutine(StandForce());
+    }
+
+    void CheckCursorMovement()
+    {
+        posLast = posNext;
         Vector3 nextPosTemp = transform.position;
 
         distance = (posLast - nextPosTemp).magnitude;
         distance *= 1000;
+    }
 
-        if (distance < 600f && distance > -600f) return;
-
-        postNext = nextPosTemp;
-        Vector3 target = postNext - posLast;
+    void ThrowForce()
+    {
+        posNext = transform.position;
+        Vector3 target = posNext - posLast;
 
         directionNext.z = -Vector2.SignedAngle(target, directionInitial);
         transform.rotation = Quaternion.Euler(directionNext);
 
         forceOutputActual = forceOutput;
-
-        StopCoroutine(StandForce());
-        StartCoroutine(StandForce());
     }
 
     IEnumerator StandForce()

@@ -50,9 +50,9 @@ public class FlockConversion : Flock
         if (agent.agentConversion.ConvertPercent >= 100) agent.agentConversion.ConvertPercent = 0;
 
         FBehaviour.agents.Remove(agent);
-        agent.transform.SetParent(PlayerManager.instance.flockPaco.transform, true);
-        PlayerManager.instance.flockPaco.FBehaviour.agents.Add(agent);
-        agent.agentOwnership.parentflock = PlayerManager.instance.flockPaco;
+        agent.transform.SetParent(PlayerManager.instance.passifFlock.transform, true);
+        PlayerManager.instance.passifFlock.FBehaviour.agents.Add(agent);
+        agent.agentOwnership.parentflock = PlayerManager.instance.passifFlock;
         agent.agentOwnership.isPlayer = FOwnership.isPlayer;
 
         if (!FOwnership.isPlayer) agent.agentOwnership.SwapColor();

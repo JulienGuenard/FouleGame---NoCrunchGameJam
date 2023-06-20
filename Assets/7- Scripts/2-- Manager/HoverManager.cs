@@ -36,6 +36,7 @@ public class HoverManager : MonoBehaviour
     void HoverUnitAtCenter()
     {
         if (hoveredUnitList.Count < 1) return;
+
         Vector3 cursorPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         cursorPos -= new Vector3(0, 0, cursorPos.z);
         float distanceNearest = 0;

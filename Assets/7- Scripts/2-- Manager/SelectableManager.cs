@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class SelectableManager : MonoBehaviour
 {
-    public static SelectableManager instance;
+    public int selectableUnitNumberMax;
 
     List<GameObject> selectableUnitList = new List<GameObject>();
 
-    public int selectableUnitNumberMax;
+    public static SelectableManager instance;
 
     void Awake()
     {
@@ -22,7 +22,7 @@ public class SelectableManager : MonoBehaviour
 
     public void Selectable(GameObject obj)
     {
-        if (obj.GetComponent<FA_Ownership>() == null) return;
+        if (obj.GetComponent<FA_Ownership>() == null)               return;
         if (!obj.GetComponent<FA_Ownership>().isPlayer)             return;
         if (GetSelectableUnitList().Contains(obj))                  return;
         if (DragManager.instance.GetDraggedUnitList().Count != 0)   return;
@@ -35,8 +35,8 @@ public class SelectableManager : MonoBehaviour
 
     public void Unselectable(GameObject obj)
     {
-        if (obj == null) return;
-        if (obj.GetComponent<FA_Selection>() == null) return;
+        if (obj == null)                                return;
+        if (obj.GetComponent<FA_Selection>() == null)   return;
 
         RemoveToSelectableUnitList(obj);
         obj.GetComponent<FA_Selection>().Unselectable();
